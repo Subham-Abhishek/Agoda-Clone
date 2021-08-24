@@ -1,0 +1,92 @@
+.root{
+    margin:10px;
+    width: 100%;
+}
+.root:hover{
+    box-shadow: 5px 5px 5px rgb(184, 182, 182);
+}
+
+.hoteldiv{
+    display:flex;
+    width: 70%;
+    height: 250px;
+    border:1px solid grey ;
+  }
+/*   
+  .childimg1 img{
+      margin-left:0.5px
+  };   */
+
+  .hoteldetails{
+      font-size:15px;
+      width:40%;
+      /* border:1px solid black; */
+      margin-left: 10px;
+      width: 400px;
+      padding: 25;
+      height:250px
+    
+  };
+  .directiontext{
+  font-size:13px ;
+  color: blue ;
+}
+
+.detailsbtn{
+    width: 80px;
+    height: 20px;
+    margin-left:5px;
+    gap: 10px;
+}
+.detailsbtnplus{
+    width: 30px;
+    height: 20px;
+    margin-left:5px;
+    gap: 10px;
+
+
+}
+.detailsbtndinner{
+    width: 130px;
+    height: 20px;
+    margin-left:5px;
+    gap: 10px;
+
+}
+.btntext{
+    font-size: 10px;
+    color: green;
+    font-weight: bold;
+}
+.btnspan{
+    height: 50px;
+    width: 50%;
+}
+.updatedetail{
+    margin-top: 10px;
+    color: rgb(225, 45, 45);
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+
+}
+.payment{
+    margin-top: 10px;
+    color: rgb(62, 108, 234);
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+
+}
+.pay{
+    font-weight: bold;
+}
+.coupon{
+    margin-top:10px ;
+    border-radius: 2px;
+    border: 1px solid rgb(164, 223, 165);
+    color: rgb(40, 135, 28);
+    background-color: rgb(232, 247, 233);
+    width: 90%;
+
+}
