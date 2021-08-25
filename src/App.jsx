@@ -1,9 +1,10 @@
 import './App.css';
+import { Register } from './Components/Authorization/Register';
 
 function App() {
   return (
     <div className="App">
-      <h1>Agoda-Clone</h1>
+     <Register/>
     </div>
   );
 }
