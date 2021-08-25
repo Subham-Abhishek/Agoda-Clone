@@ -10,10 +10,13 @@ import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import Recaptcha, { ReactRecaptcha } from 'react-recaptcha';
 import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from 'react-router-dom'
 
 
 export const Register = () => {
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
+    const [isAuth, setAuth] = useState(false)
+
     useEffect(() => {
         setLoading(true)
         let timer = setTimeout(() => {
@@ -31,9 +34,12 @@ export const Register = () => {
         console.log(response);
         console.log(response.profileObj);
     }
+    if(isAuth){
+        return <Redirect to="/"/>
+    }
     return (
+        isLoading ? <Loading /> :
         <div className="resister-page">
-            {isLoading ? <Loading /> :
                 <div className="signup">
                     <Typography>
                         SignUp
@@ -105,11 +111,11 @@ export const Register = () => {
                         </div>
                     </div>
                     <div className="line1"></div>
-                    <div className="buttons">Already have an account? Sign in</div>
+                    <div className="buttons">Already have an account? <Link to="/login">Sign in</Link></div>
                     <p>By signing in, I agree to Agoda's Terms of Use and Privacy Policy.</p>
                 </div>
 
-            }
-        </div>
+                </div>
+            
     )
 }
