@@ -1,5 +1,6 @@
-import {GETDATA_FAILURE,GETDATA_REQUEST,GETDATA_SUCCESS,SEARCHDATA_FAILURE,SEARCHDATA_REQUEST,
-SEARCHDATA_SUCCESS,ID_FAILURE,ID_REQUEST,ID_SUCCESS} from "./actiontype"
+import {GETDATA_FAILURE,GETDATA_REQUEST,GETDATA_SUCCESS,
+    SEARCHDATA_FAILURE,SEARCHDATA_REQUEST,
+SEARCHDATA_SUCCESS,ID} from "./actiontype"
 import React from 'react'
 import axios from "axios"
 
@@ -36,6 +37,42 @@ export const getDataSuccess = (payload) => {
                 })
 
         }
+
+              
+export const searchDataRequest = () => {
+
+    return {
+        type:SEARCHDATA_REQUEST,
+    }
+    }
+
+    export const searchDataSuccess = (payload) => {
+
+        return {
+            type:SEARCHDATA_SUCCESS,
+            payload
+        }
+        }
+        export const searchDataFailure = (err) => {
+
+            return {
+                type:SEARCHDATA_FAILURE,
+                payload:err
+            }
+            }
+
+            export const searchData=(payload)=> dispatch=>{
+            dispatch (searchDataRequest()) 
+            return axios.get(`http://localhost:3001/hotel?city=${payload}`)
+            .then((res)=>{
+            console.log(res.data)
+            dispatch(searchDataSuccess(res.data))
+                })
+                .catch((err)=>{
+                    dispatch(searchDataFailure(err))
+                })
+
+            }
         
 
     

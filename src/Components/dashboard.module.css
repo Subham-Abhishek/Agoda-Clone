@@ -1,26 +1,44 @@
-.root{
-    margin:10px;
-    width: 100%;
+*{
+margin: 0;
+padding: 0;
 }
-.root:hover{
+.root{
+    display: grid;
+    grid-template-columns: 23% 65%;
+    margin:30px;
+    width: 89%;
+  border: 1px solid black; 
+
+}
+.root1{
+    border: 1px solid black;
+
+}
+.root2{
+    margin: 10px; 
+
+}
+
+
+.hoteldiv:hover{
     box-shadow: 5px 5px 5px rgb(184, 182, 182);
 }
 
 .hoteldiv{
     display:flex;
-    width: 70%;
+    width: 60%;
     height: 250px;
-    border:1px solid grey ;
+    /* margin: 20px; */
+    
   }
-/*   
-  .childimg1 img{
+ 
+  /* .childimg {
       margin-left:0.5px
-  };   */
+  };    */
 
   .hoteldetails{
       font-size:15px;
       width:40%;
-      /* border:1px solid black; */
       margin-left: 10px;
       width: 400px;
       padding: 25;
@@ -88,5 +106,101 @@
     color: rgb(40, 135, 28);
     background-color: rgb(232, 247, 233);
     width: 90%;
+
+}
+
+.hotelfacility{
+    width:300px;
+    height: 300px;
+    padding-top: 2%;
+
+}
+.hotelfacilitychild{
+    width: 150px;
+    height:250px;
+    /* background-color: aqua; */
+    margin-left: 100px;
+}
+.offer{
+    display: flex;
+    height: 15px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    width: 120px;
+    height: 20px;
+    background-color: rgb(22, 115, 127);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+.offertxt{
+    margin-left: 5px;
+
+}
+.ratingdiv{
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color:blue ;
+    margin-left: 5px;
+
+}
+.roombtn{
+   
+    position: relative;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgb(62, 108, 234);
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    margin-left: 25px;
+    margin-top: 10px;
+
+}
+.price{
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 2%;
+
+}
+.pricetext{
+    color: rgb(144, 148, 156);
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 2%;
+    margin-left: 15px;
+
+}
+.pricevalue{
+    margin-left: 50px;
+    color: #e12d2d;
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 700;
+}
+.cancel{
+    margin-left: 20px;
+    font-size: 12px;
+    color: rgb(40, 135, 28);
+    padding: 2%;
+    margin-top: 6px;
+    
+font-weight:500;
+}
+
+
+.rateingvalue{
+    margin-left: 50px;
+    margin-top:-5px ;
+    font-size: 12px;
+    color: rgb(144, 148, 156);
+    font-weight: 500;
+    padding: 2%;
 
 }

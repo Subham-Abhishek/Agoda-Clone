@@ -1,0 +1,95 @@
+.sortdiv{
+    width: 70%;
+    height: 60px;
+    margin-left: 300px;
+    display: flex;
+    
+}
+.sortdiv>div{
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+
+}
+.sortdiv>div>p{
+    margin-top: 10px;
+}
+
+.sortchild1{
+    border-right: .5px solid rgb(179, 171, 171);
+    width: 60px;
+    /* margin: 10px; */
+}
+
+.sortchild2{
+    width: 150px;
+    border-right: .5px solid  rgb(179, 171, 171);
+    background-color: #0283df;
+/* height: 150px; */
+
+}
+.sortchild4{
+    width: 150px;
+    border-right: .5px solid rgb(179, 171, 171);
+}
+.sortchild4{
+    width: 150px;
+
+}
+
+.searchinput{
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+}
+.searchinputdate{
+    width: 150px;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 5px;
+    height: 50px;
+    border-top-right-radius:0 ;
+    border-bottom-right-radius:0 ;
+
+
+
+
+}
+.searchinputdate2{
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50px;
+    border-top-left-radius:0 ;
+    border-bottom-left-radius:0 ;
+    margin-right: 10px;
+
+}
+.searchdiv{
+    width: 90%;
+    height: 80px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+.searchinputroom{
+    height: 50px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+
+    margin-left: 10px;
+
+
+
+
+}
+.searchbtn{
+    height: 50px;
+    width: 100px;
+}

@@ -1,6 +1,5 @@
 {
-  
-    "hotel":[
+      "hotel":[
       {
         "url":"https://pix8.agoda.net/hotelImages/9656855/-1/5dcd8f5d8f826570707ad7c5b597b79b.jpg?s=450x450",
         "urlchild1":"https://pix8.agoda.net/hotelImages/5743865/0/2a0c2ae9dc0fcb1495a3d4e3dcc95a92.jpg?s=100x100",
@@ -16,7 +15,124 @@
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
         "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+      {
+        "url":"https://pix8.agoda.net/hotelImages/11301453/0/453d037f84d09cff03a94e48016a3d49.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/11301453/0/a44b5733cbd43147279a4aedbf10f263.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/11301453/0/1cb21701fa584d833331aad908bbc18b.jpg?s=100x10",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/11060962/-1/0bf83bc445e5fe106fcda2b31e7c5af9.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/11301453/0/eb449865daaa810b8ef963e2f9c51331.jpg?s=100x100",
+       "city":"kolkata",
+        "hotel":"Fairfield by Marriott Kolkata",
+        "direction":"Salt Lake, kolkata - 10.6 km to center",
+        "rating":8.9,
+        "reviews": 48 ,
+        "price": 2900,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+      {
+        "url":"https://pix8.agoda.net/hotelImages/9656855/-1/5dcd8f5d8f826570707ad7c5b597b79b.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/5743865/0/2a0c2ae9dc0fcb1495a3d4e3dcc95a92.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/5743865/-1/f3e75da06ba2bbc6a653408c1a436206.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/5513928/0/d04f5c2e5cd960e9a04c54587fa71340.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/126/1266872/1266872_16071317380044650071.jpg?s=100x100",
+       "city":"pune",
+        "hotel":"Aauris",
+        "direction":"pune city center 0.3km",
+        "rating":7.9,
+        "reviews": 275 ,
+        "price": 1400,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+      {
+        "url":"https://pix8.agoda.net/hotelImages/9656855/-1/5dcd8f5d8f826570707ad7c5b597b79b.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/5743865/0/2a0c2ae9dc0fcb1495a3d4e3dcc95a92.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/5743865/-1/f3e75da06ba2bbc6a653408c1a436206.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/5513928/0/d04f5c2e5cd960e9a04c54587fa71340.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/126/1266872/1266872_16071317380044650071.jpg?s=100x100",
+       "city":"pune",
+        "hotel":"Lemon Tree Premier New Town Pune",
+        "direction":"Pune- 9.8 km to center",
+        "rating":7.7,
+        "reviews": 80 ,
+        "price": 3000,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+      
+      {
+        "url":"https://pix8.agoda.net/hotelImages/239373/0/f91053efd45479de288eebb5299840f5.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/2293637/0/38e78ecf354392cdfe96be5f8ff4f6c7.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/239/239373/239373_19010317380071053766.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/2293637/157427767/236bd9868a88624c60c6c85ad189454d.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/2293637/0/98ef137b95783212836c22363cb0d293.jpg?s=100x100",
+       "city":"delhi",
+        "hotel":"Ramada by Wyndham Gurgaon Central",
+        "direction":"Gurgaon, New Delhi and NCR - 23.2 km to center",
+        "rating":6.7,
+        "reviews": 80 ,
+        "price": 7000,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+
+      {
+        "url":"https://pix8.agoda.net/hotelImages/239373/0/f91053efd45479de288eebb5299840f5.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/2293637/0/38e78ecf354392cdfe96be5f8ff4f6c7.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/239/239373/239373_19010317380071053766.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/2293637/157427767/236bd9868a88624c60c6c85ad189454d.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/2293637/0/98ef137b95783212836c22363cb0d293.jpg?s=100x100",
+       "city":"delhi",
+        "hotel":"Ashok Country Resort ",
+        "direction":"Gurgaon, New Delhi and NCR - 23.2 km to center",
+        "rating":6.7,
+        "reviews": 90 ,
+        "price": 5000,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+
+      {
+        "url":"https://pix8.agoda.net/hotelImages/239373/0/f91053efd45479de288eebb5299840f5.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/2293637/0/38e78ecf354392cdfe96be5f8ff4f6c7.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/239/239373/239373_19010317380071053766.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/2293637/157427767/236bd9868a88624c60c6c85ad189454d.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/2293637/0/98ef137b95783212836c22363cb0d293.jpg?s=100x100",
+       "city":"rajasthan",
+        "hotel":"Hilton Jaipur",
+        "direction":"jaipur, - 23.2 km to center",
+        "rating":6.7,
+        "reviews": 90 ,
+        "price": 3000,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+      },
+
+      {
+        "url":"https://pix8.agoda.net/hotelImages/239373/0/f91053efd45479de288eebb5299840f5.jpg?s=450x450",
+        "urlchild1":"https://pix8.agoda.net/hotelImages/2293637/0/38e78ecf354392cdfe96be5f8ff4f6c7.jpg?s=100x100",
+       "urlchild2":"https://pix8.agoda.net/hotelImages/239/239373/239373_19010317380071053766.jpg?s=100x100",
+       "urlchild3":"https://pix8.agoda.net/hotelImages/2293637/157427767/236bd9868a88624c60c6c85ad189454d.jpg?s=100x100",
+       "urlchild4":"https://pix8.agoda.net/hotelImages/2293637/0/98ef137b95783212836c22363cb0d293.jpg?s=100x100",
+       "city":"rajasthan",
+        "hotel":"Golden Tulip Essentials jaipur",
+        "direction":"Gurgaon, rajasthan and jaipur - 23.2 km to center",
+        "rating":6.7,
+        "reviews": 180 ,
+        "price": 2600,
+        "update":"Popular! last booked 12hrs ago",
+        "payment":"Book without a card",
+        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
       }
+
     ]
   
 }
