@@ -27,10 +27,10 @@ export const Register = () => {
         console.log("Captcha value:", value);
     }
 
-    function responseGoogle(response){
+    function responseGoogle(response) {
         console.log(response);
         console.log(response.profileObj);
-      }
+    }
     return (
         <div className="resister-page">
             {isLoading ? <Loading /> :
@@ -86,15 +86,14 @@ export const Register = () => {
                         <div className="line"></div>
                     </div>
                     <div className="buttons" style={{ border: "2px solid #a6a6a6" }} variant="outlined">
-                        <FcGoogle style={{ marginRight: "80px", width: 25, height: 25 }} /> 
-                        <GoogleLogin
-        clientId="276655996971-tqcgsfqvun9d061loj9t47demuhbqb9l.apps.googleusercontent.com"
-        buttonText="Sign in with Google"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}
-        
-        />
+                        {/* <GoogleLogin
+                            clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
+                            buttonText="Sign in with Google"
+                            onSuccess={responseGoogle}
+                            onFailure={responseGoogle}
+                            cookiePolicy={'single_host_origin'}
+
+                        /> */}
                     </div>
                     <div className="social">
                         <div className="buttons" style={{ border: "2px solid black" }} variant="outlined">
