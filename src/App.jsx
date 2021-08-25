@@ -1,10 +1,9 @@
 import './App.css';
+import { LandingPage } from './Pages/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Agoda-Clone</h1>
-    </div>
+    <LandingPage />
   );
 }
 
