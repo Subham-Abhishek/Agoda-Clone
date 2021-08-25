@@ -1,12 +1,22 @@
-import { Route } from 'react-router-dom';
-import './App.css';
-import { Routes } from './Routes/Routes';
+import { useState } from "react";
+import { Route } from "react-router-dom";
+import "./App.css";
+import IsAuth from "./Context/Auth";
+import { Routes } from "./Routes/Routes";
 
 function App() {
+  const [isLogin, setLogin] = useState(false);
   return (
-    <div className="App">
-     <Routes/>
-    </div>
+    <IsAuth.Provider
+      value={{
+        isAuth: isLogin,
+        toggle: setLogin,
+      }}
+    >
+      <div className="App">
+        <Routes />
+      </div>
+    </IsAuth.Provider>
   );
 }
 

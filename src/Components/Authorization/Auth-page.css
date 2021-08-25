@@ -1,18 +1,17 @@
-.resister-page{
-    width: 400px;
-    margin: auto;
-    margin-top: 50px;
-    padding: 16px 24px 24px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 10px 2px gray;
+.resister-page {
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 16px 24px 24px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 2px gray;
 }
-.Loading { 
-
-    position: absolute;
-    width: 150px;
-    top: 40%;
-    left: 40%;
+.Loading {
+  position: absolute;
+  width: 150px;
+  top: 40%;
+  left: 40%;
 }
-.Loading img{
-    width: 100%;
+.Loading img {
+  width: 100%;
 }
