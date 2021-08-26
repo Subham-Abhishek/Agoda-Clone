@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./formSelection.module.css";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
@@ -14,6 +14,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import { Calendar } from "./Calendar";
 import RoomSelect from "./RoomSelect";
+import axios from "axios";
 
 const theme = createTheme({
   palette: {
@@ -62,6 +63,7 @@ export const FormSelection = () => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const [search, setSearch] = useState("");
+  const [cities, setCities] = useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -70,6 +72,12 @@ export const FormSelection = () => {
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/city").then(({ data }) => {
+      setCities(data);
+    });
+  }, []);
 
   return (
     <>
@@ -92,31 +100,26 @@ export const FormSelection = () => {
               className={classes.tab}
               icon={<HomeWorkIcon />}
               label="Hotels & Homes"
-              value="1"
             />
             <Tab
               className={classes.tab}
               icon={<NightsStayIcon />}
               label="Private Stays"
-              value="2"
             />
             <Tab
               className={classes.tab}
               icon={<FlightTakeoffIcon />}
               label="Flight + Hotel"
-              value="3"
             />
             <Tab
               className={classes.tab}
               icon={<FlightIcon />}
               label="Flights"
-              value="4"
             />
             <Tab
               className={classes.tab}
               icon={<EventAvailableIcon />}
               label="Monthly Stays"
-              value="5"
             />
           </Tabs>
         </Paper>
@@ -135,7 +138,13 @@ export const FormSelection = () => {
 
           {/* debounce result */}
 
-          <Paper className={styles.debounceRes}></Paper>
+          <Paper style={{display: search.length === 0 ? "none" : "block"}} className={styles.debounceRes}>
+            {
+              cities.filter((city) => city.toLowerCase().indexOf(search) !== -1 ? true : false).map((city,idx) => {
+                return <p key={idx}>{city}</p>
+              })
+            }
+          </Paper>
           <Grid className={styles.formSecLine} container item>
             <Grid className={styles.calendar} item lg={8}>
               <Calendar />

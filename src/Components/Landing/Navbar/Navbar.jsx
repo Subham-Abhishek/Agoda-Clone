@@ -65,7 +65,7 @@ export const Navbar = () => {
           </div>
           <div className={styles.dropMenu}>
             <MoreHorizIcon className={styles.moreIcon} />
-            <div class={styles.dropdown}>
+            <div className={styles.dropdown}>
               <a href="#">Airport Transfers</a>
               <a href="#">Car Rentals</a>
               <a href="#">Things to do</a>
