@@ -1,0 +1,8 @@
+.advertImg{
+    width: 40%;
+    height: 200px;
+    margin: -180px 30% 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px gray, -4px -4px 10px lightgray;
+    cursor: pointer;
+}

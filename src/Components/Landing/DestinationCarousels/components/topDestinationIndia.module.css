@@ -1,0 +1,26 @@
+.india_Dest_Cont{
+    margin-bottom: 500px;
+}
+.india_dest_heading{
+    text-align: center;
+}
+.carouselImg{
+    border-radius:50%;
+    width:100px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.carouselImg:hover{
+    width: 120px;
+    transition: width 200ms ease-in-out;
+}
+.carouselItems{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.carouselItems > h4{
+    margin: 20px 0;
+
+}

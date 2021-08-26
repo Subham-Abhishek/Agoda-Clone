@@ -123,7 +123,7 @@ export const FormSelection = () => {
       </ThemeProvider>
       <Paper theme={theme} square className={classes.form}>
         <Grid container>
-          <Grid className={styles.formFirstLine} item lg={12}>
+          <Grid className={styles.formFirstLine} item lg={12} md={12}>
             <SearchIcon />
             <input
               type="text"
