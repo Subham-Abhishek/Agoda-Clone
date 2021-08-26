@@ -54,6 +54,9 @@ export function Footer() {
           </div>
         </div>
       </Container>
+      <div className={styles.copyrightFooter}>
+        👉 @ Agoda Clone! No rights reserved - this is a demo! ✌
+      </div>
     </div>
   );
 }

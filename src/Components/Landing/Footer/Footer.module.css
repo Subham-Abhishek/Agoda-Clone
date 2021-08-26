@@ -2,7 +2,7 @@
     background-color: #eee;
     color: #333;
     text-align: left;
-    padding: 30px 0 20px
+    padding: 30px 0 0
 }
 .bottom{
     display: flex;
@@ -29,6 +29,14 @@
     display: block;
     text-align: center;
     
+}
+
+.copyrightFooter{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 17px;
 }
 
 @media only screen and (max-width: 700px) {
