@@ -1,7 +1,8 @@
 .calendar{
-    padding: 15px;
+    padding: 9px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 60%;
+    width: 98%;
     cursor: pointer;
+    margin: 20px 0;
 }

@@ -13,8 +13,8 @@ export const Calendar = () => {
     if (!dates || dates.length === 0) {
       return false;
     }
-    const tooLate = dates[0] && current.diff(dates[0], "days") > 7;
-    const tooEarly = dates[1] && dates[1].diff(current, "days") > 7;
+    const tooLate = dates[0] && current.diff(dates[0], "days") > 29;
+    const tooEarly = dates[1] && dates[1].diff(current, "days") > 29;
     return tooEarly || tooLate;
   };
 

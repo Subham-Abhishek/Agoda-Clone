@@ -1,5 +1,42 @@
 .background_image{
     width: 100%;
 }
-.calendar{
+.formFirstLine{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.formFirstLine > input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.formFirstLine > input::placeholder{
+    color: #bbb;
+  font-size: 16px;
+}
+.formSecLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchBtn{
+    background-color: #5392F9;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    padding: 15px 170px;
+    font-size:20px;
+    letter-spacing:1.5px;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: 600;
+}
+.searchBtn:hover{
+    background-color: #87B3FB;
 }

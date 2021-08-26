@@ -9,15 +9,11 @@ import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
 import FlightIcon from "@material-ui/icons/Flight";
 import EventAvailableIcon from "@material-ui/icons/EventAvailable";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import {
-  FormControl,
-  Grid,
-  InputAdornment,
-  OutlinedInput,
-} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Calendar } from "./Calendar";
+import RoomSelect from "./RoomSelect";
 
 const theme = createTheme({
   palette: {
@@ -34,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff",
     transform: "translateY(-260px)",
     borderRadius: 5,
-    boxShadow: "0 4px 10px #111111"
+    boxShadow: "0 4px 10px #111111",
   },
   tab: {
     margin: "8px 0",
@@ -45,20 +41,21 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin: "10px 0",
     backgroundColor: "#fff",
-    outline:"none"
+    outline: "none",
   },
   input: {
-      border: 'none'
+    border: "none",
   },
   form: {
     width: "70%",
+    height: "200px",
     margin: "auto",
     backgroundColor: "#F8F7F9",
     transform: "translateY(-260px)",
     borderRadius: 5,
     padding: "40px 50px",
-    boxShadow: "0 4px 10px gray"
-  }
+    boxShadow: "0 4px 10px gray, 0 -4px 10px gray",
+  },
 }));
 
 export const FormSelection = () => {
@@ -126,25 +123,19 @@ export const FormSelection = () => {
       </ThemeProvider>
       <Paper theme={theme} square className={classes.form}>
         <Grid container>
-          <Grid item lg={12}>
-            <FormControl
-              fullWidth
-              className={classes.margin}
-              variant="outlined"
-            >
-              <OutlinedInput
-                value={search}
-                onChange={handleSearch}
-                placeholder="Enter a destination or property"
-                startAdornment={
-                  <InputAdornment position="start"><SearchIcon /></InputAdornment>
-                }
-              />
-            </FormControl>
+          <Grid className={styles.formFirstLine} item lg={12}>
+            <SearchIcon />
+            <input type="text" value={search} onChange={handleSearch} placeholder="Enter a destination" />
           </Grid>
-          <Grid className={styles.calendar} item lg={12}>
+          <Grid className={styles.formSecLine} container item>
+            <Grid className={styles.calendar} item lg={8}>
               <Calendar />
+            </Grid>
+            <Grid className={styles.roomSelect} item lg={4}>
+              <RoomSelect />
+            </Grid>
           </Grid>
+          <button className={styles.searchBtn}>SEARCH</button>
         </Grid>
       </Paper>
     </>

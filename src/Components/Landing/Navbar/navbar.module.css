@@ -1,13 +1,14 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar_left {
   display: flex;
   align-items: center;
 }
-.navbar_left > div, .navbar_right p {
+.navbar_left > div,
+.navbar_right p {
   color: #555;
   margin: 12px;
   font-size: 14px;
@@ -66,8 +67,8 @@
 .dropMenu:hover .dropdown {
   display: block;
 }
-.navbar_right{
-    display: flex;
-    align-items: center;
-    margin: 0 15px;
+.navbar_right {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
 }
