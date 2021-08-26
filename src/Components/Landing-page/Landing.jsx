@@ -8,6 +8,7 @@ const Landing = () => {
     <div>
       <Link to="/register">Register</Link>
       <Link to="/login">sign in</Link>
+      <Link style={{marginLeft:50}} to="/checkout">checkout</Link>
       {
           Auth.isAuth?<h1>Logged in.</h1>:<h1>login</h1>
       }

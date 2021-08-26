@@ -78,11 +78,11 @@ export const Register = () => {
           />
         </div>
         <div>
-
+{/* 
                         <ReCAPTCHA
                             sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                             onChange={onChange}
-                        />
+                        /> */}
                     </div>
         <button className="signup-btn">Sign Up</button>
         <div className="break">
@@ -95,14 +95,14 @@ export const Register = () => {
           style={{ border: "2px solid #a6a6a6" }}
           variant="outlined"
         >
-          <GoogleLogin
+          {/* <GoogleLogin
                             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
                             buttonText="Sign in with Google"
                             onSuccess={responseGoogle}
                             onFailure={responseGoogle}
                             cookiePolicy={'single_host_origin'}
 
-                        />
+                        /> */}
         </div>
         <div className="social">
           <div

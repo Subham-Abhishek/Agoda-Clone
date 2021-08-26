@@ -74,13 +74,13 @@ export const Login = () => {
           style={{ border: "2px solid #a6a6a6" }}
           variant="outlined"
         >
-          <GoogleLogin
+          {/* <GoogleLogin
             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
             buttonText="Sign in with Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
-          />
+          /> */}
         </div>
         <div className="social">
           <div
