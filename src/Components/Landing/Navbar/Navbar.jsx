@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import { Box, Button } from "@material-ui/core";
+import { Avatar, Box, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -31,15 +31,16 @@ const useStyles = makeStyles({
     },
   },
   box: {
-      backgroundColor: '#ddd',
-      textAlign: 'center',
-      padding: '10px',
-      zIndex: '-1'
-  }
+    backgroundColor: "#eee",
+    textAlign: "center",
+    padding: "10px",
+    zIndex: "-1",
+  },
 });
 
 export const Navbar = () => {
   const classes = useStyles();
+  const [auth, setAuth] = useState(false);
   return (
     <>
       <div className={styles.navbar}>
@@ -75,12 +76,37 @@ export const Navbar = () => {
           <Button className={classes.sec} variant="outlined" color="secondary">
             List your place
           </Button>
-          <Button className={classes.pri} color="primary">
-            Sign in
-          </Button>
-          <Button className={classes.pri} variant="outlined" color="primary">
-            Create account
-          </Button>
+          {auth ? (
+            <>
+              <Avatar alt="SAJ" src="" />
+              <p>Subham</p>
+              <Button
+                onClick={() => setAuth(!auth)}
+                className={classes.pri}
+                variant="outlined"
+                color="primary"
+              >
+                Sign out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                onClick={() => setAuth(!auth)}
+                className={classes.pri}
+                color="primary"
+              >
+                Sign in
+              </Button>
+              <Button
+                className={classes.pri}
+                variant="outlined"
+                color="primary"
+              >
+                Create account
+              </Button>
+            </>
+          )}
         </div>
       </div>
       <Box className={classes.box}>

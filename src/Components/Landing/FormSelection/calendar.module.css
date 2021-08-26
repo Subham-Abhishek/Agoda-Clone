@@ -1,0 +1,7 @@
+.calendar{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+    cursor: pointer;
+}

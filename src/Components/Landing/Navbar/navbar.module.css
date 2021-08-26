@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
 }
-.navbar_left > div {
+.navbar_left > div, .navbar_right p {
   color: #555;
   margin: 12px;
   font-size: 14px;
@@ -25,11 +25,11 @@
 .header_logo {
   width: 74px;
   margin: 12px 45px 12px 30px;
+  cursor: pointer;
 }
 .dropMenu {
   position: relative;
   display: inline-block;
-  z-index: 8;
 }
 .moreIcon {
   color: #555;
@@ -45,7 +45,8 @@
   border-radius: 4px;
   box-shadow: 3px 3px 10px #00000033, -3px 0px 10px #00000033;
   z-index: 10;
-  padding: 3px
+  padding: 3px;
+  background-color: white;
 }
 .dropdown a {
   color: black;
@@ -64,4 +65,9 @@
 }
 .dropMenu:hover .dropdown {
   display: block;
+}
+.navbar_right{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
 }
