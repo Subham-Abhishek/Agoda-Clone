@@ -73,14 +73,7 @@ export const DestinationCarousels = () => {
 
       <Container maxWidth="lg">
         <Grid className={styles.rentalGrid} container>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={4}
-            md={6}
-            sm={12}
-            xs={12}
-          >
+          <Grid item lg={4} md={6} sm={12} xs={12}>
             <div className={styles.reviews}>
               <h1>Hotel Leela International</h1>
               <p>in New Delhi</p>
@@ -92,14 +85,7 @@ export const DestinationCarousels = () => {
               <p>-Milind from Kolkata</p>
             </div>
           </Grid>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={4}
-            md={6}
-            sm={12}
-            xs={12}
-          >
+          <Grid item lg={4} md={6} sm={12} xs={12}>
             <div className={styles.reviews}>
               <h1>ITC Royal Bengal</h1>
               <p>in Kolkata</p>
@@ -111,14 +97,7 @@ export const DestinationCarousels = () => {
               <p>-Abhishek from Delhi</p>
             </div>
           </Grid>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={4}
-            md={6}
-            sm={12}
-            xs={12}
-          >
+          <Grid item lg={4} md={6} sm={12} xs={12}>
             <div className={styles.reviews}>
               <h1>Hotel Taj Lands End</h1>
               <p>in Mumbai</p>

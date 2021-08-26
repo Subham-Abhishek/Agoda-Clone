@@ -1,20 +1,22 @@
+.rentalTypes{
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px
+}
 .rentalTypes:hover{
-  box-shadow: 4px 4px 10px gray;
+  box-shadow: 4px 4px 10px gray, -4px -4px 10px lightgray;
+  padding: 0;
+  transition: 300ms;
 }
 .rentalImg {
-  width: 96%;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  width: 100%;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
 }
 
 .rentalImg + p {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  width: 96%;
+  width: 100%;
   font-weight: 600;
   font-size: 16px;
   padding: 5px 10px;

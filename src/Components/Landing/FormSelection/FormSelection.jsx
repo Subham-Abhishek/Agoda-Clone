@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: "70%",
-    height: "200px",
+    height: window.innerWidth > 970 ? "210px" : "250px",
     margin: "auto",
     backgroundColor: "#F8F7F9",
     transform: "translateY(-260px)",
@@ -72,6 +72,8 @@ export const FormSelection = () => {
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
+
+  console.log(window.innerWidth);
 
   useEffect(() => {
     axios.get("http://localhost:4000/city").then(({ data }) => {
@@ -126,7 +128,14 @@ export const FormSelection = () => {
       </ThemeProvider>
       <Paper theme={theme} square className={classes.form}>
         <Grid container>
-          <Grid className={styles.formFirstLine} item lg={12} md={12}>
+          <Grid
+            className={styles.formFirstLine}
+            item
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+          >
             <SearchIcon />
             <input
               type="text"
@@ -138,18 +147,30 @@ export const FormSelection = () => {
 
           {/* debounce result */}
 
-          <Paper style={{display: search.length === 0 ? "none" : "block"}} className={styles.debounceRes}>
-            {
-              cities.filter((city) => city.toLowerCase().indexOf(search) !== -1 ? true : false).map((city,idx) => {
-                return <p key={idx}>{city}</p>
-              })
-            }
+          <Paper
+            style={{ display: search.length === 0 ? "none" : "block" }}
+            className={styles.debounceRes}
+          >
+            {cities
+              .filter((city) =>
+                city.toLowerCase().indexOf(search) !== -1 ? true : false
+              )
+              .map((city, idx) => {
+                return <p key={idx}>{city}</p>;
+              })}
           </Paper>
           <Grid className={styles.formSecLine} container item>
-            <Grid className={styles.calendar} item lg={8}>
+            <Grid className={styles.calendar} item lg={8} md={8} sm={12} xs={12}>
               <Calendar />
             </Grid>
-            <Grid className={styles.roomSelect} item lg={4}>
+            <Grid
+              className={styles.roomSelect}
+              item
+              lg={4}
+              md={4}
+              sm={12}
+              xs={12}
+            >
               <RoomSelect />
             </Grid>
           </Grid>

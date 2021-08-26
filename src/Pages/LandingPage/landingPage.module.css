@@ -1,9 +1,11 @@
-.advertImg {
-  width: 40%;
-  height: 200px;
-  margin: -180px 30% 50px;
+.advertImg{
+  display: flex;
+}
+.advertImg img {
+  width: 95%;
+  margin: -180px 10px 50px;
   border-radius: 10px;
-  box-shadow: 4px 4px 10px gray, -4px -4px 10px lightgray;
+  box-shadow: 4px 4px 10px rgb(170, 170, 170), -4px -4px 10px lightgray;
   cursor: pointer;
 }
 .scrollNav{
