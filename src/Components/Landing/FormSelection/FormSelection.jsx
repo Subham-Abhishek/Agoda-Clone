@@ -125,7 +125,12 @@ export const FormSelection = () => {
         <Grid container>
           <Grid className={styles.formFirstLine} item lg={12}>
             <SearchIcon />
-            <input type="text" value={search} onChange={handleSearch} placeholder="Enter a destination" />
+            <input
+              type="text"
+              value={search}
+              onChange={handleSearch}
+              placeholder="Enter a destination"
+            />
           </Grid>
           <Grid className={styles.formSecLine} container item>
             <Grid className={styles.calendar} item lg={8}>

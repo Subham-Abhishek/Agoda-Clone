@@ -1,13 +1,13 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import { LandingPage } from '../Pages/LandingPage'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import { LandingPage } from "../Pages/LandingPage";
 
 export const Routes = () => {
-    return (
-        <Switch>
-            <Route exact path='/'>
-                <LandingPage />
-            </Route>
-        </Switch>
-    )
-}
+  return (
+    <Switch>
+      <Route exact path="/">
+        <LandingPage />
+      </Route>
+    </Switch>
+  );
+};
