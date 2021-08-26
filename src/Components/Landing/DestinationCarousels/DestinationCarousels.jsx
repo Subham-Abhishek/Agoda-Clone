@@ -105,9 +105,9 @@ export const DestinationCarousels = () => {
               <h1>Hotel Leela International</h1>
               <p>in New Delhi</p>
               <h2>
-                "We booked Hotel Leela International through Agoda after reading a
-                handful of reviews, and it was easily the best decision we made
-                for our trip to New delhi."
+                "We booked Hotel Leela International through Agoda after reading
+                a handful of reviews, and it was easily the best decision we
+                made for our trip to New delhi."
               </h2>
               <p>-Milind from Kolkata</p>
             </div>
