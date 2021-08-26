@@ -1,0 +1,18 @@
+.checkdiv{
+color:black;
+    cursor: text;
+    font-weight: 400;
+    padding-top: 18px;
+    padding-bottom: 7px;
+    font-size: 12px;
+
+}
+
+.checkdivtext{
+    color: #5a5b5b;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 18px;
+    padding-bottom: 7px
+}

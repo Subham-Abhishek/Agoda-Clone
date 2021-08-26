@@ -1,14 +1,11 @@
 import React,{useState} from 'react'
 import { useDispatch } from 'react-redux'
-import { searchData } from '../Redux/action'
 import styles from "./Sortingdiv.module.css";
 import {Paper,Button,InputBase,IconButton} from "@material-ui/core";
 // import SearchIcon from '@material-ui/icons/Search';
 import GroupIcon from '@material-ui/icons/Group';
 
-
-
-
+import { searchData } from "../../Bookingreducer/Redux/action";
 
 const Searchdiv = () => {
     const [query,setQuery]=useState("")
@@ -54,7 +51,7 @@ const Searchdiv = () => {
  />
 
 
-        <Button variant="contained" color="primary" className={styles.searchbtn}  onClick={handlesearch}>search</Button>
+        <button variant="contained"  className={styles.searchbtn}  onClick={handlesearch}>Search</button>
       
        </div>
         

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData, getDataSuccess } from "../Redux/action";
-// import { makeStyles } from '@material-ui/core/styles';
+import { getData,getDataSuccess } from "../../Bookingreducer/Redux/action";
+
 import { Button, Box } from "@material-ui/core";
-import styles from "./dashboard.module.css";
+import styles from "../../Components/Booking/dashboard.module.css";
 
 import Paper from "@material-ui/core/Paper";
 import { color, fontFamily, fontWeight } from "@material-ui/system";
