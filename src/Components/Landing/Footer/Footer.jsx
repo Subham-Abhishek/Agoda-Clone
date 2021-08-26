@@ -37,8 +37,20 @@ export function Footer() {
           </div>
           <div className={styles.category}>
             <h4>Get the app</h4>
-            <a rel="noreferrer" href="https://apps.apple.com/us/app/agoda-best-travel-deals/id440676901" target="_blank">iOS app</a>
-            <a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.agoda.mobile.consumer&hl=en_IN&gl=US" target="_blank">Android app</a>
+            <a
+              rel="noreferrer"
+              href="https://apps.apple.com/us/app/agoda-best-travel-deals/id440676901"
+              target="_blank"
+            >
+              iOS app
+            </a>
+            <a
+              rel="noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.agoda.mobile.consumer&hl=en_IN&gl=US"
+              target="_blank"
+            >
+              Android app
+            </a>
           </div>
         </div>
       </Container>
