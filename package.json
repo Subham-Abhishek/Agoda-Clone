@@ -7,7 +7,9 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "moment": "^2.29.1",
     "react": "^17.0.2",
+    "react-component-countdown-timer": "^0.1.8",
     "react-dom": "^17.0.2",
     "react-google-login": "^5.2.2",
     "react-google-recaptcha": "^2.1.0",
@@ -15,6 +17,7 @@
     "react-recaptcha": "^2.3.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-step-progress-bar": "^1.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
