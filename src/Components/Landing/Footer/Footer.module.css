@@ -1,0 +1,55 @@
+.footer{
+    background-color: #eee;
+    color: #333;
+    text-align: left;
+    padding: 30px 0 20px
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.bottom p{
+    margin: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.contact > div{
+    margin: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.bottom h4{
+    margin: 10px;
+    font-size: 15px;
+    color: #555;
+}
+
+.category a{
+    display: block;
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .top {
+    flex-direction: column;
+  }
+  .subscribe > button {
+      display: block;
+      margin-top: 15px;
+      margin-left: 25px;
+  }
+  .bottom{
+      flex-direction: column;
+      text-align: center;
+  }
+  .bottom p{
+      display: none;
+  }
+  .contact > div{
+      font-size: 14px;
+  }
+  .bottom h4{
+      font-size: 17px;
+  }
+}

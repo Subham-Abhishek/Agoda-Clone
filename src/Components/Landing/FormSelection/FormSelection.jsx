@@ -132,6 +132,10 @@ export const FormSelection = () => {
               placeholder="Enter a destination"
             />
           </Grid>
+
+          {/* debounce result */}
+
+          <Paper className={styles.debounceRes}></Paper>
           <Grid className={styles.formSecLine} container item>
             <Grid className={styles.calendar} item lg={8}>
               <Calendar />

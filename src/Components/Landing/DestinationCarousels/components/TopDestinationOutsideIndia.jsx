@@ -1,13 +1,13 @@
 import { Container, Typography } from "@material-ui/core";
 import React from "react";
-import styles from "./topDestinationIndia.module.css";
+import styles from "./topDestinationOutsideIndia.module.css";
 import InfiniteCarousel from "react-leaf-carousel";
 
-export const TopDestinationIndia = () => {
+export const TopDestinationOutsideIndia = () => {
   return (
     <Container className={styles.india_Dest_Cont} maxWidth="md">
       <Typography className={styles.india_dest_heading} variant="h5">
-        Top destinations in India
+        Popular destinations outside India
       </Typography>
       <InfiniteCarousel
         breakpoints={[
@@ -37,49 +37,49 @@ export const TopDestinationIndia = () => {
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/16850/1_16850_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/17072/1_17072_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>Mumbai</h4>
+          <h4>Las Vegas (NV)</h4>
         </div>
         <div className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/14552/1_14552_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/12772/1_12772_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>New Delhi</h4>
+          <h4>Los Angeles (CA)</h4>
         </div>
         <div className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/6241/1_6241_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/10757/1_10757_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>Kolkata</h4>
+          <h4>Orland (FL)</h4>
         </div>
         <div className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/4923/1_4923_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/8683/1_8683_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>Bangalore</h4>
+          <h4>Dallas (TX)</h4>
         </div>
         <div className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/17269/1_17269_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/13899/1_13899_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>Chennai</h4>
+          <h4>Chicago (IL)</h4>
         </div>
         <div className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
-            src="https://pix6.agoda.net/geo/city/8801/1_8801_02.jpg?s=345x345&ar=1x1"
+            src="https://pix6.agoda.net/geo/city/318/1_318_02.jpg?s=345x345&ar=1x1"
           />
-          <h4>Hyderabad</h4>
+          <h4>New York</h4>
         </div>
         <div className={styles.carouselItems}>
           <img

@@ -1,0 +1,63 @@
+.rentalImg{
+    width: 96%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.rentalImg + p{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 96%;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+.reviews{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 25px 25px;
+    margin: 10px;
+    border-radius: 7px;
+    border-bottom: 3px solid dodgerblue;
+}
+
+.reviews > h1{
+    color: dodgerblue;
+    margin-bottom: 0;
+}
+
+.reviews > h2{
+    font-size:19px
+}
+
+.reviews > p{
+    font-size:16px;
+    margin: 8px;
+}
+
+.reviews > p:nth-child(2){
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.reviews > p:last-child{
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+    letter-spacing: 1px;
+    text-shadow: 0.5px 0 5px rgb(138, 138, 138);
+}
+
+.reviews *{
+    margin: 0;
+}
+
+.rentalGrid{
+    margin-bottom: 50px;
+}
