@@ -82,7 +82,9 @@
   color: red;
 }
 .continue{
-  font-size: 10px;
+  padding: 8px;
+  width: 130px;
+  font-size: 13px;
   border: none;
   border-radius: 3px;
   line-height: 30px;

@@ -20,18 +20,16 @@ export function Timer() {
 	}, []);
 
 	return (
-		<div className="app">
-		
 			<div className="timer-container">
 				
 				{showSemicolon ? <div className="semicolon">:</div> : null}
 				<div className="timer">
-					{hours}
+					{hours}:
 		
 				</div>
 				{showSemicolon ? <div className="semicolon">:</div> : null}
 				<div className="timer">
-					{minutes}
+					{minutes}:
 			
 				</div>
 				{showSemicolon ? <div className="semicolon">:</div> : null}
@@ -40,7 +38,7 @@ export function Timer() {
 				
 				</div>
 			</div>
-		</div>
+		
 	);
 }
 

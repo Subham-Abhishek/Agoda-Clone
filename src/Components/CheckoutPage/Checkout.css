@@ -7,23 +7,24 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    height: 40px;
-    padding: 0 70px;
+    height: 60px;
+    padding: 0 110px;
     background-color:white ;
     box-shadow: 0px 0px 2px grey;
 }
 nav img{
-    width: 60px;
-    height: 25px;
+    width: 85px;
+    height: 35px;
 }
 .progress{
+    border: 1px solid;
     width:60%;
-    margin-left: 50px;
+    margin-left: 90px;
     height: 100%;
 }
 .progress-bar{
     position: relative;
-    margin-top: 10px;
+    margin-top: 18px;
     display: flex;
     width: 64%;
     height: 3px;
@@ -33,7 +34,7 @@ nav img{
 .step1{
     position: absolute;
     top: -10px;
-    left: -20%;
+    left: -15%;
     width: 150px;
     height: 40px;
     text-align: center;
@@ -42,24 +43,24 @@ nav img{
 
 .sub-active{
     display: inline-block;
-    width: 13px;
-    height: 13px;
-    font-size: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
     font-weight: 500;
     text-align: center;
-    line-height: 15px;
+    line-height: 20px;
     border-radius: 50%;
     color: white;
     background-color: rgb(83,146,249);
 }
 .sub-deactive{
     display: inline-block;
-    width: 13px;
-    height: 13px;
-    font-size: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
     font-weight: 500;
     text-align: center;
-    line-height: 15px;
+    line-height: 20px;
     border-radius: 50%;
     color: rgb(115,115,115);
     background-color:rgb(206,208,212);
@@ -68,7 +69,7 @@ nav img{
 .step2{
     position: absolute;
     top: -10px;
-    left: 29%;
+    left: 34%;
     width: 150px;
     height: 40px;
     text-align: center;
@@ -77,37 +78,172 @@ nav img{
 .step3{
     position: absolute;
     top: -10px;
-    left: 78%;
+    left: 84%;
     width: 150px;
     height: 40px;
     text-align: center;
 }
 
 .progress-info-active{
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 500;
     margin-top: 4px;
     color: rgb(83,146,249);
 }
 .progress-info-deactive{
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 500;
     margin-top: 4px;
     color: rgb(115,115,115);
 }
 .checkout-container{
-    max-width: 84% !important;
+    max-width: 85% !important;
     margin: auto;
     display: flex;
+    margin-top: 15px;
     justify-content: space-between;
-    background-color: aqua;
+    
 }
 .userInfo{
-    width: 65.5%;
-    background-color: grey;
+    width: 68%;
+    /* background-color: white; */
 }
 .hotel-detail{
-    width: 33.5%;
+    width: 30.5%;
     height: 10px;
     background-color: red;
+}
+.advice{
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    border: 1px solid rgb(221, 223, 226);
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.greenBar{
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: green;
+    margin-right: 10px;
+}
+.tik{
+    /* background-color: green; */
+    transform: rotateY(180deg);
+    margin-right: 8px;
+}
+.great{
+    color: rgb(50, 169, 35);
+    font-weight: 600;
+    margin: 0 4px;
+}
+.form-container{
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid rgb(221, 223, 226);
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    
+  background-color: white;
+}
+.time-holder{
+    width: 100%;
+    height: 55px;
+    border: 2px;
+    background-color: rgb(244, 248, 254);
+}
+.timehold{
+    float: right;
+    display: flex; 
+    align-items: center;
+    padding: 4px 8px;
+}
+.holding{
+    color: #2A2A2E;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-right: 12px;
+}
+.timer-container{
+    margin-left: 10px;
+    display: flex;
+    margin-right: 10px;
+}
+.timer{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    margin-right: 1px;
+    font-weight: bold;
+    color: rgb(57,111,198);
+}
+.input-container{
+    width: 95%;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.form-container >h4{
+    margin-left: 19px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    color: #2A2A2E;
+}
+.input-container label,label{
+    font-size: 14px;
+    color: #2A2A2E;
+    font-weight: 400;
+}
+.input-container input{
+  width: 100%;
+  height: 35px;
+  border: 1px solid rgba(0,0,0,.2);
+}
+.divide{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+.divide div{
+    width: 48% !important;
+    margin: 0;
+}
+.inp{
+    width: 100%;
+    height: 37px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+.inp .tik{
+    /* background-color: green; */
+    transform: rotateY(90deg) !important;
+    margin-right: 8px;
+}
+.check{
+    position: relative;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    border: 1px solid rgb(206, 208, 212);
+    border-radius: 50%;
+    /* appearance: none; */
+    background-clip: padding-box;
+    cursor: pointer;
+    margin: 0px !important;
+}
+.policy{
+    width: 100%;
+    font-size: 12px;
+}
+.clickable{
+   color: blue;
 }
