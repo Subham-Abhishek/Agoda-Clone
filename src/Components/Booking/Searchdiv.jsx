@@ -22,7 +22,8 @@ const Searchdiv = () => {
        {/* <input className={styles.searchinput} value={query} 
         onChange={(e)=>setQuery(e.target.value)} placeholder="search"/> */}
  
-    
+    <div>
+      
 <InputBase  className={styles.searchinput} value={query}  
    onChange={(e)=>setQuery(e.target.value)}
               placeholder="Search"
@@ -52,7 +53,8 @@ const Searchdiv = () => {
 
 
         <button variant="contained"  className={styles.searchbtn}  onClick={handlesearch}>Search</button>
-      
+        </div>
+
        </div>
         
 

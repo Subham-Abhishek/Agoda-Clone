@@ -25,6 +25,8 @@ export const getDataSuccess = (payload) => {
             payload:error
         }
         }
+
+        
         export const getData=()=> dispatch=>{
             dispatch(getDataRequest())
             return axios.get("http://localhost:3001/hotel")

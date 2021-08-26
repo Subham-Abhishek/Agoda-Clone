@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData,getDataSuccess } from "../../Bookingreducer/Redux/action";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import { Button, Box } from "@material-ui/core";
 import styles from "../../Components/Booking/dashboard.module.css";
@@ -11,6 +12,8 @@ import Sortingdiv from "./Sortingdiv";
 import Searchdiv from "./Searchdiv";
 import axios from "axios";
 import Dashboardleft from "./Dashboardleft";
+import Switch from '@material-ui/core/Switch';
+
 
 const Dashboard = () => {
   const state = useSelector((state) => state.hoteldata);
@@ -42,6 +45,26 @@ const Dashboard = () => {
   return (
     <>
       <Searchdiv />
+      <div className={styles.upgrade}>
+        <img style={{margin:"10px"}} height="50px" src="https://cdn6.agoda.net/images/kite-js/banner/special-offers-colored3.svg" alt="" />
+       
+       <div className={styles.upgradetext}>
+       <h5  className={styles.upgradetext1}>
+
+Agoda Special Offers
+Upgrade your experience with Agoda Special Offers
+
+Hurry</h5>
+         </div> 
+          <Switch className={styles.slidebtn}
+            checked={state.checkedB}
+            name="checkedB"
+            
+            color="primary"
+          />
+      
+       
+</div>      
       <Sortingdiv handleSort={handleSort} handlereview={handlereview} />
 
       <Box className={styles.root}>
@@ -153,6 +176,7 @@ const Dashboard = () => {
                           }}
                         >
                           {" "}
+                          
                           Excellent{" "}
                           <div className={styles.ratingdiv}>
                             <h5
