@@ -19,65 +19,45 @@ export const DestinationCarousels = () => {
       </Typography>
       <Container maxWidth="lg">
         <Grid className={styles.rentalGrid} container>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={3}
-            md={4}
-            sm={6}
-            xs={12}
-          >
-            <img
-              className={styles.rentalImg}
-              src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-apartment.jpg"
-              alt=""
-            />
-            <p>Apartments</p>
+          <Grid item lg={3} md={4} sm={6} xs={12}>
+            <div className={styles.rentalTypes}>
+              <img
+                className={styles.rentalImg}
+                src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-apartment.jpg"
+                alt=""
+              />
+              <p>Apartments</p>
+            </div>
           </Grid>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={3}
-            md={4}
-            sm={6}
-            xs={12}
-          >
-            <img
-              className={styles.rentalImg}
-              src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-house.jpg"
-              alt=""
-            />
-            <p>Vacation Rentals</p>
+          <Grid item lg={3} md={4} sm={6} xs={12}>
+            <div className={styles.rentalTypes}>
+              <img
+                className={styles.rentalImg}
+                src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-house.jpg"
+                alt=""
+              />
+              <p>Vacation Rentals</p>
+            </div>
           </Grid>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={3}
-            md={4}
-            sm={6}
-            xs={12}
-          >
-            <img
-              className={styles.rentalImg}
-              src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-villa.jpg"
-              alt=""
-            />
-            <p>Private Villas</p>
+          <Grid item lg={3} md={4} sm={6} xs={12}>
+            <div className={styles.rentalTypes}>
+              <img
+                className={styles.rentalImg}
+                src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-villa.jpg"
+                alt=""
+              />
+              <p>Private Villas</p>
+            </div>
           </Grid>
-          <Grid
-            className={styles.rentalTypes}
-            item
-            lg={3}
-            md={4}
-            sm={6}
-            xs={12}
-          >
-            <img
-              className={styles.rentalImg}
-              src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-bungalow.jpg"
-              alt=""
-            />
-            <p>Bungalows</p>
+          <Grid item lg={3} md={4} sm={6} xs={12}>
+            <div className={styles.rentalTypes}>
+              <img
+                className={styles.rentalImg}
+                src="https://cdn6.agoda.net/images/accommodation/other-property-types/entire-bungalow.jpg"
+                alt=""
+              />
+              <p>Bungalows</p>
+            </div>
           </Grid>
         </Grid>
       </Container>

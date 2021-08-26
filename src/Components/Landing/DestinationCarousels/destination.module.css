@@ -1,3 +1,6 @@
+.rentalTypes:hover{
+  box-shadow: 4px 4px 10px gray;
+}
 .rentalImg {
   width: 96%;
   border-left: 1px solid #ccc;

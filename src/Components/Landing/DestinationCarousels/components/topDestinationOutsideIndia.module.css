@@ -9,6 +9,7 @@
   width: 100px;
   margin-top: 30px;
   cursor: pointer;
+  border: 1px solid #ccc;
 }
 .carouselImg:hover {
   width: 120px;
