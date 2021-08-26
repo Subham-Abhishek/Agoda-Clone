@@ -10,14 +10,17 @@
 .navbar_left > div,
 .navbar_right p {
   color: #555;
-  margin: 12px;
+  margin: 15px 12px 0 12px;
   font-size: 14px;
   text-shadow: 0.5px 0 1px #555;
   cursor: pointer;
 }
+.navbar_right p{
+  margin: 12px;
+}
 .navbar_left > div:nth-child(5) {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .navbar_left > div:hover {
   color: #75a8f9;
@@ -37,7 +40,7 @@
   font-size: 30px;
   cursor: pointer;
   margin-left: 6px;
-  margin-top: 8px;
+  margin-top: -6px;
 }
 .dropdown {
   display: none;

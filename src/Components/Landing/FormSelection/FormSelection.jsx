@@ -4,7 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import NightsStayIcon from "@material-ui/icons/NightsStay";
+import ApartmentIcon from "@material-ui/icons/Apartment";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
 import FlightIcon from "@material-ui/icons/Flight";
@@ -103,7 +103,7 @@ export const FormSelection = () => {
             />
             <Tab
               className={classes.tab}
-              icon={<NightsStayIcon />}
+              icon={<ApartmentIcon />}
               label="Private Stays"
             />
             <Tab
