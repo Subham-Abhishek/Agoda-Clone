@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./formSelection.module.css";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
@@ -15,6 +16,8 @@ import { Grid } from "@material-ui/core";
 import { Calendar } from "./Calendar";
 import RoomSelect from "./RoomSelect";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../../context/Provider";
 
 const theme = createTheme({
   palette: {
@@ -62,20 +65,28 @@ const useStyles = makeStyles((theme) => ({
 export const FormSelection = () => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   const [cities, setCities] = useState([]);
   const [focus, setFocus] = useState(false);
   const [debounce, setDebounce] = useState(false);
+
+  const {searchedCity, setSearchedCity} = useContext(AppContext)
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const handleSearch = (e) => {
-    setSearch(e.target.value);
+    // setSearch(e.target.value);
+    setSearchedCity(e.target.value);
   };
 
-  console.log(window.innerWidth);
+  const handleDebounceCity = (city) => {
+    console.log(city);
+    // setSearch(city)
+    setSearchedCity(city)
+    setDebounce(false)
+  }
 
   useEffect(() => {
     axios.get("http://localhost:4000/city").then(({ data }) => {
@@ -150,10 +161,11 @@ export const FormSelection = () => {
               }}
               onBlur={() => {
                 setFocus(false);
-                setDebounce(false);
+                // setDebounce(false);
               }}
               type="text"
-              value={search}
+              // value={search}
+              value={searchedCity}
               onChange={handleSearch}
               placeholder="Enter a destination"
             />
@@ -165,12 +177,21 @@ export const FormSelection = () => {
             style={{ display: debounce ? "block" : "none" }}
             className={styles.debounceRes}
           >
+            <div className={styles.debounceTooltip}></div>
             {cities
               .filter((city) =>
-                city.toLowerCase().indexOf(search) !== -1 ? true : false
+                // city.toLowerCase().indexOf(search.toLowerCase()) !== -1
+                city.toLowerCase().indexOf(searchedCity.toLowerCase()) !== -1
+                  ? true
+                  : false
               )
               .map((city, idx) => {
-                return <p key={idx}>{city}</p>;
+                return (
+                  <div onClick={() => handleDebounceCity(city)} className={styles.debounceCity} key={idx}>
+                    <LocationOnIcon className={styles.locationIcon} />
+                    <p>{city}, India</p>
+                  </div>
+                );
               })}
           </Paper>
 
@@ -198,7 +219,7 @@ export const FormSelection = () => {
               <RoomSelect setFocus={setFocus} />
             </Grid>
           </Grid>
-          <button className={styles.searchBtn}>SEARCH</button>
+          <button className={styles.searchBtn}><Link style={{color: "#fff"}} to="/milind">SEARCH</Link></button>
         </Grid>
       </Paper>
     </>
