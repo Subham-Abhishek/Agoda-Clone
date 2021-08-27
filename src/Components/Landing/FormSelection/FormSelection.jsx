@@ -70,7 +70,7 @@ export const FormSelection = () => {
   const [focus, setFocus] = useState(false);
   const [debounce, setDebounce] = useState(false);
 
-  const {searchedCity, setSearchedCity} = useContext(AppContext)
+  const { searchedCity, setSearchedCity } = useContext(AppContext);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -84,9 +84,9 @@ export const FormSelection = () => {
   const handleDebounceCity = (city) => {
     console.log(city);
     // setSearch(city)
-    setSearchedCity(city)
-    setDebounce(false)
-  }
+    setSearchedCity(city);
+    setDebounce(false);
+  };
 
   useEffect(() => {
     axios.get("http://localhost:4000/city").then(({ data }) => {
@@ -187,7 +187,11 @@ export const FormSelection = () => {
               )
               .map((city, idx) => {
                 return (
-                  <div onClick={() => handleDebounceCity(city)} className={styles.debounceCity} key={idx}>
+                  <div
+                    onClick={() => handleDebounceCity(city)}
+                    className={styles.debounceCity}
+                    key={idx}
+                  >
                     <LocationOnIcon className={styles.locationIcon} />
                     <p>{city}, India</p>
                   </div>
@@ -219,7 +223,11 @@ export const FormSelection = () => {
               <RoomSelect setFocus={setFocus} />
             </Grid>
           </Grid>
-          <button className={styles.searchBtn}><Link style={{color: "#fff"}} to="/milind">SEARCH</Link></button>
+          <button className={styles.searchBtn}>
+            <Link style={{ color: "#fff" }} to="/milind">
+              SEARCH
+            </Link>
+          </button>
         </Grid>
       </Paper>
     </>

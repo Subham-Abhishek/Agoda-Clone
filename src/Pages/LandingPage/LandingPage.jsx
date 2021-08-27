@@ -46,7 +46,7 @@ export const LandingPage = () => {
         </Grid>
       </Container>
 
-      <ScrollUpNav calcScroll = "500" />
+      <ScrollUpNav calcScroll="500" />
       <DestinationCarousels />
       <Footer />
     </>

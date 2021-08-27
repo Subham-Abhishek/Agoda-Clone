@@ -105,7 +105,11 @@ export const ScrollUpNav = ({ calcScroll }) => {
             </div>
           </Grid>
 
-          <button><Link style={{color: "#fff"}} to="/milind">SEARCH</Link></button>
+          <button>
+            <Link style={{ color: "#fff" }} to="/milind">
+              SEARCH
+            </Link>
+          </button>
         </div>
       </Grid>
     </>
