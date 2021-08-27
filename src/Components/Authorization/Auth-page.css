@@ -36,9 +36,9 @@
 .loader-container2 {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
-  max-width: 275px;
+  width: 420px;
   border-radius: 6px;
   padding: 10px;
   background-color: white;
@@ -53,27 +53,31 @@
 }
 .overlay-topic {
   display: block;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: #8660c7;
 }
 .overlay-info {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
+  color: gray;
   margin-top: 8px;
 }
 .remind-topic{
   text-align: left;
   display: block;
-  font-size: 16px;
+  font-size: 23px;
+  margin-bottom: 12px;
+  margin-top: 10px;
   color: rgba(0, 0, 0, 0.8);
 }
 .remind-info{
   margin-top: 8px;
   line-height: 15px;
-  margin-bottom: 15px;
-  font-size: 9px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
   text-align: left;
   display: block;
@@ -84,15 +88,17 @@
 .continue{
   padding: 8px;
   width: 130px;
-  font-size: 13px;
+  font-size: 14px;
   border: none;
   border-radius: 3px;
   line-height: 30px;
   background-color: rgb(83,146,249);
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
   color: white;
   float: left;
   cursor: pointer;
 }
 .remind-loader{
-  width: 100px;
+  width: 150px;
+  margin-top: 12px;
 }

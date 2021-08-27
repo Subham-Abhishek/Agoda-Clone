@@ -1,6 +1,6 @@
 .checkout-Wrapper{
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     background-color: rgb(245,245,245);
 }
 nav{
@@ -17,7 +17,7 @@ nav img{
     height: 35px;
 }
 .progress{
-    border: 1px solid;
+   
     width:60%;
     margin-left: 90px;
     height: 100%;
@@ -106,12 +106,12 @@ nav img{
 }
 .userInfo{
     width: 68%;
+    margin-bottom: 50px;
     /* background-color: white; */
 }
 .hotel-detail{
     width: 30.5%;
-    height: 10px;
-    background-color: red;
+
 }
 .advice{
     width: 100%;
@@ -228,7 +228,7 @@ nav img{
     margin-right: 8px;
 }
 .check{
-    position: relative;
+   
     width: 20px;
     min-width: 20px;
     height: 20px;
@@ -236,14 +236,322 @@ nav img{
     border: 1px solid rgb(206, 208, 212);
     border-radius: 50%;
     /* appearance: none; */
-    background-clip: padding-box;
+    /* background-clip: padding-box; */
     cursor: pointer;
-    margin: 0px !important;
+    margin: 12px;
+    margin-top: 15px;
+ 
+
 }
 .policy{
     width: 100%;
     font-size: 12px;
+    margin-top: 50px;
+    margin-left: 20px;
 }
 .clickable{
    color: blue;
+}
+.preference{
+    width: 95%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: rgb(249, 249, 250);
+}
+.question{
+}
+.question label{
+    padding: 12px !important;
+}
+.next{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.hurry{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(225, 45, 45);
+    margin-right:20px;
+        margin-bottom:10px;
+}
+.great1{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(50, 169, 35);
+    margin-right:20px;
+        margin-bottom:10px;
+}
+/* hotel details*/
+
+.hotelInfo{
+    width: 100%;
+    background-color: rgb(249,249,250);
+    padding: 12px;
+    border: 1px solid #cbd3db;
+    margin-bottom: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 1px 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.hotel-img{
+    width:26%;
+    overflow: hidden;
+}
+.hotel-img img{
+    width: 100%;
+    image-rendering: optimizeQuality;
+    transform: scaleX(2);
+    height: 130px;
+    
+}
+.hotelDetails{
+    width: 70%;
+}
+.best{
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+.hotelName{
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 25px;
+    font-weight: 300;
+    color: #2A2A2E;
+    margin-bottom: 10px;
+}
+.addre{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.exellent{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    /* line-height: 25px; */
+    display: flex; 
+    align-items: center;
+}
+.exellent1{
+    display: inline-block;
+    margin-left: 3px;
+    color: rgb(57,111,198);
+}
+.ratingBox {
+    width: 35px;
+    height: 30px;
+    position: relative;
+    background: rgb(72,139,248);
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-top: 5px;
+    color: white;text-align: center;
+    line-height: 30px;
+  }
+  .ratingBox::before {
+    position: absolute;
+    right:-1.5px;    
+    top: 0px;
+    content: "";
+    width: 8px;
+    height: 5px;
+    border-radius: 1px;
+    background: rgb(72,139,248);
+    transform: skew(150deg);
+    
+  }
+  .hotelInfo1{
+    width: 100%;
+    background-color: rgb(249,249,250);
+    padding: 12px;
+    border: 1px solid #cbd3db;
+    margin-bottom: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 1px 1px;
+  }
+  .dateHolder{
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      margin: 10px 0;
+      color: #2A2A2E;
+
+  }
+  .quantity{
+      font-size: 14px;
+      font-weight: 500;
+      color: #2A2A2E;
+  }
+  .ratingHolder{
+      width: 100%;
+      display: flex;
+      margin: 10px 0;
+  }
+  .ratingBox{
+      font-size: 14px;
+  }
+  .rev div:first-of-type{
+      font-size: 14px;
+      color: rgb(57,111,198);
+  }
+  .rev div:last-of-type{
+    font-size: 12px;
+    font-weight: 300;
+}
+.line{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    margin: 15px 0;
+}
+.roomNumber{
+    width: 125px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+.roomNumber span{
+    font-size: 12px;
+    margin-left: 10px;
+    color: #2A2A2E;
+}
+.Hurry{
+    width: 107%;
+    height: 120px;
+    
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: rgb(0 0 50 / 20%) 0px 1px 1px 1px;
+
+}
+.Hurry .redbar{
+    /* display: inline-block; */
+    width: 6px;
+    height: 100%;
+    background-color:rgb(226,60,57);
+}
+.Hurry img{
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+}
+.hurryUp{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    color:rgb(226,60,57) ;
+    font-weight: 500;
+    margin-right: 2px;
+}
+.hurryUp1{
+    
+    letter-spacing: .5px;
+    font-size: 14px;
+    color:#2A2A2E ;
+    font-weight: 300;
+    margin-right: 2px;
+}
+.it{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PriceHolder{
+    width: 106.5%;
+    padding-bottom: 20px;
+    background-color: white;
+    border: 1px solid #cbd3db;
+    margin-bottom: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 1px 1px;
+}
+.PriceInfo{
+    width: 93%;
+    padding: 12px;
+    /* padding-top: 18px; */
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    background-color: #F9F9FA !important;
+}
+.PriceInfo div{
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.dateHolder1{
+    padding: 12px;
+    color: black !important;
+    display: flex;
+    justify-content: space-between;
+}
+.dateHolder1 span{
+    color: black !important;
+}
+.pricePolicy{
+    position: absolute;
+    right: -242px;
+    top: -170px;
+    padding: 12px;
+    width:470px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 5px 1px;
+    
+
+}
+.activePo{
+    opacity: 1;
+    transition: 300ms ease-in-out;
+}
+.deactive{
+    
+    opacity: 0;
+    transition: 300ms ease-in-out;
+}
+.pricePolicy ::before{
+    position: absolute;
+    right:230px;    
+    bottom: -15px;
+    content: "";
+        width: 20px; 
+      height: 20px; 
+      background: white;
+      border-bottom: 1px solid gray;
+      border-left: 1px solid gray;
+      margin: 3px 0 0 30px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+   
+}
+.pricePolicy h4{
+    font-size: 15px;
+    color: black ;
+    margin-bottom: 12px;
+    font-weight: 500 !important;
+}
+.pricePolicy p{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+}
+.moreInfo{
+    position: relative;
 }

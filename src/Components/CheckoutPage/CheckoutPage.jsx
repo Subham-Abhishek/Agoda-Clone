@@ -6,8 +6,10 @@ import { ConfirmLoading } from "./ConfirmLoading";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import { FaCheck } from "react-icons/fa";
 import { Timer } from "./Timer";
+import { HotelDetails } from "./HotelDetails";
+import { Payment } from "./Payment";
 
-let x = 0
+let x = 0;
 
 export const CheckoutPage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -18,7 +20,7 @@ export const CheckoutPage = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   useEffect(() => {
-    setLoading(false);
+    // setLoading(false);
     let timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -30,14 +32,12 @@ export const CheckoutPage = () => {
       clearTimeout(timer2);
     };
   }, []);
-  
-  const handleNext = () => {
-    setStep2(true)
-    x++
-    if(x==2)
-    setStep3(true)
 
-  }
+  const handleNext = () => {
+    setStep2(true);
+    x++;
+    if (x == 2) setStep3(true);
+  };
 
   return isLoading ? (
     <CheckoutLoading />
@@ -84,7 +84,9 @@ export const CheckoutPage = () => {
       </nav>
 
       <div className="checkout-container">
-        <div className="userInfo">
+        {
+
+         !step2? <div className="userInfo">
           <div className="advice">
             <span className="greenBar"></span>
             <span className="tik">
@@ -169,32 +171,46 @@ export const CheckoutPage = () => {
                 <label htmlFor="" style={{ display: "block" }}>
                   Do you have a smoking preference?
                 </label>
-                <input type="radio" className="check" />
+               <div style={{display:"flex",alignItems:"center"}}>
+               <input type="radio" className="check" />
                 <label htmlFor="">Non-smoking</label>
-                <input type="radio" className="check" />
-                <label htmlFor="">Smoking</label>
+                <input style={{marginLeft:130}} type="radio" className="check" />
+                <label  htmlFor="">Smoking</label>
+               </div>
               </div>
               <div className="question">
                 <label htmlFor="" style={{ display: "block" }}>
                   What bed configuration do you prefer?
                 </label>
-                <input type="radio" className="check" />
+               <div style={{display:"flex",alignItems:"center"}}>
+               <input type="radio"  className="check" />
                 <label htmlFor="">I'd like a large beb</label>
-                <input type="radio" className="check" />
+                <input type="radio" style={{marginLeft:100}} className="check" />
                 <label htmlFor="">I'd like twin beds</label>
+               </div>
               </div>
             </div>
             <div className="policy">
-            By proceeding with this booking, I agree to Agoda’s <span className="clickable">Terms of Use</span> and <span className="clickable">Privacy Policy.</span>
+              By proceeding with this booking, I agree to Agoda’s{" "}
+              <span className="clickable">Terms of Use</span> and{" "}
+              <span className="clickable">Privacy Policy.</span>
             </div>
             <div className="next">
-              <label htmlFor="">Hurry! Our last room for your dates at this price
-</label>
-              <button onClick={handleNext} className="next-page">NEXT PAGE</button>
+              <label htmlFor="" className="hurry" style={{marginTop:30}}>
+                Hurry! Our last room for your dates at this price
+              </label>
+              <span className="great1">RISK FREE! No cancellation fee</span>
+              <button onClick={handleNext}  className="continue" style={{marginRight:20,marginBottom:20}}>
+                NEXT PAGE
+              </button>
+              <span className="great1">You wont't be charged yet.</span>
             </div>
           </div>
+        </div>:<Payment/>
+        }
+        <div className="hotel-detail">
+          <HotelDetails/>
         </div>
-        <div className="hotel-detail"></div>
       </div>
       {isremind && <ConfirmLoading setRemind={setRemind} />}
     </div>

@@ -1182,6 +1182,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@google-pay/button-react@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@google-pay/button-react/-/button-react-2.6.0.tgz#b8ed21c8765310912500edd5ba79a1c2d9a07e42"
+  integrity sha512-0NgQndvcsug5lvXfQPakPPS2pBUj47VQtIFlXtKHc5e+IyZ6dsqKR/ng15esXJvcGG6Migrl3mcdIrypEHZ3Iw==
+  dependencies:
+    "@types/googlepay" "^0.6.3"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1782,6 +1789,11 @@
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
+
+"@types/googlepay@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@types/googlepay/-/googlepay-0.6.3.tgz#4e716556b904c9af5263255bf872b81ee4073d4d"
+  integrity sha512-mA9d9UoSAKbfcP3xYvTtpyBTxFytu1bwjquy8oZdZPG8z0xnfQwtmTI4F44ptyz8OBWiCmvBj8QR0Rb2D/hQXg==
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
