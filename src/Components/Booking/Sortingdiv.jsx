@@ -14,10 +14,11 @@ const Sortingdiv = ({ handleSort, handlereview, handlerate }) => {
         <p className={styles.btntext4}>Lowest price first</p>{" "}
       </div>
       <div onClick={handlerate} className={styles.sortchild4}>
-        <p className={styles.btntext4}>Rating</p>{" "}
+        <p className={styles.btntext4}>Rating   <i class="fas fa-chevron-down"></i></p>{" "}
+        
       </div>
       <div onClick={handlereview} className={styles.sortchild4}>
-        <p className={styles.btntext4}> Top Reviewed</p>
+        <p className={styles.btntext4}> Top Reviewed  <i class="fas fa-chevron-down"></i></p>
       </div>
       <div className={styles.sortchild5}>
         <p className={styles.btntext4}>Secret Details</p>{" "}

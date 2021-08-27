@@ -47,6 +47,15 @@ const Dashboard = () => {
       });
   };
 
+  const handlechangecheck = () => {
+    axios
+      .get("http://localhost:3001/hotel?_sort=distance&_order=desc")
+      .then((res) => {
+        console.log("result=", res.data);
+        dispatch(getDataSuccess(res.data));
+      });
+  };
+
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
@@ -57,7 +66,7 @@ const Dashboard = () => {
 
       <Box className={styles.root}>
         <Box className={styles.root1}>
-          <Dashboardleft />
+          <Dashboardleft handlechangecheck={handlechangecheck} />
         </Box>
 
         <div className={styles.hotelpaper}>
