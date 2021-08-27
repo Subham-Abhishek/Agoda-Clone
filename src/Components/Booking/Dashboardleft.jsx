@@ -16,12 +16,18 @@ const Dashboardleft = () => {
 <Paper>
 
 <div className={styles.checkdiv} >
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVWzJasTE1hLoKULMQCJ1HYIgQpyXjLVEtzqK02jGp0KUvwXftgCp8Cj1zdLjPa-Jhv_E&usqp=CAU" alt="" />
+    <div className="maparrow">
+        <img height="30px" src="https://cdn6.agoda.net/images/MAPS-1213/default/img-map-pin-red.svg" alt="" />
+    </div>
+    <div>
+    <img src="https://cdn6.agoda.net/images/MAPS-1213/default/bkg-map-entry.svg"/>
+
+    </div>
     </div>   
     <div  className={styles.checkdiv}>
 
         
-       <div >
+       <div className={styles.hov} >
            <p className={styles.checkdivtext} >Distance to center</p>
     <span> <Checkbox
         // checked={checked}
@@ -32,7 +38,7 @@ const Dashboardleft = () => {
       Inside city center(469)
     </span>
 </div>
-<div>
+<div className={styles.hov}>
 
     <span> <Checkbox
         // checked={checked}
@@ -43,7 +49,7 @@ const Dashboardleft = () => {
     2 km to center (159)
     </span>
     </div>
-<div>
+<div className={styles.hov}>
     <span> <Checkbox
         // checked={checked}
         color="primary"
@@ -55,7 +61,7 @@ const Dashboardleft = () => {
     </span>
     </div>
 
-<div>
+<div className={styles.hov}>
         <span> <Checkbox
                 // checked={checked}
                 color="primary"
@@ -66,7 +72,8 @@ const Dashboardleft = () => {
 
             </span>
         </div>
-    
+    <div className={styles.hov}>
+
      <span> <Checkbox
         // checked={checked}
         color="primary"
@@ -77,14 +84,17 @@ const Dashboardleft = () => {
 
     </span>
     </div>
+
+    </div>
     </Paper>
     <Paper>
 
     <div  className={styles.checkdiv}>
 
         
-<div >
+<div className={styles.hov} >
     <p className={styles.checkdivtext} >Neighbour</p>
+    
 <span> <Checkbox
  // checked={checked}
  color="primary"
@@ -94,7 +104,7 @@ const Dashboardleft = () => {
 Indira Gandhi Int'l Airport(469)
 </span>
 </div>
-<div>
+<div className={styles.hov}>
 
 <span> <Checkbox
  // checked={checked}
@@ -105,7 +115,7 @@ Indira Gandhi Int'l Airport(469)
 Gurgaon (159)
 </span>
 </div>
-<div>
+<div className={styles.hov}>
 <span> <Checkbox
  // checked={checked}
  color="primary"
@@ -117,7 +127,7 @@ Gurgaon (159)
 </span>
 </div>
 
-<div>
+<div className={styles.hov}>
  <span> <Checkbox
          // checked={checked}
          color="primary"
@@ -128,6 +138,7 @@ Gurgaon (159)
 
      </span>
  </div>
+<div className={styles.hov}>
 
 <span> <Checkbox
  // checked={checked}
@@ -138,7 +149,55 @@ Gurgaon (159)
          10km to center (151)
 
 </span>
+
 </div>
+
+</div>
+    </Paper>
+
+
+    <Paper>
+    <div  className={styles.checkdiv}>
+
+        
+<div className={styles.hov} >
+    <p className={styles.checkdivtext} >Near Popular Attraction</p>
+    
+<span> <Checkbox
+ // checked={checked}
+ color="primary"
+ onChange={handleChangecheck}
+ inputProps={{ 'aria-label': 'secondary checkbox' }}
+/>
+Cannought Place (228)
+</span>
+</div>
+<div className={styles.hov}>
+
+<span> <Checkbox
+ // checked={checked}
+ color="primary"
+ onChange={handleChangecheck}
+ inputProps={{ 'aria-label': 'secondary checkbox' }}
+/>
+Chandni Chowk(6)
+</span>
+</div>
+<div className={styles.hov}>
+<span> <Checkbox
+ // checked={checked}
+ color="primary"
+ onChange={handleChangecheck}
+ inputProps={{ 'aria-label': 'secondary checkbox' }}
+/>
+   Hauz khas valley
+
+</span>
+</div>
+
+
+</div>
+    
     </Paper>
 
        </>

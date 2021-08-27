@@ -1,14 +1,16 @@
 .sortdiv{
     width: 70%;
-    height: 60px;
+    height: 46px;
     margin-left: 300px;
     display: flex;
     margin-top: 10px;
-    
+    border: 1px solid rgb(179, 171, 171);
+    border-radius: 7px;
+
+
 }
 .sortdiv>div{
-    height: 50px;
-    margin: 10px;
+    /* height: 46px; */
     text-align: center;
 
 }
@@ -17,26 +19,61 @@
 }
 
 .sortchild1{
-    border-right: .5px solid rgb(179, 171, 171);
-    width: 60px;
+    /* border-right: .5px solid rgb(179, 171, 171); */
+    width: 65px;
+    /* border-right: 1px solid rgb(221, 223, 226); */
+    background-color: rgb(248, 247, 249);
+
+    color: rgb(115, 115, 115);
+
     /* margin: 10px; */
 }
+    
+
 
 .sortchild2{
-    width: 150px;
+    width: 180px;
     border-right: .5px solid  rgb(179, 171, 171);
-    background-color: #0283df;
 /* height: 150px; */
+background-color: #5392f9;
+color: #fff;
+cursor: pointer;
+margin-top: -1px;
+
+
+
+}
+.sortchild4:hover{
+    color: #0283df;
+    cursor: pointer;
 
 }
 .sortchild4{
-    width: 150px;
+    width: 170px;
     border-right: .5px solid rgb(179, 171, 171);
+     height: 35px;
+     margin-top:4px ;
 }
-.sortchild4{
-    width: 150px;
+.sortchild4>.btntext4{
+    margin-top: 4px;
 
 }
+.sortchild2>.btntext2{
+    margin-top: 12px;
+
+}
+
+
+.sortchild5{
+    width: 170px;
+
+
+}
+.sortchild5:hover{
+    cursor: pointer;
+    color: #0283df;
+}
+
 
 .searchinput{
     width: 350px;
@@ -97,9 +134,6 @@
     background-color: white;
     margin-left: 30px;
 
-
-
-
 }
 .searchbtn{
     font-size: 15px;
@@ -126,4 +160,3 @@
     top:7px;
 
 }
-

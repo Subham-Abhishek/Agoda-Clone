@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData,getDataSuccess } from "../../Bookingreducer/Redux/action";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { getData, getDataSuccess } from "../../Bookingreducer/Redux/action";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { Button, Box } from "@material-ui/core";
 import styles from "../../Components/Booking/dashboard.module.css";
@@ -12,7 +12,9 @@ import Sortingdiv from "./Sortingdiv";
 import Searchdiv from "./Searchdiv";
 import axios from "axios";
 import Dashboardleft from "./Dashboardleft";
-import Switch from '@material-ui/core/Switch';
+import Switch from "@material-ui/core/Switch";
+import FilterBox from "./FilterBox";
+import { NavLink } from "react-router-dom";
 
 
 const Dashboard = () => {
@@ -46,38 +48,49 @@ const Dashboard = () => {
     <>
       <Searchdiv />
       <div className={styles.upgrade}>
-        <img style={{margin:"10px"}} height="50px" src="https://cdn6.agoda.net/images/kite-js/banner/special-offers-colored3.svg" alt="" />
-       
-       <div className={styles.upgradetext}>
-       <h5  className={styles.upgradetext1}>
+        <img
+          style={{ margin: "10px" }}
+          height="50px"
+          src="https://cdn6.agoda.net/images/kite-js/banner/special-offers-colored3.svg"
+          alt=""
+        />
 
-Agoda Special Offers
-Upgrade your experience with Agoda Special Offers
+        <div className={styles.upgradetext}>
+          <h5 className={styles.upgradetext1}>
+            Agoda Special Offers Upgrade your experience with Agoda Special
+            Offers Hurry
+          </h5>
+        </div>
+        <Switch
+          className={styles.slidebtn}
+          checked={state.checkedB}
+          name="checkedB"
+          color="primary"
+        />
+      </div>
 
-Hurry</h5>
-         </div> 
-          <Switch className={styles.slidebtn}
-            checked={state.checkedB}
-            name="checkedB"
-            
-            color="primary"
-          />
-      
-       
-</div>      
       <Sortingdiv handleSort={handleSort} handlereview={handlereview} />
 
       <Box className={styles.root}>
         <Box className={styles.root1}>
           <Dashboardleft />
         </Box>
-        <Paper>
+        <Paper className={styles.hotelpaper}>
           <Box className={styles.root2}>
             {state.map((item) => {
               return (
+                <NavLink className={styles.nav} to={`/hotel/${item.id}`}>
+
                 <div className={styles.hoteldiv}>
+                  
                   <Box className={styles.hotelchild1}>
+                    <div className={styles.bigimg}>
+                      <div className={styles.bigimgtext}>free cancelation</div>
+                    <div className={styles.bigimgtrain}>
+                    <i class="fas fa-subway"></i>
+                    </div>
                     <img height="200px" width="250px" src={item.url} alt="" />
+                    </div>
                     <Box className={styles.childimg1}>
                       <img
                         className={styles.childimg}
@@ -176,7 +189,6 @@ Hurry</h5>
                           }}
                         >
                           {" "}
-                          
                           Excellent{" "}
                           <div className={styles.ratingdiv}>
                             <h5
@@ -224,6 +236,8 @@ Hurry</h5>
                     </div>
                   </Paper>
                 </div>
+                </NavLink>
+
               );
             })}
           </Box>
