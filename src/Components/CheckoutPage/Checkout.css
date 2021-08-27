@@ -664,3 +664,61 @@ nav img{
     font-size: 14px;
     color: #2A2A2E;
 }
+.thanks{
+    width: 100%;
+
+}
+.bluebar{
+    height: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+    background-color: rgb(83,146,249);
+}
+.thanks h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #2A2A2E;
+    margin-left: 15px;
+}
+.features{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.features span{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-left: 10px;
+    
+}
+.features:last-of-type{
+    margin-bottom: 20px;
+}
+.bookAnother{
+    width: 155px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(57,111,198);
+    margin-bottom: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.bookAnother1{
+    width: 160px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255,167,62);
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
