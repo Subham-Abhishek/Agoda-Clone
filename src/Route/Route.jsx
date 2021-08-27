@@ -1,26 +1,25 @@
-import React from 'react'
+import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from '../Components/Booking/Dashboard';
-import FilterBox from '../Components/Booking/FilterBox';
+import Dashboard from "../Components/Booking/Dashboard";
+import FilterBox from "../Components/Booking/FilterBox";
 // import Navbar from './Navbar';
 
 const Routing = () => {
-    return (
-        <div>
-            {/* <Navbar/> */}
+  return (
+    <div>
+      {/* <Navbar/> */}
 
-                  <Switch>
-                  <Route exact path="/">
+      <Switch>
+        <Route exact path="/">
           <Dashboard />
         </Route>
 
-              <Route path="/hotel/:id">
+        <Route path="/hotel/:id">
           <FilterBox />
         </Route>
-        </Switch>
+      </Switch>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Routing
+export default Routing;

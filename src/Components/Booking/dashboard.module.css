@@ -1,92 +1,100 @@
-*{
-margin: 0;
-padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
-.root{
+
+.root {
     display: grid;
     grid-template-columns: 20% 65%;
-    margin:auto;
+    margin: auto;
     width: 90%;
     cursor: pointer;
-  /* border: 1px solid black;  */
+    /* border: 1px solid black;  */
 
 }
 
 
-.hotelpaper { 
+.hotelpaper {
     height: 2160px;
     width: 910px
 }
 
 
-.root2{
-    margin: 20px; 
+.root2 {
+    margin: 20px;
 
 }
 
 
 
-.hoteldiv:hover{
+.hoteldiv:hover {
     box-shadow: 5px 5px 5px rgb(184, 182, 182);
 }
 
-.hoteldiv{
-    display:flex;
+.hoteldiv {
+    display: flex;
     width: 100%;
     height: 250px;
     margin-top: 20px;
-    
-  }
- 
-  /* .childimg {
+
+}
+
+/* .childimg {
       margin-left:0.5px
   };    */
 
-  .hoteldetails{
-      font-size:15px;
-      width:40%;
-      margin-left: 10px;
-      width: 400px;
-      padding: 25;
-      height:250px
-    
-  };
-  .directiontext{
-  font-size:13px ;
-  color: blue ;
+.hoteldetails {
+    font-size: 15px;
+    width: 40%;
+    margin-left: 10px;
+    width: 400px;
+    padding: 25;
+    height: 250px
 }
 
-.detailsbtn{
+;
+
+.directiontext {
+    font-size: 13px;
+    color: blue;
+}
+
+.detailsbtn {
     width: 80px;
     height: 20px;
-    margin-left:5px;
+    margin-left: 5px;
     gap: 10px;
 }
-.detailsbtnplus{
+
+.detailsbtnplus {
     width: 30px;
     height: 20px;
-    margin-left:5px;
+    margin-left: 5px;
     gap: 10px;
 
 
 }
-.detailsbtndinner{
+
+.detailsbtndinner {
     width: 130px;
     height: 20px;
-    margin-left:5px;
+    margin-left: 5px;
     gap: 10px;
 
 }
-.btntext{
+
+.btntext {
     font-size: 10px;
     color: green;
     font-weight: bold;
 }
-.btnspan{
+
+.btnspan {
     height: 50px;
     width: 50%;
 }
-.updatedetail{
+
+.updatedetail {
     margin-top: 10px;
     color: rgb(225, 45, 45);
     font-size: 12px;
@@ -94,7 +102,8 @@ padding: 0;
     font-weight: 500;
 
 }
-.payment{
+
+.payment {
     margin-top: 10px;
     color: rgb(62, 108, 234);
     font-size: 12px;
@@ -102,11 +111,13 @@ padding: 0;
     font-weight: 500;
 
 }
-.pay{
+
+.pay {
     font-weight: bold;
 }
-.coupon{
-    margin-top:10px ;
+
+.coupon {
+    margin-top: 10px;
     border-radius: 2px;
     border: 1px solid rgb(164, 223, 165);
     color: rgb(40, 135, 28);
@@ -115,18 +126,20 @@ padding: 0;
 
 }
 
-.hotelfacility{
+.hotelfacility {
     height: 300px;
     padding-top: 2%;
 
 }
-.hotelfacilitychild{
+
+.hotelfacilitychild {
     width: 150px;
-    height:250px;
+    height: 250px;
     /* background-color: aqua; */
     margin-left: 60px;
 }
-.offer{
+
+.offer {
     display: flex;
     height: 15px;
     padding: 4px 8px;
@@ -139,22 +152,24 @@ padding: 0;
 
 }
 
-.offertxt{
+.offertxt {
     margin-left: 5px;
 
 }
-.ratingdiv{
+
+.ratingdiv {
     width: 30px;
     height: 30px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
-    background-color:blue ;
+    background-color: blue;
     margin-left: 5px;
 
 }
-.roombtn{
-   
+
+.roombtn {
+
     position: relative;
     border: none;
     padding: 12px;
@@ -167,14 +182,16 @@ padding: 0;
     cursor: pointer;
 
 }
-.price{
+
+.price {
     font-size: 10px;
     line-height: 14px;
     font-weight: 500;
     padding: 2%;
 
 }
-.pricetext{
+
+.pricetext {
     color: rgb(144, 148, 156);
     font-size: 10px;
     line-height: 14px;
@@ -183,38 +200,41 @@ padding: 0;
     margin-left: 15px;
 
 }
-.pricevalue{
+
+.pricevalue {
     margin-left: 50px;
     color: #e12d2d;
-        font-size: 22px;
-        line-height: 22px;
-        font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
 }
-.cancel{
+
+.cancel {
     margin-left: 20px;
     font-size: 12px;
     color: rgb(40, 135, 28);
     padding: 2%;
     margin-top: 6px;
-    
-font-weight:500;
+
+    font-weight: 500;
 }
 
 
-.rateingvalue{
+.rateingvalue {
     margin-left: 50px;
-    margin-top:-5px ;
+    margin-top: -5px;
     font-size: 12px;
     color: rgb(144, 148, 156);
     font-weight: 500;
     padding: 2%;
 
 }
-.upgrade{
+
+.upgrade {
     display: flex;
-    width:100% ;
+    width: 100%;
     height: 70px;
-    border:  1px solid black;
+    border: 1px solid black;
     background-color: rgb(56, 67, 90);
     border: none;
     overflow: hidden;
@@ -225,11 +245,13 @@ font-weight:500;
     margin-top: 20px;
 
 }
-.upgradetext{
-    width:400px;
+
+.upgradetext {
+    width: 400px;
     margin-top: -5px;
 }
-.upgradetext1{
+
+.upgradetext1 {
     display: block;
     font-size: 0.83em;
     margin-block-start: 1.67em;
@@ -238,28 +260,31 @@ font-weight:500;
     margin-inline-end: 0px;
     font-weight: bold;
 }
-.slidebtn{
+
+.slidebtn {
     margin-left: 350px;
     margin-top: 14px;
     position: relative;
-    width: 24px; 
+    width: 24px;
     height: 14px;
     border-radius: 13px;
     transition: all 0.2s ease 0s;
     /* background-color: rgb(221, 223, 226); */
 
 
- 
+
 }
 
 
-.nav{
+.nav {
     text-decoration: none;
 }
-.bigimg{
+
+.bigimg {
     position: relative;
 }
-.bigimgtext{
+
+.bigimgtext {
     position: absolute;
     width: 100px;
     height: 15px;
@@ -271,20 +296,22 @@ font-weight:500;
     padding: 5px 10px;
     border-radius: 2px;
 }
-.bigimgtrain{
-position: absolute;
+
+.bigimgtrain {
+    position: absolute;
     background-color: #5392f9;
     width: 35px;
     height: 35px;
     color: white;
-    border-top-left-radius:50% ;
-    border-bottom-left-radius:50% ;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
     border: 3px solid white;
     bottom: 10px;
     right: 0;
 
 }
-.bigimgtrain i{
-   padding: 9px 13px; 
+
+.bigimgtrain i {
+    padding: 9px 13px;
 
 }
