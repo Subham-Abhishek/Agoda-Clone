@@ -12,7 +12,7 @@ import { Payment } from "./Payment";
 let x = 0;
 
 export const CheckoutPage = () => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [isremind, setRemind] = useState(false);
   const [step1, setStep1] = useState(true);
   const [step2, setStep2] = useState(false);
@@ -25,7 +25,7 @@ export const CheckoutPage = () => {
       setLoading(false);
     }, 2000);
     let timer2 = setTimeout(() => {
-      setRemind(false);
+      setRemind(true);
     }, 8000);
     return () => {
       clearTimeout(timer);
@@ -206,7 +206,7 @@ export const CheckoutPage = () => {
               <span className="great1">You wont't be charged yet.</span>
             </div>
           </div>
-        </div>:<Payment/>
+        </div>:<Payment step3={step3} setStep3={setStep3}/>
         }
         <div className="hotel-detail">
           <HotelDetails/>
