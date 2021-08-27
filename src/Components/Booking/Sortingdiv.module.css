@@ -1,7 +1,7 @@
 .sortdiv{
-    width: 70%;
+    width: 100%;
     height: 46px;
-    margin-left: 300px;
+    /* margin-left: 300px; */
     display: flex;
     margin-top: 10px;
     border: 1px solid rgb(179, 171, 171);
@@ -111,7 +111,7 @@ margin-top: -1px;
 }
 .searchdiv>div{
     width: 90%;
-    margin-left:100px ;
+    margin-left:80px ;
 }
 .searchdiv{
     width: 100%;

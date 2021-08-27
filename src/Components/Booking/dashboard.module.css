@@ -4,9 +4,10 @@ padding: 0;
 }
 .root{
     display: grid;
-    grid-template-columns: 23% 65%;
-    margin:30px;
-    width: 89%;
+    grid-template-columns: 20% 65%;
+    margin:auto;
+    width: 90%;
+    cursor: pointer;
   /* border: 1px solid black;  */
 
 }
@@ -19,7 +20,7 @@ padding: 0;
 
 
 .root2{
-    margin: 10px; 
+    margin: 20px; 
 
 }
 
@@ -115,7 +116,6 @@ padding: 0;
 }
 
 .hotelfacility{
-    width:300px;
     height: 300px;
     padding-top: 2%;
 
@@ -124,7 +124,7 @@ padding: 0;
     width: 150px;
     height:250px;
     /* background-color: aqua; */
-    margin-left: 100px;
+    margin-left: 60px;
 }
 .offer{
     display: flex;
@@ -164,6 +164,7 @@ padding: 0;
     box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
     margin-left: 25px;
     margin-top: 10px;
+    cursor: pointer;
 
 }
 .price{
@@ -211,8 +212,7 @@ font-weight:500;
 }
 .upgrade{
     display: flex;
-    width:70% ;
-    margin-left:300px;
+    width:100% ;
     height: 70px;
     border:  1px solid black;
     background-color: rgb(56, 67, 90);

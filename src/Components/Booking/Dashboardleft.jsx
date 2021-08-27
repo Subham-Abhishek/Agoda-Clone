@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./dashboardleft.module.css";
 import Checkbox from '@material-ui/core/Checkbox';
-import Paper from "@material-ui/core/Paper";
+// import Paper from "@material-ui/core/Paper";
 
 
 const Dashboardleft = () => {
@@ -13,15 +13,22 @@ const Dashboardleft = () => {
     
     return (
        <>
-<Paper>
+{/* <Paper> */}
 
-<div className={styles.checkdiv} >
-    <div className="maparrow">
-        <img height="30px" src="https://cdn6.agoda.net/images/MAPS-1213/default/img-map-pin-red.svg" alt="" />
+<div className={styles.checkdiv} > 
+<div  className={styles.mapdivhead}>
+
+    <div className={styles.mapnarrow}>
+        <img height="40px" src="https://cdn6.agoda.net/images/MAPS-1213/default/img-map-pin-red.svg" alt="" />
     </div>
     <div>
-    <img src="https://cdn6.agoda.net/images/MAPS-1213/default/bkg-map-entry.svg"/>
+    <img  height=""src="https://cdn6.agoda.net/images/MAPS-1213/default/bkg-map-entry.svg"/>
 
+    </div>
+
+    <div className={styles.mapnarrowtext} >
+        <p>SEARCH ON MAP</p>
+    </div>
     </div>
     </div>   
     <div  className={styles.checkdiv}>
@@ -86,8 +93,8 @@ const Dashboardleft = () => {
     </div>
 
     </div>
-    </Paper>
-    <Paper>
+    {/* </Paper> */}
+    {/* <Paper> */}
 
     <div  className={styles.checkdiv}>
 
@@ -153,10 +160,10 @@ Gurgaon (159)
 </div>
 
 </div>
-    </Paper>
+    {/* </Paper> */}
 
 
-    <Paper>
+    {/* <Paper> */}
     <div  className={styles.checkdiv}>
 
         
@@ -198,7 +205,7 @@ Chandni Chowk(6)
 
 </div>
     
-    </Paper>
+    {/* </Paper> */}
 
        </>
     )

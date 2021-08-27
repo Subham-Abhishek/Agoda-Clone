@@ -39,6 +39,16 @@ const Dashboard = () => {
         dispatch(getDataSuccess(res.data));
       });
   };
+  const handlerate=()=>{
+    axios
+    .get("http://localhost:3001/hotel?_sort=rating&_order=desc")
+    .then((res) => {
+      console.log("result=", res.data);
+      dispatch(getDataSuccess(res.data));
+    });
+};
+
+  
 
   useEffect(() => {
     dispatch(getData());
@@ -47,7 +57,19 @@ const Dashboard = () => {
   return (
     <>
       <Searchdiv />
-      <div className={styles.upgrade}>
+      
+
+      <Box className={styles.root}>
+        
+        <Box className={styles.root1}>
+
+          <Dashboardleft />
+        </Box>
+
+        <div className={styles.hotelpaper}>
+          <Box className={styles.root2}>
+
+          <div className={styles.upgrade}>
         <img
           style={{ margin: "10px" }}
           height="50px"
@@ -69,14 +91,8 @@ const Dashboard = () => {
         />
       </div>
 
-      <Sortingdiv handleSort={handleSort} handlereview={handlereview} />
+          <Sortingdiv handleSort={handleSort} handlereview={handlereview} handlerate={handlerate} />
 
-      <Box className={styles.root}>
-        <Box className={styles.root1}>
-          <Dashboardleft />
-        </Box>
-        <Paper className={styles.hotelpaper}>
-          <Box className={styles.root2}>
             {state.map((item) => {
               return (
                 <NavLink className={styles.nav} to={`/hotel/${item.id}`}>
@@ -241,7 +257,7 @@ const Dashboard = () => {
               );
             })}
           </Box>
-        </Paper>
+        </div>
       </Box>
     </>
   );

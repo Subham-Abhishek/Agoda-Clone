@@ -16,7 +16,7 @@
         "price": 1774,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
       {
         "id":2,
@@ -34,7 +34,7 @@
         "price": 2900,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
       {
         "id":3,
@@ -52,7 +52,7 @@
         "price": 1400,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
       {
         "id":4,
@@ -70,7 +70,7 @@
         "price": 3000,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
       
       {
@@ -80,7 +80,7 @@
        "urlchild2":"https://pix8.agoda.net/hotelImages/239/239373/239373_19010317380071053766.jpg?s=100x100",
        "urlchild3":"https://pix8.agoda.net/hotelImages/2293637/157427767/236bd9868a88624c60c6c85ad189454d.jpg?s=100x100",
        "urlchild4":"https://pix8.agoda.net/hotelImages/2293637/0/98ef137b95783212836c22363cb0d293.jpg?s=100x100",
-       "city":"delhi",
+       "city":"new delhi",
         "hotel":"Ramada by Wyndham Gurgaon Central",
         "direction":"Gurgaon, New Delhi and NCR - 23.2 km to center",
         "distance":23,
@@ -89,7 +89,7 @@
         "price": 7000,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
 
       {
@@ -99,16 +99,16 @@
        "urlchild2":"https://pix8.agoda.net/hotelImages/116/1164924/1164924_17032718170051925702.jpg?s=100x100",
        "urlchild3":"https://q-xx.bstatic.com/xdata/images/hotel/max500/80060081.jpg?k=69cb245d7258ec6f42b420d0faca47a3df7099cbe062d1696c8fcff8ca889550&s=50x50",
        "urlchild4":"https://pix8.agoda.net/hotelImages/547/547163/547163_19051517150074511423.jpg?s=100x100",
-       "city":"delhi",
+       "city":"new delhi",
         "hotel":"Ashok Country Resort ",
         "direction":"jilabaad, New Delhi and NCR - 13.2 km to center",
         "distance":13,
-        "rating":6.7,
+        "rating":7.8,
         "reviews": 90 ,
         "price": 5000,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
 
       {
@@ -118,16 +118,16 @@
        "urlchild2":"https://pix8.agoda.net/hotelImages/4885047/0/3bba6331a51a688daa951e39fee197d0.jpg?s=100x100",
        "urlchild3":"https://pix8.agoda.net/hotelImages/4885047/0/5863c62048b5df27280decd15b221f97.jpg?s=100x100",
        "urlchild4":"https://pix8.agoda.net/hotelImages/4885047/0/21d4f0ba7c443fbae120239f39397cfc.jpg?s=100x100",
-       "city":"rajasthan",
+       "city":"jaipur",
         "hotel":"Hilton Jaipur",
         "direction":"jaipur, - 14.2 km to center",
         "distance":14,
-        "rating":6.7,
+        "rating":9.7,
         "reviews": 90 ,
         "price": 3000,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       },
 
       {
@@ -137,16 +137,16 @@
        "urlchild2":"https://q-xx.bstatic.com/xdata/images/hotel/max500/80134488.jpg?k=2d4daf5f7ae9cba6226246b635aab15adc97f4dd5a20cca04390b8d404abb1ef&s=50x50",
        "urlchild3":"https://q-xx.bstatic.com/xdata/images/hotel/max500/80134488.jpg?k=2d4daf5f7ae9cba6226246b635aab15adc97f4dd5a20cca04390b8d404abb1ef&s=50x50",
        "urlchild4":"https://pix8.agoda.net/hotelImages/298/298950/298950_15060714340028769880.jpg?s=100x100",
-       "city":"rajasthan",
+       "city":"jaipur",
         "hotel":"Golden Tulip Essentials jaipur",
         "direction":"Gurgaon, rajasthan and jaipur - 17.2 km to center",
         "distance":17,
-        "rating":6.7,
+        "rating":8.3,
         "reviews": 180 ,
         "price": 2600,
         "update":"Popular! last booked 12hrs ago",
         "payment":"Book without a card",
-        "coupon":"24 HOURSALE coupan code 24 HOURSALE app... "
+        "coupon":"24 HOURSALE coupon code 24 HOURSALE app... "
       }
 
     ]

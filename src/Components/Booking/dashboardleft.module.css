@@ -1,10 +1,12 @@
 .checkdiv{
-color:black;
+/* color:black; */
     cursor: text;
     font-weight: 400;
-    padding-top: 18px;
+    padding-top: 22px;
     padding-bottom: 7px;
     font-size: 12px;
+    color: #5a5b5b;
+
 
 }
 
@@ -13,7 +15,7 @@ color:black;
     color: #5a5b5b;
     cursor: text;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 650;
     padding-top: 18px;
     padding-bottom: 7px
 }
@@ -25,6 +27,31 @@ color:black;
 .hov{
     color: #5a5b5b;
 }
-.maparrow{
+.mapdivhead{
+    position:relative;
+}
+.mapnarrow{
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    top: 10px;
+    left: 90px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 2px;
+
+}
+.mapnarrowtext{
     
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c3c3c;
+    text-transform: uppercase;
+
 }
