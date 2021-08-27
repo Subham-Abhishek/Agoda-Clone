@@ -5,7 +5,7 @@ import styles from "./calendar.module.css";
 
 const { RangePicker } = DatePicker;
 
-export const Calendar = () => {
+export const Calendar = ({ setFocus }) => {
   const [dates, setDates] = useState([]);
   const [hackValue, setHackValue] = useState();
   const [value, setValue] = useState();
@@ -29,6 +29,8 @@ export const Calendar = () => {
 
   return (
     <RangePicker
+      onFocus={() => setFocus(true)}
+      onBlur={() => setFocus(false)}
       className={styles.calendar}
       value={hackValue || value}
       disabledDate={disabledDate}

@@ -64,6 +64,8 @@ export const FormSelection = () => {
   const [value, setValue] = useState(0);
   const [search, setSearch] = useState("");
   const [cities, setCities] = useState([]);
+  const [focus, setFocus] = useState(false);
+  const [debounce, setDebounce] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -126,7 +128,11 @@ export const FormSelection = () => {
           </Tabs>
         </Paper>
       </ThemeProvider>
-      <Paper theme={theme} square className={classes.form}>
+      <Paper
+        style={{ backgroundColor: focus ? "#808080" : "#F8F7F9" }}
+        square
+        className={classes.form}
+      >
         <Grid container>
           <Grid
             className={styles.formFirstLine}
@@ -138,6 +144,14 @@ export const FormSelection = () => {
           >
             <SearchIcon />
             <input
+              onFocus={() => {
+                setFocus(true);
+                setDebounce(true);
+              }}
+              onBlur={() => {
+                setFocus(false);
+                setDebounce(false);
+              }}
               type="text"
               value={search}
               onChange={handleSearch}
@@ -148,7 +162,7 @@ export const FormSelection = () => {
           {/* debounce result */}
 
           <Paper
-            style={{ display: search.length === 0 ? "none" : "block" }}
+            style={{ display: debounce ? "block" : "none" }}
             className={styles.debounceRes}
           >
             {cities
@@ -159,9 +173,19 @@ export const FormSelection = () => {
                 return <p key={idx}>{city}</p>;
               })}
           </Paper>
+
+          {/* debounce result end */}
+
           <Grid className={styles.formSecLine} container item>
-            <Grid className={styles.calendar} item lg={8} md={8} sm={12} xs={12}>
-              <Calendar />
+            <Grid
+              className={styles.calendar}
+              item
+              lg={8}
+              md={8}
+              sm={12}
+              xs={12}
+            >
+              <Calendar setFocus={setFocus} />
             </Grid>
             <Grid
               className={styles.roomSelect}
@@ -171,7 +195,7 @@ export const FormSelection = () => {
               sm={12}
               xs={12}
             >
-              <RoomSelect />
+              <RoomSelect setFocus={setFocus} />
             </Grid>
           </Grid>
           <button className={styles.searchBtn}>SEARCH</button>

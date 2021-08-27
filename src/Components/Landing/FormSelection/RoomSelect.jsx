@@ -7,10 +7,7 @@ function onChange(value) {
   console.log(`selected ${value}`);
 }
 
-function onFocus() {
-  console.log("focus");
-}
-export default function RoomSelect() {
+export default function RoomSelect({ setFocus }) {
   return (
     <Select
       className={styles.roomSelect}
@@ -19,7 +16,8 @@ export default function RoomSelect() {
       placeholder="1 adult / 1 room"
       optionFilterProp="children"
       onChange={onChange}
-      onFocus={onFocus}
+      onFocus={() => setFocus(true)}
+      onBlur={() => setFocus(false)}
       filterOption={(input, option) =>
         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
       }
