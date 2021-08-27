@@ -8,6 +8,7 @@ function SelectNavbar() {
             <button>Facilities</button>
             <button>Reviews</button>
             <button>Childrens and extra beds</button>
+            <button>Map</button>
         </div>
     </>
 }

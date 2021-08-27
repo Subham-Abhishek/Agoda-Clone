@@ -1,28 +1,38 @@
 import * as React from 'react';
 import { useState } from 'react';
 import ReactMapGL, { Marker, Popup, FullscreenControl } from 'react-map-gl';
-// import { Dropdown } from 'react-bootstrap';
 import styles from "../Select/Select.module.css"
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { makeStyles } from '@material-ui/core/styles';
 
 const fullscreenControlStyle= {
   right: 10,
   top: 10
 };
-
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
 
 function Map() {
-    const [lati, setLati] = useState(24.7914)
-    const [long, setLong] = useState(85.0002)
+    const classes = useStyles();
+    const [lati, setLati] = useState(29.7914)
+    const [long, setLong] = useState(75.0002)
     const [showPopup, togglePopup] = React.useState(false);
     const [viewport, setViewport] = useState({
         width: 1500,
         height: 950,
         latitude: lati,
         longitude: long,
-        zoom: 8,
+        zoom: 10,
         pitch: 50
     });
-
+ 
     return (
         <div style={{ display: "flex", flexDirection: "row" }}>
 
@@ -54,7 +64,7 @@ function Map() {
                     <FullscreenControl style={fullscreenControlStyle} />
 
 
-                    <Marker latitude={lati} longitude={long} offsetTop={(-viewport.zoom * 5) / 2}>
+                    <Marker latitude={24.7914} longitude={85.0002} offsetTop={(-viewport.zoom * 3) / 2}>
                         <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png" width={viewport.zoom * 7} height={viewport.zoom * 7} alt="marker" />
                     </Marker>
                 </ReactMapGL>
@@ -68,17 +78,35 @@ function Map() {
                     <img src="https://cdn.britannica.com/21/1621-050-FFCB3339/pilgrims-ghat-Phalgu-River-Bihar-India-Gaya.jpg" width="80px" height="80px" style={{ marginRight: '20px' }} alt="marker" />
                     <h6 style={{marginTop:"9px"}}>Gaya, city, south-central Bihar state, northeastern India.<span style={{color:"orange"}}> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></h6>
                 </div>
-                {/* <Dropdown>
-                    <Dropdown.Toggle   className={ styles.Mapdropdown}>
-                         Explore More Places
-                    </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-                </Dropdown> */}
+                <Accordion className={styles.selectAccordion}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                className={styles.selectaccodionsummary}
+                            >
+                                <Typography className={classes.heading}>
+                                    Explore More Nearby Places
+                                </Typography>
+                            </AccordionSummary>
+                    <AccordionDetails className={ styles.mapAccordion}>
+                        <div className={styles.mapExplorediv}>
+                                    <h1>Explore</h1>
+                                </div>
+                        <div className={styles.mapExplorediv}>
+                                    <h1>Explore</h1>
+                                </div>
+                        <div className={styles.mapExplorediv}>
+                                    <h1>Explore</h1>
+                                </div>
+                        <div className={styles.mapExplorediv}>
+                                    <h1>Explore</h1>
+                                </div>
+                        <div className={styles.mapExplorediv}>
+                                    <h1>Explore</h1>
+                                </div>
+                            </AccordionDetails>
+                </Accordion>
             </div>
         </div >
     );

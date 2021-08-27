@@ -1,0 +1,29 @@
+.loadingDiv {
+  width: 450px;
+  height: 250px;
+  box-shadow: 0px 0px 10px grey;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 15px;
+}
+.loadingDiv img {
+  width: 70px;
+  height: 70px;
+  margin-left: 190px;
+  margin-top: 50px;
+}
+.loadingDiv h3 {
+  margin: 20px 0px;
+  text-align: center;
+  color: rgb(194, 111, 194);
+}
+.loadingDiv h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  text-align: center;
+}
