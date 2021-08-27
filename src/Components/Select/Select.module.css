@@ -481,3 +481,76 @@ button {
 .navbarmaindiv button:first-child {
   margin-left: 500px;
 }
+.selectfaqh1 {
+  margin: 20px 0px;
+}
+.selectfaqiv1 {
+  display: flex;
+}
+.faqdivdiv1 {
+  width: 80%;
+  margin-right: 50px;
+}
+.selectFaqimage {
+  width: 300px;
+  height: 200px;
+}
+.selectFaqbutton {
+  width: 300px;
+  background-color: rgb(83, 146, 249);
+  color: white;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+}
+.selectaccodionsummary {
+  height: 70px;
+  background-color: rgb(243, 243, 243);
+}
+.selectaccodionsummary:hover {
+  background-color: rgb(83, 146, 249);
+  color: white;
+}
+.selectAccordion {
+  margin: 13px 0px;
+}
+.mapImageh4 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.mapImageh4 i {
+  margin-right: 10px;
+}
+.mapImageh42 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.mapImageh42 i {
+  margin-right: 10px;
+  color: red;
+}
+.selectmapDiv {
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 5px 5px;
+}
+.selectmapDiv i {
+  margin-right: 10px;
+}
+.selectlandmarksdiv {
+  overflow-y: scroll;
+  height: 90px;
+}
+.selectQutub {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 10px 20px;
+}

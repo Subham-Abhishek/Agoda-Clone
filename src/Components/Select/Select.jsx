@@ -7,6 +7,11 @@ import { SelectNavbar } from "./Navbar";
 import React,{ useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -128,7 +133,41 @@ function Select() {
                         </div>
                     </div>
                     <div className={styles.mapImage}>
-                        <Link to={"/map"}><img src="https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="map"/></Link>
+                        <Link to={"/map"}><img src="https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="map" /></Link>
+                        <h4 className={styles.mapImageh4}><i className="fas fa-award"></i>Excellent location</h4>
+                        <h4 className={styles.mapImageh42}><i className="fas fa-building"></i>Popular Neighbourhood</h4>
+                        <div className={ styles.selectmapDiv}>
+                            <p><i class="fas fa-car"></i>Parking </p>
+                            <p>Free</p>
+                        </div>
+                        <h6 style={{ marginLeft: "20px" }}>Popular Landmarks</h6>
+                        <div className={ styles.selectlandmarksdiv}>                            
+                            <div className={ styles.selectQutub}>
+                                <p>Qutub Minar</p>
+                                <p>6.9 KM</p>
+                            </div>
+                            <div className={ styles.selectQutub}>
+                                <p>Lodhi Garden</p>
+                                <p>11.9 KM</p>
+                            </div>
+                            <div className={ styles.selectQutub}>
+                                <p>Gurudrawa Sahib</p>
+                                <p>10.7 KM</p>
+                            </div>
+                            <div className={ styles.selectQutub}>
+                                <p>India gate</p>
+                                <p>3.7 KM</p>
+                            </div>
+                            <div className={ styles.selectQutub}>
+                                <p>Red Fort</p>
+                                <p>9.0</p>
+                            </div>
+                            <div className={ styles.selectQutub}>
+                                <p>Cannaught place</p>
+                                <p>6.9 KM</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,7 +260,94 @@ function Select() {
             </div>
 
 
-            <h1>Frequently asked questions</h1>
+            <h1 className={styles.selectfaqh1}>Frequently asked questions</h1>
+            <div className={styles.selectfaqiv1 }>
+                <div className={ styles.faqdivdiv1}>
+                    <Accordion className={ styles.selectAccordion}>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                            className={ styles.selectaccodionsummary}
+                        >
+                        <Typography className={classes.heading}>What time is check-in and check-out at Red Fox Hotel Delhi Airport?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                        <Typography>
+                        Check-in is from 02:00 PM, and check-out is until 12:00 PM. You may request early check-in or late check-out during booking, subject to availability. Guests checking in or out before or after the designated periods may be charged an additional fee. The hotel offers luggage storage to guests for before check-in and after check-out. The front desk is always open, day or night.
+                        </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={ styles.selectAccordion}>
+                        <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                            className={ styles.selectaccodionsummary}
+                        >
+                        <Typography className={classes.heading}>How do I get to Red Fox Hotel Delhi Airport?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                        <Typography>
+                           Red Fox Hotel Delhi Airport is easy to access from the airport. In fact, you can even book your airport transfer in advance for greater peace of mind with the additional charge of 2000 INR. Just use the "Let us know what you need" section of the booking page to let the hotel know you want a ride, and they will contact you via the Agoda messaging service. A stay at Red Fox Hotel Delhi Airport also comes with easy access to the neighborhoods around the hotel through the convenient shuttle service offered at the hotel. For those who wish to drive their own cars, Red Fox Hotel Delhi Airport has a car park right on site for maximum convenience. Parking is free for guests. Parking options include a full-service valet for total ease. If you're looking for an easy way to get around New Delhi and NCR with private transportation, the hotel can arrange both taxis or car rental.
+                        </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={ styles.selectAccordion}>
+                        <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                            className={ styles.selectaccodionsummary}
+                        >
+                        <Typography className={classes.heading}>Is breakfast offered at Red Fox Hotel Delhi Airport?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                        <Typography>
+                            Start your mornings right, with the continental and buffet breakfast options offered at Red Fox Hotel Delhi Airport. Adults can enjoy breakfast offered with an additional charge of 490 INR if not included in the room rate. You may save on breakfast costs with Agoda by booking a room with breakfast, which is often included for less than buying it at the hotel.
+                        </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={ styles.selectAccordion}>
+                        <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                            className={ styles.selectaccodionsummary}
+                        >
+                        <Typography className={classes.heading}>What are my dining options at Red Fox Hotel Delhi Airport?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                        <Typography>
+                           Red Fox Hotel Delhi Airport features an on-site restaurant for your dining convenience. Light meal like coffee or tea is served using only quality ingredients.
+                        </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={ styles.selectAccordion}>
+                        <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                            className={ styles.selectaccodionsummary}
+                        >
+                        <Typography className={classes.heading}>Can business events be hosted at Red Fox Hotel Delhi Airport?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                        <Typography >
+                            On-site venues and convenient event services make Red Fox Hotel Delhi Airport an ideal choice for hosting events such as conferences and meetings. The venue available at the hotel can accommodate up to 80 people. An extensive range of facilities and services including free Wi-Fi, meeting stationery and audio-visual equipment is available to help your business meeting or event a successful one.
+                        </Typography>
+                        </AccordionDetails>
+                        </Accordion>
+                </div>
+                <div>
+                    <img src="	https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="faqimage" className={styles.selectFaqimage} />
+                    <Link to={"/map"}>
+                        <button className={styles.selectFaqbutton}>
+                            <h3>View Map</h3> 
+                         </button>
+                    </Link>
+                </div>
+                </div>
         </div>
         <Comment/>
     </>

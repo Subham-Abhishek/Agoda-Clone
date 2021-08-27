@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 import ReactMapGL, { Marker, Popup, FullscreenControl } from 'react-map-gl';
+// import { Dropdown } from 'react-bootstrap';
+import styles from "../Select/Select.module.css"
 
 const fullscreenControlStyle= {
   right: 10,
@@ -28,7 +30,8 @@ function Map() {
                 <ReactMapGL
                     mapboxApiAccessToken={"pk.eyJ1IjoiYXZpbmFzaDc1NjQiLCJhIjoiY2tzcTNyaWVyMDF2MjJ2cG5mMTZjbW1zZCJ9.WswyUJ6_O947xyEIsDI8Eg"}
 
-                    mapStyle="mapbox://styles/mapbox/dark-v9"
+                    // mapStyle="mapbox://styles/mapbox/dark-v9"
+                    mapStyle='mapbox://styles/mapbox/streets-v11'
                     // mapStyle= 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'
                     {...viewport}
                     onViewportChange={nextViewport => setViewport(nextViewport)}
@@ -62,10 +65,20 @@ function Map() {
                     <h4>Current Selection</h4>
                 </div>
                 <div style={{ display: "flex" }} onClick={() => { togglePopup(!showPopup) }}>
-                    <img src="https://cdn.britannica.com/21/1621-050-FFCB3339/pilgrims-ghat-Phalgu-River-Bihar-India-Gaya.jpg" width={viewport.zoom * 11} height={viewport.zoom * 11} style={{ marginRight: '20px' }} alt="marker" />
-                    <h5 style={{marginTop:"9px"}}>Gaya, city, south-central Bihar state, northeastern India.<span style={{color:"orange"}}> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></h5>
+                    <img src="https://cdn.britannica.com/21/1621-050-FFCB3339/pilgrims-ghat-Phalgu-River-Bihar-India-Gaya.jpg" width="80px" height="80px" style={{ marginRight: '20px' }} alt="marker" />
+                    <h6 style={{marginTop:"9px"}}>Gaya, city, south-central Bihar state, northeastern India.<span style={{color:"orange"}}> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></h6>
                 </div>
-                
+                {/* <Dropdown>
+                    <Dropdown.Toggle   className={ styles.Mapdropdown}>
+                         Explore More Places
+                    </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </Dropdown.Menu>
+                </Dropdown> */}
             </div>
         </div >
     );
