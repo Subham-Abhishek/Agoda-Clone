@@ -1,9 +1,11 @@
 import './App.css';
-
+import { Routes } from './Routes/Routes';
+import { SelectNavbar } from './Components/Select/Navbar';
 function App() {
   return (
     <div className="App">
-      <h1>Agoda-Clone</h1>
+      <Routes/>
+      {/* <SelectNavbar/> */}
     </div>
   );
 }
