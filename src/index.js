@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import AppProvider from "./context/Provider";
 import {Provider} from "react-redux"
 import {store} from "./Bookingreducer/Redux/store"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,16 +19,6 @@ ReactDOM.render(
     </AppProvider>
   </BrowserRouter>,
   document.getElementById("root")
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <BrowserRouter>
-//       <Provider store={store}>
-//     <App />
-//     </Provider>
-//     </BrowserRouter>
-//   </React.StrictMode>,
-//   document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
