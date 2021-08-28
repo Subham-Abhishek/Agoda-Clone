@@ -68,17 +68,3 @@ export const searchDataFailure = (err) => {
         payload: err
     }
 }
-
-// export const searchData = (payload) => dispatch => {
-//     console.log("ok:" ,payload.toLowerCase());
-//     dispatch(searchDataRequest())
-//     return axios.get(`http://localhost:3001/hotel?city=${payload.toLowerCase()}`)
-//         .then((res) => {
-//             // console.log(res.data)
-//             dispatch(searchDataSuccess(res.data))
-//         })
-//         .catch((err) => {
-//             dispatch(searchDataFailure(err))
-//         })
-
-// }
