@@ -145,11 +145,15 @@
     padding: 4px 8px;
     border-radius: 2px;
     width: 120px;
-    height: 20px;
+    height: 27px;
     background-color: rgb(22, 115, 127);
     color: rgb(255, 255, 255);
-    font-size: 15px;
+    font-size: 13px;
+    margin-left: 20px;
 
+}
+.offer img{
+    margin-top: 3px;
 }
 
 .offertxt {
@@ -163,8 +167,9 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
-    background-color: blue;
-    margin-left: 5px;
+    background-color:#0283df;
+    margin-left: 14px;
+    margin-top: 3px;
 
 }
 
@@ -177,7 +182,7 @@
     background-color: rgb(62, 108, 234);
     color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 10px;
     cursor: pointer;
 
@@ -197,12 +202,12 @@
     line-height: 14px;
     font-weight: 500;
     padding: 2%;
-    margin-left: 15px;
+    margin-left: 20px;
 
 }
 
 .pricevalue {
-    margin-left: 50px;
+    margin-left: 60px;
     color: #e12d2d;
     font-size: 22px;
     line-height: 22px;
@@ -214,15 +219,14 @@
     font-size: 12px;
     color: rgb(40, 135, 28);
     padding: 2%;
-    margin-top: 6px;
-
+    margin-top: -20px;
     font-weight: 500;
 }
 
 
 .rateingvalue {
-    margin-left: 50px;
-    margin-top: -5px;
+    margin-left: 15%;
+    margin-top: -30px;
     font-size: 12px;
     color: rgb(144, 148, 156);
     font-weight: 500;
@@ -249,16 +253,15 @@
 .upgradetext {
     width: 400px;
     margin-top: -5px;
+    color:white ;
 }
 
 .upgradetext1 {
     display: block;
-    font-size: 0.83em;
-    margin-block-start: 1.67em;
-    margin-block-end: 1.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size:  13px;
+    margin-top: 5%;
     font-weight: bold;
+    color: white;
 }
 
 .slidebtn {
@@ -286,15 +289,22 @@
 
 .bigimgtext {
     position: absolute;
-    width: 100px;
-    height: 15px;
-    background-color: green;
-    color: white;
+    width: 130px;
+    height: 23px;
+    background: rgb(55, 125, 66);
+
     top: 10px;
     left: -5px;
-    font-size: 12px;
     padding: 5px 10px;
     border-radius: 2px;
+    text-align: center;
+}
+.bigimgtext>p{
+    margin-top: -4px;
+    font-size: 12px;
+    font-weight: 600;
+    color:rgb(249, 249, 250);
+
 }
 
 .bigimgtrain {

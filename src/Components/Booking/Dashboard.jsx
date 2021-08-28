@@ -16,7 +16,7 @@ import Switch from "@material-ui/core/Switch";
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
-
+import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
 const Dashboard = () => {
   const state = useSelector((state) => state.hoteldata);
   console.log(state);
@@ -63,7 +63,8 @@ const Dashboard = () => {
 
   return (
     <>
-      <Searchdiv />
+      {/* <Searchdiv /> */}
+      <ScrollUpNav calcScroll="-1"/>
     <Filtering/>
 
       <Box className={styles.root}>
@@ -83,7 +84,7 @@ const Dashboard = () => {
 
               <div className={styles.upgradetext}>
                 <h5 className={styles.upgradetext1}>
-                  Agoda Special Offers Upgrade your experience with Agoda
+                  Agoda Special Offers <br /> Upgrade your experience with Agoda
                   Special Offers Hurry
                 </h5>
               </div>
@@ -108,7 +109,7 @@ const Dashboard = () => {
                     <Box className={styles.hotelchild1}>
                       <div className={styles.bigimg}>
                         <div className={styles.bigimgtext}>
-                          free cancelation
+                          <p> Free cancellation </p>
                         </div>
                         <div className={styles.bigimgtrain}>
                           <i class="fas fa-subway"></i>
@@ -151,7 +152,7 @@ const Dashboard = () => {
                         />
                       </Box>
                     </Box>
-                    <Paper>
+                    {/* <Paper> */}
                       <div className={styles.hoteldetails}>
                         <h3>{item.hotel}</h3>
 
@@ -205,8 +206,8 @@ const Dashboard = () => {
                           <i class="fas fa-pencil-alt"></i> {item.coupon}
                         </div>
                       </div>
-                    </Paper>
-                    <Paper style={{ width: "240px" }}>
+                    {/* </Paper> */}
+                    <div style={{ width: "240px" }}>
                       <div className={styles.hotelfacility}>
                         <div className={styles.hotelfacilitychild}>
                           <p
@@ -263,7 +264,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
-                    </Paper>
+                    </div>
                   </div>
                 </NavLink>
               );
