@@ -23,6 +23,14 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.1",
     "thunk": "0.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "bootstrap": "^5.1.0",
+    "font-awesome": "^4.7.0",
+    "mapbox-gl": "^2.4.1",
+    "react-bootstrap": "^2.0.0-beta.6",
+    "react-map-gl": "^6.1.16",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -48,5 +56,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
