@@ -1,13 +1,13 @@
 import { Route } from 'react-router-dom';
 import './App.css';
 import Dashboard from './Components/Booking/Dashboard';
-import Routing from './Route/Route';
+import Routingmilind from './Route/Routemilind';
 
 function App() {
   return (
     <div className="App">
       {/* <Dashboard/> */}
-      <Routing/>
+      <Routingmilind/>
     </div>
   );
 }

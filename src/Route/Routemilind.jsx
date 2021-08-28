@@ -4,7 +4,7 @@ import Dashboard from "../Components/Booking/Dashboard";
 import FilterBox from "../Components/Booking/FilterBox";
 // import Navbar from './Navbar';
 
-const Routing = () => {
+const Routingmilind = () => {
   return (
     <div>
       {/* <Navbar/> */}
@@ -22,4 +22,4 @@ const Routing = () => {
   );
 };
 
-export default Routing;
+export default Routingmilind;
