@@ -1,11 +1,19 @@
-import './App.css';
-import { Routes } from './Routes/Routes';
+import { useState } from "react";
+import "./App.css";
+import IsAuth from "./Context/Auth";
+import { Routes } from "./Routes/Routes";
 
 function App() {
+  const [isLogin, setLogin] = useState(false);
   return (
-    <>
-    <Routes />
-    </>
+    <IsAuth.Provider
+      value={{
+        isAuth: isLogin,
+        toggle: setLogin,
+      }}
+    >
+      <Routes />
+    </IsAuth.Provider>
   );
 }
 

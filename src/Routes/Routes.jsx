@@ -7,6 +7,9 @@ import { LandingPage } from "../Pages/LandingPage/LandingPage";
 import { Map } from "../Components/Map/Map";
 import { Select } from "../Components/Select/Select";
 // import { Milind } from "../Pages/Milind Page/Milind";
+import { Login } from "../Components/Authorization/Login";
+import { Register } from "../Components/Authorization/Register";
+import { CheckoutPage } from "../Components/CheckoutPage/CheckoutPage";
 
 export const Routes = () => {
   let { searchedCity, setSearchedCity } = useContext(AppContext);
@@ -27,6 +30,15 @@ export const Routes = () => {
       </Route>
       <Route exact path="/map">
         <Map />
+      </Route>
+      <Route path="/register">
+        <Register />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/checkout">
+        <CheckoutPage />
       </Route>
     </Switch>
   );
