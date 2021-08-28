@@ -1,5 +1,6 @@
 import { Select } from "antd";
 import styles from "./roomSelect.module.css";
+import PeopleIcon from '@material-ui/icons/People';
 
 const { Option } = Select;
 
@@ -9,10 +10,14 @@ function onChange(value) {
 
 export default function RoomSelect({ setFocus }) {
   return (
-    <Select
+    <div className={styles.select_the_room}>
+      <PeopleIcon className={styles.peopleIcon} />
+      <Select
       className={styles.roomSelect}
+      dropdownClassName={styles.roomSelectOptions}
       size="large"
       showSearch
+      bordered={false}
       placeholder="1 adult / 1 room"
       optionFilterProp="children"
       onChange={onChange}
@@ -22,8 +27,9 @@ export default function RoomSelect({ setFocus }) {
         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
       }
     >
-      <Option value={1}>1 adult / 1 room</Option>
-      <Option value={2}>1 adult / 2 room</Option>
+      <Option value={1}>Solo Traveller</Option>
+      <Option value={2}>Couple / Pair</Option>
     </Select>
+    </div>
   );
 }

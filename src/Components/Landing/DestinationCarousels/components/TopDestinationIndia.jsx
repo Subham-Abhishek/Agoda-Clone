@@ -1,9 +1,14 @@
 import { Container, Typography } from "@material-ui/core";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./topDestinationIndia.module.css";
 import InfiniteCarousel from "react-leaf-carousel";
+import { AppContext } from "../../../../context/Provider";
+import { Link } from "react-router-dom";
 
 export const TopDestinationIndia = () => {
+
+  const { searchedCity, setSearchedCity } = useContext(AppContext);
+
   return (
     <Container className={styles.india_Dest_Cont} maxWidth="md">
       <Typography className={styles.india_dest_heading} variant="h5">
@@ -33,7 +38,8 @@ export const TopDestinationIndia = () => {
         slidesToShow={6}
         scrollOnDevice={true}
       >
-        <div className={styles.carouselItems}>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Mumbai")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -41,7 +47,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Mumbai</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("New Delhi")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -49,7 +57,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>New Delhi</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Kolkata")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -57,7 +67,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Kolkata</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Bangalore")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -65,7 +77,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Bangalore</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Chennai")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -73,7 +87,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Chennai</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Hyderabad")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -81,7 +97,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Hyderabad</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Goa")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -89,7 +107,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Goa</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Jaipur")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -97,7 +117,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Jaipur</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Pune")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -105,7 +127,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Pune</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Lonavala")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -113,7 +137,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Lonavala</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Pondicherry")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -121,7 +147,9 @@ export const TopDestinationIndia = () => {
           />
           <h4>Pondicherry</h4>
         </div>
-        <div className={styles.carouselItems}>
+        </Link>
+        <Link to="/milind">
+          <div onClick={() => setSearchedCity("Udaipur")} className={styles.carouselItems}>
           <img
             className={styles.carouselImg}
             alt=""
@@ -129,6 +157,7 @@ export const TopDestinationIndia = () => {
           />
           <h4>Udaipur</h4>
         </div>
+        </Link>
       </InfiniteCarousel>
     </Container>
   );

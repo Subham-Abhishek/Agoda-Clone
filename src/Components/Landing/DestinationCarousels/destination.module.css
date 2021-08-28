@@ -1,10 +1,10 @@
-.rentalTypes{
+.rentalTypes {
   width: 95%;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 5px
+  padding: 5px;
 }
-.rentalTypes:hover{
+.rentalTypes:hover {
   box-shadow: 4px 4px 10px gray, -4px -4px 10px lightgray;
   padding: 0;
   transition: 300ms;

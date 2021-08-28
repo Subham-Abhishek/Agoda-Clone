@@ -12,12 +12,13 @@ import FlightIcon from "@material-ui/icons/Flight";
 import EventAvailableIcon from "@material-ui/icons/EventAvailable";
 import SearchIcon from "@material-ui/icons/Search";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { Calendar } from "./Calendar";
 import RoomSelect from "./RoomSelect";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../context/Provider";
+import { Checkbox } from "antd";
 
 const theme = createTheme({
   palette: {
@@ -51,12 +52,12 @@ const useStyles = makeStyles((theme) => ({
     border: "none",
   },
   form: {
-    width: "70%",
-    height: window.innerWidth > 970 ? "210px" : "250px",
+    width: "83%",
+    height: window.innerWidth > 970 ? "300px" : "360px",
     margin: "auto",
     backgroundColor: "#F8F7F9",
     transform: "translateY(-260px)",
-    borderRadius: 5,
+    borderRadius: 9,
     padding: "40px 50px",
     boxShadow: "0 4px 10px gray, 0 -4px 10px gray",
   },
@@ -95,7 +96,11 @@ export const FormSelection = () => {
   }, []);
 
   return (
-    <>
+    <div>
+      <div
+        style={{ backgroundColor: focus ? "rgba(0,0,0,0.5)" : "transparent" , display: focus ? "block" : "none"}}
+        className={styles.main_container}
+      ></div>
       <img
         className={styles.background_image}
         src="https://cdn6.agoda.net/images/MVC/default/background_image/illustrations/bg-agoda-homepage.png"
@@ -103,6 +108,7 @@ export const FormSelection = () => {
       />
       <ThemeProvider theme={theme}>
         <Paper theme={theme} square className={classes.root}>
+          <div className={styles.newTag}>New!</div>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -140,7 +146,7 @@ export const FormSelection = () => {
         </Paper>
       </ThemeProvider>
       <Paper
-        style={{ backgroundColor: focus ? "#808080" : "#F8F7F9" }}
+        style={{ backgroundColor: focus ? "#aaa" : "#F8F7F9" }}
         square
         className={classes.form}
       >
@@ -153,7 +159,7 @@ export const FormSelection = () => {
             sm={12}
             xs={12}
           >
-            <SearchIcon />
+            <SearchIcon className={styles.searchIcon} />
             <input
               onFocus={() => {
                 setFocus(true);
@@ -163,7 +169,7 @@ export const FormSelection = () => {
                 setFocus(false);
                 // setDebounce(false);
               }}
-              type="text"
+              type="search"
               // value={search}
               value={searchedCity}
               onChange={handleSearch}
@@ -205,8 +211,8 @@ export const FormSelection = () => {
             <Grid
               className={styles.calendar}
               item
-              lg={8}
-              md={8}
+              lg={7}
+              md={7}
               sm={12}
               xs={12}
             >
@@ -215,14 +221,34 @@ export const FormSelection = () => {
             <Grid
               className={styles.roomSelect}
               item
-              lg={4}
-              md={4}
+              lg={5}
+              md={5}
               sm={12}
               xs={12}
             >
               <RoomSelect setFocus={setFocus} />
             </Grid>
           </Grid>
+
+          <Grid
+            style={{ width: "98%" }}
+            className={styles.formThirdLine}
+            container
+            item
+          >
+            <Grid
+              className={styles.checkbox_flightHotel}
+              item
+              lg={7}
+              md={7}
+              sm={12}
+              xs={12}
+            >
+              <Checkbox>Save up to 25% on hotels</Checkbox>
+              <div className={styles.checkboxTag}>Flight + Hotel</div>
+            </Grid>
+          </Grid>
+
           <button className={styles.searchBtn}>
             <Link style={{ color: "#fff" }} to="/milind">
               SEARCH
@@ -230,6 +256,6 @@ export const FormSelection = () => {
           </button>
         </Grid>
       </Paper>
-    </>
+    </div>
   );
 };

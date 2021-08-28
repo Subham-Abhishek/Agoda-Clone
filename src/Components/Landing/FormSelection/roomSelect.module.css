@@ -1,3 +1,23 @@
 .roomSelect {
   width: 100%;
 }
+.peopleIcon{
+  color: #555
+}
+.select_the_room{
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  display: flex;
+  padding-left: 10px;
+  /* margin-left: 12px; */
+}
+.roomSelectOptions{
+  /* background-color: #888; */
+  border-radius: 8px;
+  /* transform: translateY(-10px); */
+  padding: 20px 0;
+}

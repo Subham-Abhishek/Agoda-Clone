@@ -28,11 +28,19 @@
   margin: 10px;
   border-radius: 5px;
   background-color: #fff;
+  height: 60px;
+  border-radius: 9px;
 }
 .scrollNavSearch > input {
   border: none;
   outline: none;
+  width: 100%;
 }
+.scrollNavSearch > input::placeholder {
+  color: #bbb;
+  font-size: 16px;
+}
+
 .debounceRes {
   width: 89.5%;
   max-height: 500px;
