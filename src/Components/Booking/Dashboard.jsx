@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData, getDataSuccess, searchDataFailure, searchDataRequest, searchDataSuccess } from "../../Bookingreducer/Redux/action";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -20,6 +20,7 @@ import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
 import { AppContext } from "../../context/Provider";
 
 const Dashboard = () => {
+  const [clicked, setClicked] = useState(false)
   const state = useSelector((state) => state.hoteldata);
   console.log(state);
   const dispatch = useDispatch();
@@ -73,16 +74,19 @@ const searchData = () => {
         })
 }
 
+const handleClicking = () => {
+  setClicked(!clicked)
+}
 
 useEffect(() => {
     searchData();
     // dispatch(getData());
-  }, [dispatch]);
+  }, [clicked]);
 
   return (
     <>
       {/* <Searchdiv /> */}
-      <ScrollUpNav calcScroll="-1"/>
+      <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
     <Filtering/>
 
       <Box className={styles.root}>
