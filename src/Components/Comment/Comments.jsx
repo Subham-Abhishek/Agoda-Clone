@@ -19,7 +19,7 @@ function Comment() {
     }, [])
 
     const getComments = () => {
-        axios.get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=20`)
+        axios.get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=10`)
             .then((res) => (setComment(res.data)))
             .catch((err) => (console.log(err)))
     }

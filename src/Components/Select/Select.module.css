@@ -10,7 +10,7 @@
 
 .selectUpperDiv {
   width: 776px;
-  height: 781px;
+  height: 760px;
 }
 
 .selectUpperDivImage {
@@ -20,9 +20,18 @@
   display: flex;
   flex-direction: row;
 }
+.selectUpperDivImage img {
+  transition: 0.3s all ease-in-out;
+}
+.selectUpperDivImage img:hover {
+  filter: brightness(0.5);
+}
 
 .selectBigimage {
-  filter: brightness(0.8);
+  filter: brightness(0.6);
+}
+.selectBigimage:hover {
+  filter: brightness(0.3);
 }
 .selectUpperDivdiv {
   width: 238px;
@@ -36,42 +45,43 @@
 .selectUpperDivdiv div {
   width: 50%;
 }
-.selectUpperDivdiv div:nth-child(1) p:nth-child(1) {
+.upperdivPosition p:nth-child(1) {
   text-align: right;
   margin-right: 20px;
   color: grey;
   font-size: 12px;
   margin-top: 2px;
 }
-.selectUpperDivdiv div:nth-child(1) p:nth-child(2) {
+.upperdivPosition p:nth-child(2) {
   color: #ee595d;
   text-align: right;
   margin-right: 20px;
   font-size: 12px;
   font-weight: bolder;
+  margin-top: -15px;
 }
 .selectUpperDivdiv div:nth-child(1) p:nth-child(2) span {
   font-size: 18px;
   font-weight: bolder;
 }
-.selectUpperDivdiv div:nth-child(2) {
+.upperdivPosition2 {
   background-color: #ee595d;
   color: white;
 }
-.selectUpperDivdiv div:nth-child(2) h3 {
-  margin-top: 5px;
+.upperdivPosition2 p:first-child {
+  margin-top: 0px;
+  margin-left: 10px;
+  font-weight: bolder;
 }
-.selectUpperDivdiv div:nth-child(2) h3,
-.selectUpperDivdiv div:nth-child(2) h5 {
-  margin-left: 20px;
+.upperdivPosition2 p:last-child {
+  margin-top: -15px;
+  margin-left: 10px;
+  font-weight: bolder;
 }
 
 .selectBigimage {
   width: 435px;
   height: 360px;
-}
-.selectUpperDivImage img:hover {
-  filter: brightness(0.6);
 }
 .selectUpperDivImage2 {
   width: 332px;
@@ -112,7 +122,7 @@
 }
 .selectseeallphotos {
   position: absolute;
-  bottom: 55px;
+  bottom: 50px;
   right: 29px;
   color: white;
   font-size: 12px;
@@ -123,26 +133,41 @@
 }
 .selectratingdiv1 {
   width: 308px;
-  height: 245px;
+  height: 200px;
   border-radius: 4px;
   border-color: rgb(221, 223, 226);
   border-style: solid;
   border-width: 1px;
-  padding: 16px;
+  padding: 0px 10px;
   box-shadow: none;
-  margin: 0px 0px 8px;
-  margin-left: 30px;
+  margin: 0px 0px 4px 10px;
+  margin-left: 22px;
 }
 .mapImage {
   width: 308px;
-  height: 473px;
+  height: 522px;
   border-radius: 4px;
   border-color: rgb(221, 223, 226);
   border-style: solid;
   border-width: 1px;
   padding: 16px;
-  margin-left: 30px;
+  margin-left: 22px;
   overflow: hidden;
+}
+.mapImageupdiv {
+  width: 90%;
+  margin: 9% 5%;
+  height: 30px;
+  display: flex;
+  margin-top: 20px;
+}
+.mapImageupdivdiv1 {
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: 2px solid rgb(0, 76, 184);
 }
 .selectHoteldetails {
   border-radius: 4px;
@@ -153,6 +178,20 @@
   box-shadow: none;
   margin: 16px 0px 0px;
   height: 131px;
+}
+.mapImageupdivdiv2 {
+  display: flex;
+  flex-direction: column;
+}
+.mapImageupdivdiv2 h5 {
+  font-size: 14px;
+  margin-left: 5px;
+  margin-bottom: -7px;
+}
+.mapImageupdivdiv2 p {
+  color: rgb(115, 115, 115);
+  font-size: 11px;
+  margin-left: 5px;
 }
 .selectHotelmeans {
   border-radius: 4px;
@@ -220,10 +259,13 @@
   font-size: 12px;
   text-align: center;
 }
-.mapImage img {
-  width: 90%;
-  margin-left: 10px;
+.mapImageimage {
+  width: 100%;
   height: 20%;
+}
+.mapImageimage img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   transition: 0.5s all ease-in-out;
 }
@@ -232,13 +274,14 @@
   transform: scale(1.3);
 }
 .selectpopulardates {
-  width: 99.45%;
+  width: 100%;
   height: 81px;
   padding: 10px;
   border-color: rgb(221, 223, 226);
   border-style: solid;
   border-width: 1px;
-  margin-top: 25px;
+  margin-top: 0px;
+  border-radius: 5px;
 }
 .selectpopulardatesimg {
   display: flex;
@@ -295,6 +338,7 @@
   border: 1px solid rgb(221, 223, 226);
   padding: 10px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 .selectsqrt {
   font-weight: 700;
@@ -307,11 +351,12 @@
 }
 .selectinnerdiv {
   width: 98%;
-  height: 500px;
+  height: 400px;
   background-color: #f5f5f5;
   margin-top: 10px;
   display: flex;
   padding: 10px;
+  border-radius: 5px;
 }
 .selectinnerdiv1 {
   width: 18%;
@@ -438,13 +483,24 @@
 button {
   cursor: pointer;
 }
-
+.selectmodaldivright {
+  display: flex;
+  flex-direction: column;
+}
+.selectmodaldivright h3 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.selectmodaldivright h6 {
+  color: #0283df;
+  font-size: 10px;
+}
 .selectRatingDiv {
   display: flex;
   height: 50px;
-  margin-left: 20px;
+  margin-left: 5px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .selectRatingDiv1 {
   width: 60px;
@@ -458,14 +514,15 @@ button {
 }
 .selectRatingDiv1 h2 {
   margin: 13px 0px 0px 13px;
+  color: white;
 }
 .selectRatingdivs {
-  border: 1px solid greenyellow;
+  border: 1px solid rgb(211, 208, 208);
   width: fit-content;
   padding: 3px 13px 0px 13px;
   height: 30px;
   border-radius: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: rgb(50, 169, 35);
 }
 
@@ -485,20 +542,18 @@ button {
   top: 0px;
   background-color: white;
   z-index: 10;
+  display: flex;
 }
 .navbarmaindiv button {
   border: none;
   background-color: white;
   text-align: center;
   margin-right: 30px;
-  font-size: 15px;
+  font-size: 13.7px;
   margin-top: 15px;
 }
 .navbarmaindiv button:active {
   color: blue;
-}
-.navbarmaindiv button:first-child {
-  margin-left: 500px;
 }
 .selectfaqh1 {
   margin: 20px 0px;
@@ -521,10 +576,13 @@ button {
 .selectFaqbutton {
   width: 300px;
   background-color: rgb(83, 146, 249);
-  color: white;
   height: 40px;
   margin-top: 30px;
   border: none;
+}
+.selectFaqbutton h3 {
+  color: white;
+  padding-top: 6px;
 }
 .selectmapfaqs {
   padding: 20px;
@@ -541,6 +599,9 @@ button {
 .selectAccordion {
   margin: 13px 0px;
   border-left: 5px solid #0283df;
+}
+.selectAccordion1 {
+  margin: 4px 0px;
 }
 .mapImageh4 {
   margin-left: 20px;
@@ -562,19 +623,23 @@ button {
   color: red;
 }
 .selectmapDiv {
-  margin: 5px 20px;
+  margin: 8px 20px;
   display: flex;
+  height: 35px;
   justify-content: space-between;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  padding: 5px 5px;
+  border-top: 1px solid rgb(149, 146, 139);
+  border-bottom: 1px solid rgb(149, 146, 139);
+  padding: 4px 5px;
 }
 .selectmapDiv i {
   margin-right: 10px;
 }
+.selectmapDiv p:last-child {
+  color: rgb(133, 193, 80);
+}
 .selectlandmarksdiv {
   overflow: hidden;
-  height: 167px;
+  height: 157px;
 }
 .selectQutub {
   display: flex;
@@ -609,7 +674,7 @@ button {
   padding: 12px;
   font-size: 14px;
   color: #4e4e4e;
-  line-height: 21px;
+  line-height: 10px;
   font-weight: 400;
   display: grid;
   grid-template-columns: 23% 23% 23% 23%;
@@ -799,17 +864,17 @@ button {
 .RatingModalButton {
   width: 200px;
   height: 40px;
-  background-color: #5392f9;
-  color: white;
+  color: #5392f9;
+  background-color: white;
   border-radius: 5px;
   margin-top: 0px;
   margin-left: 130px;
   border: none;
+  border: 2px solid #5392f9;
 }
 .RatingModalButton:hover {
-  border: 2px solid #5392f9;
-  color: #5392f9;
-  background-color: white;
+  background-color: #5392f9;
+  color: white;
 }
 .selectHeart {
   width: 40px;
@@ -831,10 +896,13 @@ button {
 .priceernightdiv1 {
   width: 104px;
   background-color: rgb(225, 45, 45);
-  height: 12px;
-  color: white;
+  height: 22px;
+  color: #f5f5f5;
   padding: 4px 8px;
   margin: 10px 0px;
+}
+.priceernightdiv1 h6 {
+  color: white;
 }
 .priceernightdiv2 {
   width: 154px;
@@ -862,7 +930,7 @@ button {
 }
 .mapExplorediv {
   width: 100%;
-  height: 80px;
+  height: 60px;
 }
 .mapAccordion {
   display: flex;
@@ -870,29 +938,29 @@ button {
 }
 .mapExplorediv {
   display: flex;
-  padding: 10px;
-  border-bottom: 2px solid rgb(224, 222, 222);
+  padding: 5px;
+  border-bottom: 3px solid rgb(224, 222, 222);
   color: #4e4e4e;
 }
 .mapExplorediv:hover {
   background-color: rgb(214, 211, 211);
 }
 .mapExplorediv img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 .mapExplorediv h3 {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 16px;
 }
 .mapExplorediv h5 {
   margin-left: 20px;
-  margin-top: 5px;
+  margin-top: -8px;
 }
 .selectaccodionsummary1 {
   width: 94%;
-  height: 40px;
+  height: 10px;
   border-bottom: 2px solid rgb(224, 222, 222);
 }
 .mainImagemap {
@@ -905,4 +973,43 @@ button {
   margin-bottom: 15px;
   margin-top: 15px;
   border-bottom: 3px solid rgb(224, 222, 222);
+}
+.navbarmaindivdiv1 {
+  width: 40%;
+  margin-left: 8%;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbarmaindivdiv1 button:hover {
+  color: #5392f9;
+  border-bottom: #5392f9 2px solid;
+}
+.navbarmaindivdiv2 {
+  margin-left: 15%;
+  width: 30%;
+  display: flex;
+}
+.navbarmaindivdiv2 button {
+  width: 150px;
+  background-color: #5392f9;
+  color: white;
+  border-radius: 5px;
+  margin-left: 2%;
+  height: 70%;
+  margin-top: 8px;
+}
+.navbarmaindivdiv2 button h3 {
+  color: white;
+  padding-top: 5px;
+}
+.navbarmaindivdiv2 > h3 {
+  padding-top: 10px;
+  color: #ee595d;
+}
+.navbarmaindivdiv2 p {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #696262;
 }
