@@ -30,12 +30,16 @@ const theme = createTheme({
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "60%",
+    width: "65%",
     margin: "auto",
     backgroundColor: "#fff",
     transform: "translateY(-260px)",
-    borderRadius: 5,
-    boxShadow: "0 4px 10px #111111",
+    borderRadius: 9,
+    boxShadow: "0 4px 10px #bbb",
+    zIndex: 10,
+    position: "relative",
+    top: "16px",
+    padding: "0 40px" 
   },
   tab: {
     margin: "8px 0",
