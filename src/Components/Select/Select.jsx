@@ -15,6 +15,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Capture from "../Store/Capture.jpeg";
 import Fade from '@material-ui/core/Fade';
 import { Loading } from "../Loading/Loading";
+import { useParams, useHistory, useLocation } from "react-router-dom";
+import axios from "axios";
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -29,19 +32,43 @@ function Select() {
     const [heart, setHeart] = useState(false)
     const [src, setSrc] = useState("https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png")
     const [loading, setLoading] = useState(false)
+    const [user, setUser] = useState({});
+      const location = useLocation;
+        console.log(location);
+
+        const { id } = useParams();
+
+        useEffect(() => {
+            getUserDetails();
+        }, []);
+    
+        const getUserDetails = () => {
+        axios
+        .get(`http://localhost:3001/hotel/${id}`)
+            
+        .then((res) => {
+            console.log("getIdusers", res.data);
+            setUser(res.data);
+        })
+        .catch((err) => { })
+        .finally(() => {console.log("users", user)})
+    };
+    
+    console.log("usersHotelDeatils", user)
+
  
     const handleClick = (event) => {
         setAnchorEl(anchorEl ? null : event.currentTarget);
     };
 
     const open = Boolean(anchorEl);
-    const id = open ? 'simple-popper' : undefined;
+    const id1 = open ? 'simple-popper' : undefined;
 
 
     window.onscroll = () => {
         // console.log(window.scrollY)
 
-        if (window.scrollY >= 300) {
+        if (window.scrollY >= 250) {
             setNavbar(true)
         }
         else {
@@ -76,14 +103,20 @@ function Select() {
                     <button onClick={() => { window.scrollTo(0, 2268) }}>Reviews</button>
                     <button onClick={() => { window.scrollTo(0, 1762) }}>Frequently Asked Questions</button>
                     <button onClick={() => { window.scrollTo(0, 6434) }}>Map</button>
+                    <button onClick={() => { window.scrollTo(0, 2434) }}>Check In</button>
                     {/* <button onClick={() => { window.scrollTo(0, 0); }}> Top <i className="fas fa-arrow-up" ></i> </button> */}
                 </div>
                 <div className={styles.navbarmaindivdiv2}>
-                    <h3>
-                        Price
+                    <div className={styles.navbarmaindivdiv2div1}>
+                        <h6>The cheapest price </h6>
+                        <h3>
+                        <span style={{fontSize:"12px"}}>Rs.</span>
+                        {user.price}
                     </h3>
+                    </div>
+                    
                     <button>
-                        <h3  onClick={() => { window.scrollTo(0, 1088) }}>View This Deal</h3>
+                        <h3  onClick={() => { window.scrollTo(0, 1088) }}>VIEW THIS DEAL</h3>
                     </button>
                     <p  onClick={() => { window.scrollTo(0, 0) }}>Back To Top<span> <i class="fas fa-arrow-up"></i></span></p>
                 </div>
@@ -92,11 +125,11 @@ function Select() {
                 <div className={styles.upperdiv}>
                     <div className={styles.selectUpperDiv}>
                         <div className={styles.selectUpperDivImage}>
-                            <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/46069253.jpg?k=3b4c54b4792df6aced8f9040cb373b7fd59c59fcfba7218f6d9fdcb39265906f&o=" alt="image1" className={styles.selectBigimage} />
+                            <img src={user.url} alt="image1" className={styles.selectBigimage} />
                             <div className={styles.selectUpperDivdiv}>
                                 <div className={ styles.upperdivPosition}>
                                     <p>from</p>
-                                    <p>Rs. <span>2,879</span></p>
+                                    <p>Rs. <span>{ user.price}</span></p>
                                 </div>
                                 <div className={ styles.upperdivPosition2}>
                                     <p>54%</p>
@@ -108,10 +141,10 @@ function Select() {
                                 <p>Sandeep - January 5 2020</p>
                             </h4>
                             <div className={styles.selectUpperDivImage2}>
-                                <img src="https://pix8.agoda.net/hotelImages/400860/-1/3cfdcb434113aab012d5b85bbe77c4e3.jpg?s=1024x768" alt="images" className={styles.upperImage2} />
+                                <img src={user.urlchild1} alt="images" className={styles.upperImage2} />
                                 <div className={styles.selectDivFlexUpper}>
-                                    <img src="https://pix8.agoda.net/hotelImages/5061882/0/766190091e57e969173415511421bf31.jpg?s=1024x768" alt="images" />
-                                    <img src="	https://pix8.agoda.net/hotelImages/5061882/0/85fb9b7a13482a2ec82d01967afb66b8.jpg?s=1024x768" alt="images" />
+                                    <img src={user.urlchild2} alt="images" />
+                                    <img src={user.urlchild3} alt="images" />
                                     <h5 className={styles.selectseeallphotos}>SEE ALL PHOTOS</h5>
                                 </div>
                                 <div className={styles.selectHeart} onClick={handleHeart}>
@@ -125,7 +158,7 @@ function Select() {
                                 <button>Free Wi-Fi</button>
                                 <button>Genius</button>
                             </div>
-                            <h1>Red Fox Hotel Delhi Airport
+                            <h1>{ user.hotel}
                                 <span>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -163,12 +196,12 @@ function Select() {
                     <div className={styles.selectrating}>
                         <div className={styles.selectratingdiv1}>
                             <div className={styles.selectRatingDiv}>
-                                <div className={styles.selectRatingDiv1} aria-describedby={id} type="button" onMouseEnter={handleClick} onMouseLeave={handleClick}>
+                                <div className={styles.selectRatingDiv1} aria-describedby={id1} type="button" onMouseEnter={handleClick} onMouseLeave={handleClick}>
                                     <span >
                                         <h2>7.7</h2>
                                     </span>
                                 
-                                    <Popper id={id} open={open} anchorEl={anchorEl} transition>
+                                    <Popper id={id1} open={open} anchorEl={anchorEl} transition>
                                         {({ TransitionProps }) => (
                                             <Fade {...TransitionProps} timeout={350}>
                                                 <div className={classes.paper}>
@@ -363,6 +396,7 @@ function Select() {
                                     CHEAPEST PRICE YOU'VE SEEN!
                                 </p>
                             </div>
+                            <h4 style={{ color: "red",padding:"10px",textAlign:"right" }}>Rs. { user.price}</h4>
                         </div>
                         <div className={styles.selectinnerdiv5}>
                             <div className={styles.selectinnerdivs}>
