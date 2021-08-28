@@ -49,7 +49,7 @@ export const ScrollUpNav = ({ calcScroll }) => {
           style={{ display: scroll > calcScroll ? "flex" : "none" }}
           className={styles.scrollNav}
         >
-          <Grid item lg={4}>
+          <Grid item xl={4} lg={4} md={4} sm={6} xs={6}>
             <div className={styles.scrollNavSearch}>
               <SearchIcon />
               <input
@@ -94,18 +94,18 @@ export const ScrollUpNav = ({ calcScroll }) => {
 
           {/* debounce result end */}
 
-          <Grid item lg={5}>
+          <Grid item xl={5} lg={5} md={5} sm={6} xs={6}>
             <div>
               <Calendar setFocus={setFocus} />
             </div>
           </Grid>
-          <Grid item lg={3}>
+          <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
             <div>
               <RoomSelect setFocus={setFocus} />
             </div>
           </Grid>
 
-          <button>
+          <button style={{height: '60px'}}>
             <Link style={{ color: "#fff" }} to="/milind">
               SEARCH
             </Link>

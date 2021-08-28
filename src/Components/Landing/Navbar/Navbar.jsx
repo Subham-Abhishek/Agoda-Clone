@@ -35,6 +35,8 @@ const useStyles = makeStyles({
     textAlign: "center",
     padding: "10px",
     zIndex: "-1",
+    fontSize: "17px",
+    fontWeight: 600
   },
 });
 

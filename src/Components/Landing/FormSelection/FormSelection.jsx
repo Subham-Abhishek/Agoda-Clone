@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 10,
     position: "relative",
     top: "16px",
-    padding: "0 40px" 
+    padding: "0 40px",
   },
   tab: {
     margin: "8px 0",
@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
     transform: "translateY(-260px)",
     borderRadius: 9,
     padding: "40px 50px",
-    boxShadow: "0 4px 10px gray, 0 -4px 10px gray",
   },
 }));
 
@@ -102,7 +101,10 @@ export const FormSelection = () => {
   return (
     <div>
       <div
-        style={{ backgroundColor: focus ? "rgba(0,0,0,0.5)" : "transparent" , display: focus ? "block" : "none"}}
+        style={{
+          backgroundColor: focus ? "rgba(0,0,0,0.7)" : "transparent",
+          display: focus ? "block" : "none",
+        }}
         className={styles.main_container}
       ></div>
       <img
@@ -150,7 +152,10 @@ export const FormSelection = () => {
         </Paper>
       </ThemeProvider>
       <Paper
-        style={{ backgroundColor: focus ? "#aaa" : "#F8F7F9" }}
+        style={{
+          backgroundColor: focus ? "#666" : "#F8F7F9",
+          boxShadow: focus ? "none" : "0 4px 10px #888, 0 -4px 10px #888",
+        }}
         square
         className={classes.form}
       >
