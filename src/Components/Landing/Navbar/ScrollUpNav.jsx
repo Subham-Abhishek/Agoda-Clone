@@ -9,7 +9,7 @@ import { AppContext } from "../../../context/Provider";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export const ScrollUpNav = ({ calcScroll }) => {
+export const ScrollUpNav = (props) => {
   const [scroll, setScroll] = useState(0);
   const [cities, setCities] = useState([]);
   const [debounce, setDebounce] = useState(false);
@@ -46,7 +46,7 @@ export const ScrollUpNav = ({ calcScroll }) => {
     <>
       <Grid container>
         <div
-          style={{ display: scroll > calcScroll ? "flex" : "none", }}
+          style={{ display: scroll > props.calcScroll ? "flex" : "none", }}
           className={styles.scrollNav}
         >
           <Grid item xl={4} lg={4} md={4} sm={6} xs={6}>
@@ -105,7 +105,7 @@ export const ScrollUpNav = ({ calcScroll }) => {
             </div>
           </Grid>
 
-          <button style={{height: '60px'}}>
+          <button onClick={props.handleClicking} style={{height: '60px'}}>
             <Link style={{ color: "#fff" }} to="/milind">
               SEARCH
             </Link>
