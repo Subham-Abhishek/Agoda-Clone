@@ -12,7 +12,7 @@ import FlightIcon from "@material-ui/icons/Flight";
 import EventAvailableIcon from "@material-ui/icons/EventAvailable";
 import SearchIcon from "@material-ui/icons/Search";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Calendar } from "./Calendar";
 import RoomSelect from "./RoomSelect";
 import axios from "axios";
