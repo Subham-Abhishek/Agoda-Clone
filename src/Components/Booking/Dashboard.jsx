@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData, getDataSuccess } from "../../Bookingreducer/Redux/action";
+import { getData, getDataSuccess, searchDataFailure, searchDataRequest, searchDataSuccess } from "../../Bookingreducer/Redux/action";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { Button, Box } from "@material-ui/core";
@@ -16,11 +16,14 @@ import Switch from "@material-ui/core/Switch";
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
+import { AppContext } from "../../context/Provider";
 
 const Dashboard = () => {
   const state = useSelector((state) => state.hoteldata);
   console.log(state);
   const dispatch = useDispatch();
+
+  const {searchedCity} = useContext(AppContext)
 
   const handleSort = () => {
     axios
@@ -57,13 +60,27 @@ const Dashboard = () => {
       });
   };
 
-  useEffect(() => {
-    dispatch(getData());
+const searchData = () => {
+    dispatch(searchDataRequest())
+    return axios.get(`http://localhost:3001/hotel?city=${searchedCity.toLowerCase()}`)
+        .then((res) => {
+            console.log(res.data)
+            dispatch(searchDataSuccess(res.data))
+        })
+        .catch((err) => {
+            dispatch(searchDataFailure(err))
+        })
+}
+
+
+useEffect(() => {
+    searchData();
+    // dispatch(getData());
   }, [dispatch]);
 
   return (
     <>
-      <Searchdiv />
+      {/* <Searchdiv /> */}
     <Filtering/>
 
       <Box className={styles.root}>

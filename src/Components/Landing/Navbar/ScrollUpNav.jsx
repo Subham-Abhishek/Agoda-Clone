@@ -14,7 +14,7 @@ export const ScrollUpNav = ({ calcScroll }) => {
   const [cities, setCities] = useState([]);
   const [debounce, setDebounce] = useState(false);
   const [, setFocus] = useState(false);
-
+  
   const { searchedCity, setSearchedCity } = useContext(AppContext);
 
   const handleSearch = (e) => {
@@ -46,7 +46,7 @@ export const ScrollUpNav = ({ calcScroll }) => {
     <>
       <Grid container>
         <div
-          style={{ display: scroll > calcScroll ? "flex" : "none" }}
+          style={{ display: scroll > calcScroll ? "flex" : "none", }}
           className={styles.scrollNav}
         >
           <Grid item xl={4} lg={4} md={4} sm={6} xs={6}>

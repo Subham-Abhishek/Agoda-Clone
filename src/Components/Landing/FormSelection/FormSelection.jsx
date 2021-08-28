@@ -216,7 +216,7 @@ export const FormSelection = () => {
 
           {/* debounce result end */}
 
-          <Grid className={styles.formSecLine} container item>
+          <Grid style={{paddingBottom : window.innerWidth > 800 ? "0" : "10px"}} className={styles.formSecLine} container item>
             <Grid
               className={styles.calendar}
               item
