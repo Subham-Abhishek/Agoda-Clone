@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid transparent;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 .searchBtn {
   background-color: #5392f9;
