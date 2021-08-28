@@ -18,10 +18,13 @@ import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
 import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
 import { AppContext } from "../../context/Provider";
+import {Loading} from "../Loading/Loading"
 
 const Dashboard = () => {
   const [clicked, setClicked] = useState(false)
   const state = useSelector((state) => state.hoteldata);
+  const [loading, setLoading] = useState(false)
+
   console.log(state);
   const dispatch = useDispatch();
 
@@ -77,14 +80,27 @@ const searchData = () => {
 const handleClicking = () => {
   setClicked(!clicked)
 }
+//loading useffect
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+      setLoading(true)
+  }, 1600);
+  return () => clearTimeout(timer);
+  }, []);
+
+
 
 useEffect(() => {
     searchData();
     // dispatch(getData());
   }, [clicked]);
 
-  return (
+
+  
+  return  (
     <>
+    
       {/* <Searchdiv /> */}
       <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
     <Filtering/>
@@ -165,12 +181,13 @@ useEffect(() => {
                           src={item.urlchild3}
                           alt=""
                         />
-                        <img
+                        <img style={{filter:"brightness(0.5)"}}
                           className={styles.childimg}
                           height="49px"
                           width="61.5px"
                           src={item.urlchild4}
                           alt=""
+
                         />
                       </Box>
                     </Box>
