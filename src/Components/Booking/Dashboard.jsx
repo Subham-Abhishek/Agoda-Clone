@@ -15,6 +15,7 @@ import Dashboardleft from "./Dashboardleft";
 import Switch from "@material-ui/core/Switch";
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
+import Filtering from "./Filtering";
 
 const Dashboard = () => {
   const state = useSelector((state) => state.hoteldata);
@@ -63,6 +64,7 @@ const Dashboard = () => {
   return (
     <>
       <Searchdiv />
+    <Filtering/>
 
       <Box className={styles.root}>
         <Box className={styles.root1}>

@@ -48,3 +48,82 @@
   color: #3c3c3c;
   text-transform: uppercase;
 }
+.filterparent{
+  width: 100%;
+  border: 1px solid black;
+  height: 60px;
+
+}
+.filter{
+  width: 90%;
+  height: 50px;
+  display: flex;
+  margin-left:80px;
+}
+
+.btn1,.btn2,.btn3,.btn4,.btn5{
+  height: 35px;
+  border-radius:20px ;
+  color: #fff;
+  background-color: #20274d;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  line-height: 1.4;
+  margin-left: 10px;
+  margin-top: 13px;
+  
+  margin-bottom: 0;
+    text-align: center;
+  
+} 
+.btnnotuse{
+  border: none;
+  background-color: white;
+  margin-top: 5px;
+  font-weight: 700;
+  
+}
+
+.btn1{
+  width: 200px;
+}
+
+.btn2{
+  width:80px
+}
+
+
+
+.btn3{
+  width: 130px;
+}
+
+
+
+.btn4{
+  width: 150px;
+}
+
+
+
+.btn5{
+  width: 140px;
+}
+button i{
+  margin: 5px;
+}
+
+.searchinputsmall{
+  margin-left: 80px ;
+  width: 210px;
+  border-radius: 25px;
+  border: 1px solid black;
+  height: 35px;
+  margin-top:15px ;
+
+}
