@@ -99,7 +99,7 @@ useEffect(() => {
             <div className={styles.upgrade}>
               <img
                 style={{ margin: "10px" }}
-                height="50px"
+                height="49px"
                 src="https://cdn6.agoda.net/images/kite-js/banner/special-offers-colored3.svg"
                 alt=""
               />
@@ -127,7 +127,7 @@ useEffect(() => {
             {state.map((item) => {
               return (
                 <NavLink className={styles.nav} to={`/hotel/${item.id}`}>
-                  <div className={styles.hoteldiv}>
+                  <Paper  elevation={1}className={styles.hoteldiv}>
                     <Box className={styles.hotelchild1}>
                       <div className={styles.bigimg}>
                         <div className={styles.bigimgtext}>
@@ -146,28 +146,28 @@ useEffect(() => {
                       <Box className={styles.childimg1}>
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild1}
                           alt=""
                         />
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild2}
                           alt=""
                         />
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild3}
                           alt=""
                         />
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild4}
                           alt=""
@@ -287,7 +287,7 @@ useEffect(() => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Paper>
                 </NavLink>
               );
             })}
