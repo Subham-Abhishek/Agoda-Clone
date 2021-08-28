@@ -198,7 +198,7 @@ function Select() {
                             <div className={styles.selectRatingDiv}>
                                 <div className={styles.selectRatingDiv1} aria-describedby={id1} type="button" onMouseEnter={handleClick} onMouseLeave={handleClick}>
                                     <span >
-                                        <h2>7.7</h2>
+                                        <h2>{ user.rating}</h2>
                                     </span>
                                 
                                     <Popper id={id1} open={open} anchorEl={anchorEl} transition>
@@ -206,7 +206,7 @@ function Select() {
                                             <Fade {...TransitionProps} timeout={350}>
                                                 <div className={classes.paper}>
                                                     <div className={styles.selectRatingModal}>
-                                                        <h4>Based on <span style={{ color: "#5392f9" }}> 734 </span> verified reviews</h4>
+                                                        <h4>Based on <span style={{ color: "#5392f9" }}> { user.reviews} </span> verified reviews</h4>
                                                         <div className={styles.RatingModalDivs}>
                                                             <div><p>9 + Exceptional</p></div>
                                                             <div className={styles.RatingBlueDiv}>
@@ -253,7 +253,7 @@ function Select() {
                                 </div>
                                 <div className={ styles.selectmodaldivright}>
                                     <h3>Very Good</h3>
-                                    <h6>/(1,515 reviews)</h6>
+                                    <h6>/({ user.reviews} reviews)</h6>
                                 </div>
                             </div>
                             <div className={styles.selectRatingdivs}>
@@ -358,7 +358,7 @@ function Select() {
                     <span className={styles.selectsqrt1}>Last Booked 6 Hours Ago</span>
                     <div className={styles.selectinnerdiv}>
                         <div className={styles.selectinnerdiv1}>
-                            <img src="https://pix8.agoda.net/hotelImages/400860/-1/3cfdcb434113aab012d5b85bbe77c4e3.jpg?s=1024x768" alt="standardqueen" />
+                            <img src={user.urlchild1} alt="standardqueen" />
                             <p className={styles.selectinnerdivp1}>Room photos and details</p>
                             <p style={{ color: "rgb(133, 193, 80)" }} className={styles.facilitiesrightDiv}><i className="fas fa-wifi"> </i> Free Wi-Fi</p>
                             <p className={styles.facilitiesrightDiv}> <i className="fas fa-bed"></i> 1 Queen bed</p>

@@ -25,7 +25,7 @@ function Map() {
     const [long, setLong] = useState(77.1855)
     const [showPopup, togglePopup] = React.useState(false);
     const [viewport, setViewport] = useState({
-        width: 1030,
+        width: 1000,
         height: 630,
         latitude: lati,
         longitude: long,
