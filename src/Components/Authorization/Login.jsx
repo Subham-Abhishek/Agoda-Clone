@@ -13,7 +13,7 @@ import GoogleLogin from "react-google-login";
 import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import { Redirect } from "react-router-dom";
-import IsAuth from "../../Context/Auth";
+import IsAuth from "../../context/Auth";
 
 export const Login = () => {
   const [isLoading, setLoading] = useState(true);
