@@ -16,7 +16,7 @@ import { Redirect } from "react-router-dom";
 import IsAuth from "../../Context/Auth";
 
 export const Login = () => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const Auth = useContext(IsAuth);
   useEffect(() => {
     setLoading(true);
@@ -56,24 +56,20 @@ export const Login = () => {
           <input type="password" placeholder="First Name" />
         </div>
 
-        <div className="confirm">
-          <FormControlLabel
+        <div className="confirm" style={{marginTop:20}}>
+          {/* <FormControlLabel
             control={<Checkbox value="allowExtraEmails" color="primary" />}
             label="Email me exclusive Agoda promotions.  I can opt out later as stated in the Privacy Policy."
-          />
+          /> */}
         </div>
 
         <button className="signup-btn">Sign Up</button>
         <div className="break">
           <div className="line"></div>
-          <p>or continue with</p>
+          <p>or sign with</p>
           <div className="line"></div>
         </div>
-        <div
-          className="buttons"
-          style={{ border: "2px solid #a6a6a6" }}
-          variant="outlined"
-        >
+        <div className="google">
           {/* <GoogleLogin
             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
             buttonText="Sign in with Google"
@@ -83,29 +79,20 @@ export const Login = () => {
           /> */}
         </div>
         <div className="social">
-          <div
-            className="buttons"
-            style={{ border: "2px solid black" }}
-            variant="outlined"
-          >
-            <FaApple style={{ marginRight: "90px", width: 25, height: 25 }} />{" "}
-            Sign in with Apple
+          <div>
+            <FaApple style={{ marginRight:5 ,color:"black",width: 20, height: 20 }} /> Apple
           </div>
 
-          <div
-            className="buttons"
-            style={{ border: "2px solid #1877f2", color: "#1877f2" }}
-            variant="outlined"
-          >
+          <div>
             <SiFacebook
-              style={{ marginRight: "75px", width: 25, height: 25 }}
+              style={{marginRight:5 ,color:"blue", width: 22, height: 22 }}
             />{" "}
-            Sign in with Facebook
+            Facebook
           </div>
         </div>
         <div className="line1"></div>
-        <div className="buttons">Already have an account? Sign in</div>
-        <p>
+      
+        <p className="By">
           By signing in, I agree to Agoda's Terms of Use and Privacy Policy.
         </p>
       </div>
