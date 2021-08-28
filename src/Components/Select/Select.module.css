@@ -535,7 +535,7 @@ button {
   overflow: hidden;
 }
 .selectaccodionsummary {
-  height: 70px;
+  height: 65px;
   background-color: rgb(243, 243, 243);
 }
 .selectaccodionsummary:hover {
@@ -544,6 +544,7 @@ button {
 }
 .selectAccordion {
   margin: 13px 0px;
+  border-left: 5px solid #0283df;
 }
 .mapImageh4 {
   margin-left: 20px;
