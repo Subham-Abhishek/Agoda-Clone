@@ -1,5 +1,6 @@
 * {
-  font-family: mallory, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: roboto;
+  letter-spacing: 0.3px;
 }
 
 .selectMainDiv {
@@ -869,4 +870,42 @@ button {
 .mapAccordion {
   display: flex;
   flex-direction: column;
+}
+.mapExplorediv {
+  display: flex;
+  padding: 10px;
+  border-bottom: 2px solid rgb(224, 222, 222);
+  color: #4e4e4e;
+}
+.mapExplorediv:hover {
+  background-color: rgb(214, 211, 211);
+}
+.mapExplorediv img {
+  width: 70px;
+  height: 70px;
+}
+.mapExplorediv h3 {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.mapExplorediv h5 {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.selectaccodionsummary1 {
+  width: 94%;
+  height: 40px;
+  border-bottom: 2px solid rgb(224, 222, 222);
+}
+.mainImagemap {
+  display: flex;
+}
+.upperdivmap {
+  border-top: 4px solid #5392f9;
+  background-color: rgb(243, 243, 243);
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-bottom: 3px solid rgb(224, 222, 222);
 }

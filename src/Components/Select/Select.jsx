@@ -52,7 +52,7 @@ function Select() {
      useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(true)
-        }, 2000);
+        }, 1600);
         return () => clearTimeout(timer);
         }, []);
 
