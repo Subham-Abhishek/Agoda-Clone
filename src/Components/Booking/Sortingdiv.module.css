@@ -1,0 +1,179 @@
+.sortdiv {
+    width: 100%;
+    height: 46px;
+    /* margin-left: 300px; */
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid rgb(179, 171, 171);
+    border-radius: 7px;
+
+
+}
+
+.sortdiv>div {
+    /* height: 46px; */
+    text-align: center;
+
+}
+
+.sortdiv>div>p {
+    margin-top: 10px;
+}
+
+.sortchild1 {
+    /* border-right: .5px solid rgb(179, 171, 171); */
+    width: 65px;
+    /* border-right: 1px solid rgb(221, 223, 226); */
+    background-color: rgb(248, 247, 249);
+
+    color: rgb(115, 115, 115);
+
+    /* margin: 10px; */
+}
+
+
+
+.sortchild2 {
+    width: 180px;
+    border-right: .5px solid rgb(179, 171, 171);
+    /* height: 150px; */
+    background-color: #5392f9;
+    color: #fff;
+    cursor: pointer;
+    margin-top: -1px;
+
+
+
+}
+
+.sortchild4:hover {
+    color: #0283df;
+    cursor: pointer;
+
+}
+
+.sortchild4 {
+    width: 170px;
+    border-right: .5px solid rgb(179, 171, 171);
+    height: 35px;
+    margin-top: 4px;
+}
+
+.sortchild4>.btntext4 {
+    margin-top: 4px;
+
+}
+
+.sortchild2>.btntext2 {
+    margin-top: 12px;
+
+}
+
+
+.sortchild5 {
+    width: 170px;
+
+
+}
+
+.sortchild5:hover {
+    cursor: pointer;
+    color: #0283df;
+}
+
+
+.searchinput {
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.searchinputdate {
+    width: 150px;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 5px;
+    height: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background-color: white;
+
+
+
+}
+
+.searchinputdate2 {
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 10px;
+    background-color: white;
+
+}
+
+.searchdiv>div {
+    width: 90%;
+    margin-left: 80px;
+}
+
+.searchdiv {
+    width: 100%;
+    height: 70px;
+    border: 1px solid black;
+    margin: auto;
+    background: #20274d;
+
+
+}
+
+
+.searchinputroom {
+    height: 50px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 30px;
+
+}
+
+.searchbtn {
+    font-size: 15px;
+    height: 50px;
+    width: 130px;
+    border: none;
+    color: #fff;
+    background-color: #5392f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 15%);
+
+}
+
+.publicicon {
+    position: relative;
+    left: 60px;
+    z-index: 1;
+    top: 5px
+}
+
+.publicicon1 {
+    position: relative;
+    left: 40px;
+    z-index: 1;
+    top: 7px;
+
+}
+.btntext4 i{
+    color: gray;
+    font-size: 12px;
+}

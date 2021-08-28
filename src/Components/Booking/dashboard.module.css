@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    display: grid;
+    grid-template-columns: 20% 65%;
+    margin: auto;
+    width: 90%;
+    cursor: pointer;
+    /* border: 1px solid black;  */
+
+}
+
+
+.hotelpaper {
+    /* height: 2160px; */
+    width: 910px
+}
+
+
+.root2 {
+    margin: 20px;
+
+}
+
+
+
+.hoteldiv:hover {
+    box-shadow: 5px 5px 5px rgb(184, 182, 182);
+}
+
+.hoteldiv {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+
+}
+
+/* .childimg {
+      margin-left:0.5px
+  };    */
+
+.hoteldetails {
+    font-size: 15px;
+    width: 40%;
+    margin-left: 10px;
+    width: 400px;
+    padding: 25;
+    height: 250px
+}
+
+;
+
+.directiontext {
+    font-size: 13px;
+    color: blue;
+}
+
+.detailsbtn {
+    width: 80px;
+    height: 20px;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+.detailsbtnplus {
+    width: 30px;
+    height: 20px;
+    margin-left: 5px;
+    gap: 10px;
+
+
+}
+
+.detailsbtndinner {
+    width: 130px;
+    height: 20px;
+    margin-left: 5px;
+    gap: 10px;
+
+}
+
+.btntext {
+    font-size: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.btnspan {
+    height: 50px;
+    width: 50%;
+}
+
+.updatedetail {
+    margin-top: 10px;
+    color: rgb(225, 45, 45);
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+
+}
+
+.payment {
+    margin-top: 10px;
+    color: rgb(62, 108, 234);
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+
+}
+
+.pay {
+    font-weight: bold;
+}
+
+.coupon {
+    margin-top: 10px;
+    border-radius: 2px;
+    border: 1px solid rgb(164, 223, 165);
+    color: rgb(40, 135, 28);
+    background-color: rgb(232, 247, 233);
+    width: 90%;
+
+}
+
+.hotelfacility {
+    height: 300px;
+    padding-top: 2%;
+
+}
+
+.hotelfacilitychild {
+    width: 150px;
+    height: 250px;
+    /* background-color: aqua; */
+    margin-left: 60px;
+}
+
+.offer {
+    display: flex;
+    height: 15px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    width: 120px;
+    height: 20px;
+    background-color: rgb(22, 115, 127);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+.offertxt {
+    margin-left: 5px;
+
+}
+
+.ratingdiv {
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: blue;
+    margin-left: 5px;
+
+}
+
+.roombtn {
+
+    position: relative;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgb(62, 108, 234);
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.price {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 2%;
+
+}
+
+.pricetext {
+    color: rgb(144, 148, 156);
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 2%;
+    margin-left: 15px;
+
+}
+
+.pricevalue {
+    margin-left: 50px;
+    color: #e12d2d;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.cancel {
+    margin-left: 20px;
+    font-size: 12px;
+    color: rgb(40, 135, 28);
+    padding: 2%;
+    margin-top: 6px;
+
+    font-weight: 500;
+}
+
+
+.rateingvalue {
+    margin-left: 50px;
+    margin-top: -5px;
+    font-size: 12px;
+    color: rgb(144, 148, 156);
+    font-weight: 500;
+    padding: 2%;
+
+}
+
+.upgrade {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border: 1px solid black;
+    background-color: rgb(56, 67, 90);
+    border: none;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    transition: all 0.2s ease 0s;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.upgradetext {
+    width: 400px;
+    margin-top: -5px;
+}
+
+.upgradetext1 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.slidebtn {
+    margin-left: 350px;
+    margin-top: 14px;
+    position: relative;
+    width: 24px;
+    height: 14px;
+    border-radius: 13px;
+    transition: all 0.2s ease 0s;
+    /* background-color: rgb(221, 223, 226); */
+
+
+
+}
+
+
+.nav {
+    text-decoration: none;
+}
+
+.bigimg {
+    position: relative;
+}
+
+.bigimgtext {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    background-color: green;
+    color: white;
+    top: 10px;
+    left: -5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.bigimgtrain {
+    position: absolute;
+    background-color: #5392f9;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border: 3px solid white;
+    bottom: 10px;
+    right: 0;
+
+}
+
+.bigimgtrain i {
+    padding: 9px 13px;
+
+}
