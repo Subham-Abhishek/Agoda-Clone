@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 10,
     position: "relative",
     top: "16px",
-    padding: "0 40px",
+    padding: "0 0px",
   },
   tab: {
     margin: "8px 0",
@@ -118,7 +118,8 @@ export const FormSelection = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            variant="fullWidth"
+            variant="scrollable"
+            scrollButtons="auto"
             indicatorColor="primary"
             textColor="primary"
             aria-label="icon label tabs example"
@@ -216,7 +217,12 @@ export const FormSelection = () => {
 
           {/* debounce result end */}
 
-          <Grid style={{paddingBottom : window.innerWidth > 800 ? "0" : "10px"}} className={styles.formSecLine} container item>
+          <Grid
+            style={{ paddingBottom: window.innerWidth > 800 ? "0" : "10px" }}
+            className={styles.formSecLine}
+            container
+            item
+          >
             <Grid
               className={styles.calendar}
               item
@@ -258,11 +264,13 @@ export const FormSelection = () => {
             </Grid>
           </Grid>
 
-          <button className={styles.searchBtn}>
-            <Link style={{ color: "#fff" }} to="/milind">
-              SEARCH
-            </Link>
-          </button>
+          <Link
+            className={styles.searchBtnLink}
+            style={{ color: "#fff" }}
+            to="/milind"
+          >
+            <button className={styles.searchBtn}>SEARCH</button>
+          </Link>
         </Grid>
       </Paper>
     </div>

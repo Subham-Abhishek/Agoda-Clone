@@ -13,8 +13,8 @@ export const ScrollUpNav = (props) => {
   const [scroll, setScroll] = useState(0);
   const [cities, setCities] = useState([]);
   const [debounce, setDebounce] = useState(false);
-  const [, setFocus] = useState(false);
-  
+  const [focus, setFocus] = useState(false);
+
   const { searchedCity, setSearchedCity } = useContext(AppContext);
 
   const handleSearch = (e) => {
@@ -43,18 +43,31 @@ export const ScrollUpNav = (props) => {
   });
 
   return (
-    <>
+    <div className={styles.container}>
       <Grid container>
         <div
-          style={{ display: scroll > props.calcScroll ? "flex" : "none", }}
+          style={{
+            backgroundColor: focus ? "rgba(0,0,0,0.7)" : "transparent",
+            display: focus ? "block" : "none",
+          }}
+          className={styles.main_container}
+        ></div>
+        <div
+          style={{
+            display: scroll > props.calcScroll ? "flex" : "none",
+          }}
           className={styles.scrollNav}
         >
-          <Grid item xl={4} lg={4} md={4} sm={6} xs={6}>
+          <Grid item >
             <div className={styles.scrollNavSearch}>
               <SearchIcon />
               <input
                 onFocus={() => {
                   setDebounce(true);
+                  setFocus(true);
+                }}
+                onBlur={() => {
+                  setFocus(false);
                 }}
                 type="text"
                 value={searchedCity}
@@ -94,24 +107,24 @@ export const ScrollUpNav = (props) => {
 
           {/* debounce result end */}
 
-          <Grid item xl={5} lg={5} md={5} sm={6} xs={6}>
-            <div>
+          <Grid item>
+            <div className={styles.scrollNavCalendar}>
               <Calendar setFocus={setFocus} />
             </div>
           </Grid>
-          <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
-            <div>
+          <Grid item>
+            <div className={styles.scrollNavRoomSelect}>
               <RoomSelect setFocus={setFocus} />
             </div>
           </Grid>
 
-          <button onClick={props.handleClicking} style={{height: '60px'}}>
+          <button onClick={props.handleClicking} className={styles.searchBtn}>
             <Link style={{ color: "#fff" }} to="/milind">
               SEARCH
             </Link>
           </button>
         </div>
       </Grid>
-    </>
+    </div>
   );
 };

@@ -1,4 +1,4 @@
-.main_container{
+.main_container {
   position: absolute;
   width: 100vw;
   height: 300vh;
@@ -8,7 +8,7 @@
   width: 100%;
   height: 360px;
 }
-.searchIcon{
+.searchIcon {
   color: #555;
 }
 .formFirstLine {
@@ -18,7 +18,7 @@
   background-color: #fff;
   padding: 10px;
   border-radius: 9px;
-  height: 60px
+  height: 60px;
 }
 .formFirstLine > input {
   width: 100%;
@@ -39,17 +39,22 @@
   border: 1px solid transparent;
   /* padding-bottom: 10px; */
 }
+.searchBtnLink {
+  min-width: 50%;
+  margin: auto;
+}
 .searchBtn {
   background-color: #5392f9;
   cursor: pointer;
   border: none;
   color: #ffffff;
-  padding: 15px 20%;
+  padding: 15px;
   font-size: 20px;
   letter-spacing: 1.5px;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
   font-weight: 600;
+  width: 100%;
 }
 .searchBtn:hover {
   background-color: #87b3fb;
@@ -84,7 +89,7 @@
 .locationIcon {
   margin-right: 10px;
 }
-.checkbox_flightHotel{
+.checkbox_flightHotel {
   border: 1px solid #ccc;
   height: 60px;
   display: flex;
@@ -92,28 +97,28 @@
   padding-left: 15px;
   border-radius: 9px;
   background-color: #fff;
-  font-weight:600;
+  font-weight: 600;
   color: #555;
 }
-.newTag{
+.newTag {
   position: absolute;
   right: 97px;
   top: -10px;
   border-radius: 5px;
   padding: 1px 5px;
-  background-color: #E12D2D;
+  background-color: #e12d2d;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing:1px
+  letter-spacing: 1px;
 }
-.checkboxTag{
+.checkboxTag {
   position: relative;
   top: -29px;
   border-radius: 5px;
   padding: 1px 5px;
   left: -220px;
-  background-color: #E12D2D;
+  background-color: #e12d2d;
   color: #fff;
   font-size: 12px;
 }
