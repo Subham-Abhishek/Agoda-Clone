@@ -3,7 +3,7 @@ import styles from "./landingPage.module.css";
 import { FormSelection } from "../../Components/Landing/FormSelection/FormSelection";
 import { Navbar } from "../../Components/Landing/Navbar/Navbar";
 import { DestinationCarousels } from "../../Components/Landing/DestinationCarousels/DestinationCarousels";
-// import { Footer } from "../../Components/Landing/Footer/Footer";
+import { Footer } from "../../Components/Landing/Footer/Footer";
 import { Container, Grid } from "@material-ui/core";
 import { ScrollUpNav } from "../../Components/Landing/Navbar/ScrollUpNav";
 
@@ -48,7 +48,7 @@ export const LandingPage = () => {
 
       <ScrollUpNav calcScroll="500" />
       <DestinationCarousels />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
