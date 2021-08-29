@@ -10,6 +10,7 @@ function App() {
       value={{
         isAuth: isLogin,
         toggle: setLogin,
+        user:{}
       }}
     >
       <Routes />

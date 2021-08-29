@@ -32,7 +32,10 @@ export const Login = () => {
   function responseGoogle(response) {
     console.log(response);
     console.log(response.profileObj);
+    Auth.user = response
     Auth.toggle(!Auth.isAuth);
+    console.log(Auth);
+
   }
   if (Auth.isAuth) {
     return <Redirect to="/" />;
