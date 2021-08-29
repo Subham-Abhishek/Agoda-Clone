@@ -583,12 +583,14 @@ nav img{
 }
 .paymentsHolder{
     width: 100%;
+    box-sizing:content-box;
     padding: 0 15px;
     margin-top: 15px;
 }
 .paymentInfo{
     width: 96%;
     height: 60px;
+    box-sizing: content-box !important;
     display: flex;
     align-items: center;
     background-color: rgb(72,139,248);

@@ -8,17 +8,17 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { useState } from "react";
 
-export const HotelDetails = () => {
+export const HotelDetails = ({selectedHotel}) => {
     const [isHover,setHover] = useState(false)
   return (
     <>
       <div className="hotelInfo">
         <div className="hotel-img">
-          <img src="hote1.jpg" alt="" />
+          <img src={selectedHotel.urlchild4} alt="" />
         </div>
         <div className="hotelDetails">
           <div className="best">Best Seller</div>
-          <div className="hotelName">KOKO HOTEL Ginza 1chome</div>
+          <div className="hotelName">{selectedHotel.hotel}</div>
           <div className="stars">
             <FaStar />
             <FaStar />
@@ -26,7 +26,7 @@ export const HotelDetails = () => {
             <FaStarHalfAlt />
           </div>
           <p className="addre">
-            1-9-5 Ginza, Chuo-ku, Ginza, Tokyo, Japan 104-0061
+            {selectedHotel.direction}
           </p>
           <div className="exellent">
             <ImLocation2 style={{ width: 20, height: 15 }} />
@@ -37,15 +37,15 @@ export const HotelDetails = () => {
       </div>
       <div className="hotelInfo1">
         <div className="dateHolder">
-          <span>4 Sep 2021 - 5 Sep 2021</span>
+          <span>1 Sep 2021 - 2 Sep 2021</span>
           <span>1 night</span>
         </div>
-        <div className="quantity">1 x Semi Double Room</div>
+        <div className="quantity">1 x Superior Room</div>
         <div className="ratingHolder">
-          <div className="ratingBox">8.2</div>
+          <div className="ratingBox">{selectedHotel.rating}</div>
           <div className="rev">
             <div>Excellent cleanliness</div>
-            <div>From 359 reviews</div>
+            <div>From {selectedHotel.reviews} reviews</div>
           </div>
         </div>
         <div className="line"></div>
@@ -59,7 +59,7 @@ export const HotelDetails = () => {
         </div>
         <div className="line"></div>
         <span className="great1" style={{ fontSize: 14 }}>
-          RISK FREE cancellation before 23:59 hrs. on 02 September 2021
+          RISK FREE cancellation before 23:59 hrs. on 01 September 2021
           (property local time)
         </span>
       </div>
@@ -72,7 +72,7 @@ export const HotelDetails = () => {
             Hurry! Our last room for your dates at this price
           </p>
           <span className="hurryUp1">It's only</span>
-          <span className="hurryUp">8</span>
+          <span className="hurryUp">2</span>
           <span className="hurryUp1">days untill your check-in.</span>
           <span className="hurryUp">Rates may rise if you don’t book now.</span>
         </div>
@@ -82,7 +82,7 @@ export const HotelDetails = () => {
         <div className="PriceInfo">
           <div>
             <span>Price(1 room x 1 night)</span>
-            <span>Rs. 3,070.26</span>
+            <span>Rs. {selectedHotel.price}</span>
           </div>
           <div>
             <span>Booking fees</span>
@@ -109,7 +109,7 @@ export const HotelDetails = () => {
               
             </div>
           </div>
-          <span>Rs. 3,714.56</span>
+          <span>Rs. {selectedHotel.price+644.76}</span>
         </div>
         <span style={{ fontSize: 12, fontWeight: 500, marginLeft: 12 }}>
           Included in price:

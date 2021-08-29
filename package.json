@@ -14,7 +14,6 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
-    "bootstrap": "^5.1.0",
     "font-awesome": "^4.7.0",
     "json-server": "^0.16.3",
     "mapbox-gl": "^2.4.1",

@@ -15,7 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Capture from "../Store/Capture.jpeg";
 import Fade from '@material-ui/core/Fade';
 import { Loading } from "../Loading/Loading";
-import { useParams, useHistory, useLocation } from "react-router-dom";
+import { useParams, useHistory, useLocation} from "react-router-dom";
 import axios from "axios";
 import Pagination from '@material-ui/lab/Pagination';
 
@@ -429,7 +429,9 @@ function Select() {
                             <div className={styles.selectinnerdivs}>
                                 Most Booked
                             </div>
+                            <Link to="/checkout">
                             <button className={styles.selectinnerbutton}>Reserve</button>
+                            </Link>
                             <div className={styles.selectreservediv}>
                                 <h5 style={{ textAlign: "center", lineHeight: "16px" }}>No risk! <br /><h5>No canceletion Fee</h5></h5>
                             </div>
