@@ -1,341 +1,298 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .root {
-    display: grid;
-    grid-template-columns: 20% 65%;
-    margin: auto;
-    width: 90%;
-    cursor: pointer;
-    /* border: 1px solid black;  */
-
+  display: grid;
+  grid-template-columns: 20% 65%;
+  margin: auto;
+  width: 90%;
+  cursor: pointer;
+  /* border: 1px solid black;  */
 }
-
 
 .hotelpaper {
-    /* height: 2160px; */
-    width: 910px
+  /* height: 2160px; */
+  width: 910px;
 }
-
 
 .root2 {
-    margin: 20px;
-
+  margin: 20px;
 }
 
-
-
 .hoteldiv:hover {
-    box-shadow: 5px 5px 5px rgb(184, 182, 182);
+  box-shadow: 5px 5px 5px rgb(184, 182, 182);
 }
 
 .hoteldiv {
-    display: flex;
-    width: 100%;
-    height: 250px;
-    margin-top: 20px;
-
+  display: flex;
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
 }
 
-.hotelchild1{
-   width: 260px;
-   height: 250px;
-   /* border: 1px solid black;  */
+.hotelchild1 {
+  width: 260px;
+  height: 250px;
+  /* border: 1px solid black;  */
 }
-.childimg1{
-    margin-top: 2px;
-    
+.childimg1 {
+  margin-top: 2px;
 }
 .childimg {
-      margin-left:1px
-   };   
-
-.hoteldetails {
-    font-size: 15px;
-    width: 40%;
-    margin-left: 10px;
-    width: 400px;
-    padding: 25;
-    height: 250px;
-    /* border-right: 1px solid black; */
+  margin-left: 1px;
 }
 
-;
+.hoteldetails {
+  font-size: 15px;
+  width: 40%;
+  margin-left: 10px;
+  width: 400px;
+  padding: 25;
+  height: 250px;
+  /* border-right: 1px solid black; */
+}
 
 .directiontext {
-    font-size: 13px;
-    color: blue;
+  font-size: 13px;
+  color: blue;
 }
 
 .detailsbtn {
-    width: 80px;
-    height: 20px;
-    margin-left: 5px;
-    gap: 10px;
+  width: 80px;
+  height: 20px;
+  margin-left: 5px;
+  gap: 10px;
 }
 
 .detailsbtnplus {
-    width: 30px;
-    height: 20px;
-    margin-left: 5px;
-    gap: 10px;
-
-
+  width: 30px;
+  height: 20px;
+  margin-left: 5px;
+  gap: 10px;
 }
 
 .detailsbtndinner {
-    width: 130px;
-    height: 20px;
-    margin-left: 5px;
-    gap: 10px;
-
+  width: 130px;
+  height: 20px;
+  margin-left: 5px;
+  gap: 10px;
 }
 
 .btntext {
-    font-size: 10px;
-    color: green;
-    font-weight: bold;
+  font-size: 10px;
+  color: green;
+  font-weight: bold;
 }
 
 .btnspan {
-    height: 50px;
-    width: 50%;
+  height: 50px;
+  width: 50%;
 }
 
 .updatedetail {
-    margin-top: 10px;
-    color: rgb(225, 45, 45);
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 500;
-
+  margin-top: 10px;
+  color: rgb(225, 45, 45);
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
 }
 
 .payment {
-    margin-top: 10px;
-    color: rgb(62, 108, 234);
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 500;
-
+  margin-top: 10px;
+  color: rgb(62, 108, 234);
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
 }
 
 .pay {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .coupon {
-    margin-top: 10px;
-    border-radius: 2px;
-    border: 1px solid rgb(164, 223, 165);
-    color: rgb(40, 135, 28);
-    background-color: rgb(232, 247, 233);
-    width: 90%;
-
+  margin-top: 10px;
+  border-radius: 2px;
+  border: 1px solid rgb(164, 223, 165);
+  color: rgb(40, 135, 28);
+  background-color: rgb(232, 247, 233);
+  width: 90%;
 }
 
 .hotelfacility {
-    width: 230px;
-    height: 300px;
-    padding-top: 2%;
-    /* border: 1px solid rgb(58, 23, 23); */
-    margin-left: 50px;
+  width: 230px;
+  height: 300px;
+  padding-top: 2%;
+  /* border: 1px solid rgb(58, 23, 23); */
+  margin-left: 50px;
 }
 
 .hotelfacilitychild {
-    width: 230px;
-    height: 250px;
-    /* background-color: aqua; */
-    margin-left: 65px;
+  width: 230px;
+  height: 250px;
+  /* background-color: aqua; */
+  margin-left: 65px;
 }
 
 .offer {
-    display: flex;
-    height: 15px;
-    padding: 4px 8px;
-    border-radius: 2px;
-    width: 120px;
-    height: 27px;
-    background-color: rgb(22, 115, 127);
-    color: rgb(255, 255, 255);
-    font-size: 13px;
-    margin-left: 20px;
-
+  display: flex;
+  height: 15px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  width: 120px;
+  height: 27px;
+  background-color: rgb(22, 115, 127);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin-left: 20px;
 }
-.offer img{
-    margin-top: 3px;
+.offer img {
+  margin-top: 3px;
 }
 
 .offertxt {
-    margin-left: 5px;
-
+  margin-left: 5px;
 }
 
 .ratingdiv {
-    width: 30px;
-    height: 30px;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    background-color:#0283df;
-    margin-left: 14px;
-    margin-top: 3px;
-
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: #0283df;
+  margin-left: 14px;
+  margin-top: 3px;
 }
 
 .roombtn {
-    width: 140px;
-    position: relative;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    background-color: rgb(62, 108, 234);
-    color: rgb(255, 255, 255);
-    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
-    margin-left: 5px;
-    margin-top: -5px;
-    cursor: pointer;
-    height: 45px;
-    text-align: center;
-
+  width: 140px;
+  position: relative;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(62, 108, 234);
+  color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+  margin-left: 5px;
+  margin-top: -5px;
+  cursor: pointer;
+  height: 45px;
+  text-align: center;
 }
 
 .price {
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 500;
-    padding: 2%;
-
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+  padding: 2%;
 }
 
 .pricetext {
-    color: rgb(144, 148, 156);
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 500;
-    padding: 2%;
-    margin-left: 20px;
-
+  color: rgb(144, 148, 156);
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+  padding: 2%;
+  margin-left: 20px;
 }
 
 .pricevalue {
-    margin-left: 60px;
-    color: #e12d2d;
-    font-size: 22px;
-    line-height: 22px;
-    font-weight: 700;
+  margin-left: 60px;
+  color: #e12d2d;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
 }
 
 .cancel {
-    margin-left: 20px;
-    font-size: 12px;
-    color: rgb(40, 135, 28);
-    padding: 2%;
-    margin-top: -20px;
-    font-weight: 500;
+  margin-left: 20px;
+  font-size: 12px;
+  color: rgb(40, 135, 28);
+  padding: 2%;
+  margin-top: -20px;
+  font-weight: 500;
 }
 
-
 .rateingvalue {
-    margin-left: 15%;
-    margin-top: -30px;
-    font-size: 12px;
-    color: rgb(144, 148, 156);
-    font-weight: 500;
-    padding: 2%;
-
+  margin-left: 15%;
+  margin-top: -30px;
+  font-size: 12px;
+  color: rgb(144, 148, 156);
+  font-weight: 500;
+  padding: 2%;
 }
 
 .upgrade {
-    display: flex;
-    width: 100%;
-    height: 70px;
-    border: 1px solid black;
-    background-color: rgb(56, 67, 90);
-    border: none;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
-    transition: all 0.2s ease 0s;
-    color: white;
-    margin-top: 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(56, 67, 90);
+  border: none;
+  border-radius: 8px;
+  padding-right: 20px;
 }
-
+.upgrade div{
+    color: white;
+}
+.imgText{
+    display: flex;
+}
 .upgradetext {
-    width: 400px;
-    margin-top: -5px;
-    color:white ;
+  width: 400px;
+  margin-top: -5px;
+  color: white;
 }
 
 .upgradetext1 {
-    display: block;
-    font-size:  13px;
-    margin-top: 5%;
-    font-weight: bold;
-    color: white;
+  display: block;
+  font-size: 13px;
+  margin-top: 5%;
+  font-weight: bold;
+  color: white;
 }
-
-.slidebtn {
-    margin-left: 350px;
-    margin-top: 14px;
-    position: relative;
-    width: 24px;
-    height: 14px;
-    border-radius: 13px;
-    transition: all 0.2s ease 0s;
-    /* background-color: rgb(221, 223, 226); */
-
-
-
-}
-
 
 .nav {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .bigimg {
-    position: relative;
+  position: relative;
 }
 
 .bigimgtext {
-    position: absolute;
-    width: 130px;
-    height: 23px;
-    background: rgb(55, 125, 66);
+  position: absolute;
+  width: 130px;
+  height: 23px;
+  background: rgb(55, 125, 66);
 
-    top: 10px;
-    left: -5px;
-    padding: 5px 10px;
-    border-radius: 2px;
-    text-align: center;
+  top: 10px;
+  left: -5px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-align: center;
 }
-.bigimgtext>p{
-    margin-top: -4px;
-    font-size: 12px;
-    font-weight: 600;
-    color:rgb(249, 249, 250);
-
+.bigimgtext > p {
+  margin-top: -4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(249, 249, 250);
 }
 
 .bigimgtrain {
-    position: absolute;
-    background-color: #5392f9;
-    width: 35px;
-    height: 35px;
-    color: white;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border: 3px solid white;
-    bottom: 10px;
-    right: 10px;
-
+  position: absolute;
+  background-color: #5392f9;
+  width: 35px;
+  height: 35px;
+  color: white;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: 3px solid white;
+  bottom: 10px;
+  right: 10px;
 }
 
 .bigimgtrain i {
-    padding: 9px 13px;
-
+  padding: 9px 13px;
 }

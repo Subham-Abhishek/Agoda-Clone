@@ -5,27 +5,26 @@ import SearchIcon from "@material-ui/icons/Search";
 
 const Filtering = () => {
   return (
-    <Paper elevation={1} className={styles.filterparent}>
+    <div className={styles.filterparent}>
       <div className={styles.filter}>
-        <button className={styles.btnnotuse}>Filter</button>
-        <button className={styles.btn1}>
-          Quarantine Offers <i class="fas fa-sort-down"></i>
-        </button>
-        <button className={styles.btn2}>
-          Price <i class="fas fa-sort-down"> </i>
-        </button>
-        <button className={styles.btn3}>
-          Start ratings <i class="fas fa-sort-down"></i>
-        </button>
-        <button className={styles.btn4}>
-          Property facilities <i class="fas fa-sort-down"></i>{" "}
-        </button>
-        <button className={styles.btn5}>
-          Property type <i class="fas fa-sort-down"></i>
-        </button>
+        <div className={styles.filterbtns}>
+          <span className={styles.btnnotuse}>Filter</span>
+          <button className={styles.btn1}>
+            Quarantine Offers <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn2}>
+            Price <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn3}>
+            Stars <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn5}>
+            More <i class="fas fa-sort-down"></i>
+          </button>
+        </div>
 
         <div className={styles.searchinputsmall}>
-            <SearchIcon />
+          <SearchIcon />
           <input
             className={styles.searchinputtext}
             type="text"
@@ -33,7 +32,7 @@ const Filtering = () => {
           />
         </div>
       </div>
-    </Paper>
+    </div>
   );
 };
 

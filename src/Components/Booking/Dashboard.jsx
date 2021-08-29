@@ -12,7 +12,7 @@ import Sortingdiv from "./Sortingdiv";
 import Searchdiv from "./Searchdiv";
 import axios from "axios";
 import Dashboardleft from "./Dashboardleft";
-import Switch from "@material-ui/core/Switch";
+import { Switch } from 'antd';
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
@@ -120,6 +120,7 @@ useEffect(() => {
         <div className={styles.hotelpaper}>
           <Box className={styles.root2}>
             <div className={styles.upgrade}>
+              <div className={styles.imgText}>
               <img
                 style={{ margin: "10px" }}
                 height="49px"
@@ -133,12 +134,8 @@ useEffect(() => {
                   Special Offers Hurry
                 </h5>
               </div>
-              <Switch
-                className={styles.slidebtn}
-                checked={state.checkedB}
-                name="checkedB"
-                color="primary"
-              />
+              </div>
+              <Switch className={styles.slidebtn} />
             </div>
 
             <Sortingdiv
