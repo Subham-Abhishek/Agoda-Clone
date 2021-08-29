@@ -131,9 +131,11 @@ button i{
   width: 170px;
   height: 25px;
   margin-left: 30px;
-  margin-top: 5px;
+  margin-top: 3px;
   border: none;
 }
-.searchinputtext:hover{
-  border: 0px;
+.searchinputtext:active{
+  /* border: none; */
+  outline: none;
+  
 }
