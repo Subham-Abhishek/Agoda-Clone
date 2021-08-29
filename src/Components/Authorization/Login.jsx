@@ -33,6 +33,7 @@ export const Login = () => {
     console.log(response);
     console.log(response.profileObj);
     Auth.user = response
+    localStorage.setItem("user",JSON.stringify(response.profileObj))
     Auth.toggle(!Auth.isAuth);
     console.log(Auth);
 
