@@ -68,16 +68,3 @@ export const searchDataFailure = (err) => {
         payload: err
     }
 }
-
-export const searchData = (payload) => dispatch => {
-    dispatch(searchDataRequest())
-    return axios.get(`http://localhost:3001/hotel?city=${payload}`)
-        .then((res) => {
-            console.log(res.data)
-            dispatch(searchDataSuccess(res.data))
-        })
-        .catch((err) => {
-            dispatch(searchDataFailure(err))
-        })
-
-}

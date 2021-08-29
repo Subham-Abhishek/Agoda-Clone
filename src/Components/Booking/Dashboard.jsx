@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData, getDataSuccess } from "../../Bookingreducer/Redux/action";
+import { getData, getDataSuccess, searchDataFailure, searchDataRequest, searchDataSuccess } from "../../Bookingreducer/Redux/action";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { Button, Box } from "@material-ui/core";
@@ -16,11 +16,19 @@ import Switch from "@material-ui/core/Switch";
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
+import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
+import { AppContext } from "../../context/Provider";
+import {Loading} from "../Loading/Loading"
 
 const Dashboard = () => {
+  const [clicked, setClicked] = useState(false)
   const state = useSelector((state) => state.hoteldata);
+  const [loading, setLoading] = useState(false)
+
   console.log(state);
   const dispatch = useDispatch();
+
+  const {searchedCity} = useContext(AppContext)
 
   const handleSort = () => {
     axios
@@ -57,13 +65,44 @@ const Dashboard = () => {
       });
   };
 
-  useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
+const searchData = () => {
+    dispatch(searchDataRequest())
+    return axios.get(`http://localhost:3001/hotel?city=${searchedCity.toLowerCase()}`)
+        .then((res) => {
+            console.log(res.data)
+            dispatch(searchDataSuccess(res.data))
+        })
+        .catch((err) => {
+            dispatch(searchDataFailure(err))
+        })
+}
 
-  return (
+const handleClicking = () => {
+  setClicked(!clicked)
+}
+//loading useffect
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+      setLoading(true)
+  }, 1600);
+  return () => clearTimeout(timer);
+  }, []);
+
+
+
+useEffect(() => {
+    searchData();
+    // dispatch(getData());
+  }, [clicked]);
+
+
+  
+  return  (
     <>
-      <Searchdiv />
+    
+      {/* <Searchdiv /> */}
+      <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
     <Filtering/>
 
       <Box className={styles.root}>
@@ -76,14 +115,14 @@ const Dashboard = () => {
             <div className={styles.upgrade}>
               <img
                 style={{ margin: "10px" }}
-                height="50px"
+                height="49px"
                 src="https://cdn6.agoda.net/images/kite-js/banner/special-offers-colored3.svg"
                 alt=""
               />
 
               <div className={styles.upgradetext}>
                 <h5 className={styles.upgradetext1}>
-                  Agoda Special Offers Upgrade your experience with Agoda
+                  Agoda Special Offers <br /> Upgrade your experience with Agoda
                   Special Offers Hurry
                 </h5>
               </div>
@@ -104,11 +143,11 @@ const Dashboard = () => {
             {state.map((item) => {
               return (
                 <NavLink className={styles.nav} to={`/hotel/${item.id}`}>
-                  <div className={styles.hoteldiv}>
+                  <Paper  elevation={1}className={styles.hoteldiv}>
                     <Box className={styles.hotelchild1}>
                       <div className={styles.bigimg}>
                         <div className={styles.bigimgtext}>
-                          free cancelation
+                          <p> Free cancellation </p>
                         </div>
                         <div className={styles.bigimgtrain}>
                           <i class="fas fa-subway"></i>
@@ -123,35 +162,36 @@ const Dashboard = () => {
                       <Box className={styles.childimg1}>
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild1}
                           alt=""
                         />
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild2}
                           alt=""
                         />
                         <img
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild3}
                           alt=""
                         />
-                        <img
+                        <img style={{filter:"brightness(0.5)"}}
                           className={styles.childimg}
-                          height="45px"
+                          height="49px"
                           width="61.5px"
                           src={item.urlchild4}
                           alt=""
+
                         />
                       </Box>
                     </Box>
-                    <Paper>
+                    {/* <Paper> */}
                       <div className={styles.hoteldetails}>
                         <h3>{item.hotel}</h3>
 
@@ -205,8 +245,8 @@ const Dashboard = () => {
                           <i class="fas fa-pencil-alt"></i> {item.coupon}
                         </div>
                       </div>
-                    </Paper>
-                    <Paper style={{ width: "240px" }}>
+                    {/* </Paper> */}
+                    <div style={{ width: "240px" }}>
                       <div className={styles.hotelfacility}>
                         <div className={styles.hotelfacilitychild}>
                           <p
@@ -263,8 +303,8 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
-                    </Paper>
-                  </div>
+                    </div>
+                  </Paper>
                 </NavLink>
               );
             })}

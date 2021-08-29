@@ -12,6 +12,7 @@ import { Register } from "../Components/Authorization/Register";
 import { CheckoutPage } from "../Components/CheckoutPage/CheckoutPage";
 import { BookingHistory } from "../Components/BookingHistory/BookingHistory";
 
+
 export const Routes = () => {
   let { searchedCity, setSearchedCity } = useContext(AppContext);
   return (
@@ -24,11 +25,11 @@ export const Routes = () => {
         <Dashboard searchedCity={searchedCity} />
       </Route>
       <Route path="/hotel/:id">
-        <FilterBox />
+        < Select/>
       </Route>
-      <Route exact path="/avinash">
+      {/* <Route exact path="/avinash">
         <Select />
-      </Route>
+      </Route> */}
       <Route exact path="/map">
         <Map />
       </Route>

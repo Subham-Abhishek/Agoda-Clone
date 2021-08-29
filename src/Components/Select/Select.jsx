@@ -15,33 +15,69 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Capture from "../Store/Capture.jpeg";
 import Fade from '@material-ui/core/Fade';
 import { Loading } from "../Loading/Loading";
+import { useParams, useHistory, useLocation } from "react-router-dom";
+import axios from "axios";
+import Pagination from '@material-ui/lab/Pagination';
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
   },
 }));
+const useStyles1 = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
 
 function Select() {
     const [navbar, setNavbar] = useState(false)
     const classes = useStyles();
+    const classes1 = useStyles1();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [heart, setHeart] = useState(false)
     const [src, setSrc] = useState("https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png")
     const [loading, setLoading] = useState(false)
+    const [user, setUser] = useState({});
+      const location = useLocation;
+        console.log(location);
+
+        const { id } = useParams();
+
+        useEffect(() => {
+            getUserDetails();
+        }, []);
+    
+        const getUserDetails = () => {
+        axios
+        .get(`http://localhost:3001/hotel/${id}`)
+            
+        .then((res) => {
+            console.log("getIdusers", res.data);
+            setUser(res.data);
+        })
+        .catch((err) => { })
+        .finally(() => {console.log("users", user)})
+    };
+    
+    console.log("usersHotelDeatils", user)
+
  
     const handleClick = (event) => {
         setAnchorEl(anchorEl ? null : event.currentTarget);
     };
 
     const open = Boolean(anchorEl);
-    const id = open ? 'simple-popper' : undefined;
+    const id1 = open ? 'simple-popper' : undefined;
 
 
     window.onscroll = () => {
         // console.log(window.scrollY)
 
-        if (window.scrollY >= 300) {
+        if (window.scrollY >= 250) {
             setNavbar(true)
         }
         else {
@@ -70,26 +106,43 @@ function Select() {
     return <>
         {loading ? <div>
             {navbar && <div className={styles.navbarmaindiv}>
-                <button onClick={() => { window.scrollTo(0, 88) }}>Rooms</button>
-                <button onClick={() => { window.scrollTo(0, 1626) }}>Facilities</button>
-                <button onClick={() => { window.scrollTo(0, 2312) }}>Reviews</button>
-                <button onClick={() => { window.scrollTo(0, 1784) }}>Frequently Asked Questions</button>
-                <button onClick={() => { window.scrollTo(0, 10060) }}>Map</button>
-                <button onClick={() => { window.scrollTo(0, 0); }}> Top <i className="fas fa-arrow-up" ></i> </button>
+                <div className={styles.navbarmaindivdiv1}>
+                    <button onClick={() => { window.scrollTo(0, 88) }}>Rooms</button>
+                    <button onClick={() => { window.scrollTo(0, 1590) }}>Facilities</button>
+                    <button onClick={() => { window.scrollTo(0, 2268) }}>Reviews</button>
+                    <button onClick={() => { window.scrollTo(0, 1762) }}>Frequently Asked Questions</button>
+                    <button onClick={() => { window.scrollTo(0, 6434) }}>Map</button>
+                    <button onClick={() => { window.scrollTo(0, 2434) }}>Check In</button>
+                    {/* <button onClick={() => { window.scrollTo(0, 0); }}> Top <i className="fas fa-arrow-up" ></i> </button> */}
+                </div>
+                <div className={styles.navbarmaindivdiv2}>
+                    <div className={styles.navbarmaindivdiv2div1}>
+                        <h6>The cheapest price </h6>
+                        <h3>
+                        <span style={{fontSize:"12px"}}>Rs.</span>
+                        {user.price}
+                    </h3>
+                    </div>
+                    
+                    <button>
+                        <h3  onClick={() => { window.scrollTo(0, 1088) }}>VIEW THIS DEAL</h3>
+                    </button>
+                    <p  onClick={() => { window.scrollTo(0, 0) }}>Back To Top<span> <i class="fas fa-arrow-up"></i></span></p>
+                </div>
             </div>}
             <div className={styles.selectMainDiv}>
                 <div className={styles.upperdiv}>
                     <div className={styles.selectUpperDiv}>
                         <div className={styles.selectUpperDivImage}>
-                            <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/46069253.jpg?k=3b4c54b4792df6aced8f9040cb373b7fd59c59fcfba7218f6d9fdcb39265906f&o=" alt="image1" className={styles.selectBigimage} />
+                            <img src={user.url} alt="image1" className={styles.selectBigimage} />
                             <div className={styles.selectUpperDivdiv}>
-                                <div>
+                                <div className={ styles.upperdivPosition}>
                                     <p>from</p>
-                                    <p>Rs. <span>2,879</span></p>
+                                    <p>Rs. <span>{ user.price}</span></p>
                                 </div>
-                                <div>
-                                    <h3>54%</h3>
-                                    <h5>Discount</h5>
+                                <div className={ styles.upperdivPosition2}>
+                                    <p>54%</p>
+                                    <p>Discount</p>
                                 </div>
                             </div>
                             <h4 className={styles.selectupperh1}>
@@ -97,10 +150,10 @@ function Select() {
                                 <p>Sandeep - January 5 2020</p>
                             </h4>
                             <div className={styles.selectUpperDivImage2}>
-                                <img src="https://pix8.agoda.net/hotelImages/400860/-1/3cfdcb434113aab012d5b85bbe77c4e3.jpg?s=1024x768" alt="images" className={styles.upperImage2} />
+                                <img src={user.urlchild1} alt="images" className={styles.upperImage2} />
                                 <div className={styles.selectDivFlexUpper}>
-                                    <img src="https://pix8.agoda.net/hotelImages/5061882/0/766190091e57e969173415511421bf31.jpg?s=1024x768" alt="images" />
-                                    <img src="	https://pix8.agoda.net/hotelImages/5061882/0/85fb9b7a13482a2ec82d01967afb66b8.jpg?s=1024x768" alt="images" />
+                                    <img src={user.urlchild2} alt="images" />
+                                    <img src={user.urlchild3} alt="images" />
                                     <h5 className={styles.selectseeallphotos}>SEE ALL PHOTOS</h5>
                                 </div>
                                 <div className={styles.selectHeart} onClick={handleHeart}>
@@ -111,10 +164,10 @@ function Select() {
                         <div className={styles.selectHoteldetails}>
                             <div className={styles.selectHotelbutton}>
                                 <button>Best Seller</button>
-                                <button>free wi-fi</button>
+                                <button>Free Wi-Fi</button>
                                 <button>Genius</button>
                             </div>
-                            <h1>Red Fox Hotel Delhi Airport
+                            <h1>{ user.hotel}
                                 <span>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -152,17 +205,17 @@ function Select() {
                     <div className={styles.selectrating}>
                         <div className={styles.selectratingdiv1}>
                             <div className={styles.selectRatingDiv}>
-                                <div className={styles.selectRatingDiv1} aria-describedby={id} type="button" onMouseEnter={handleClick} onMouseLeave={handleClick}>
+                                <div className={styles.selectRatingDiv1} aria-describedby={id1} type="button" onMouseEnter={handleClick} onMouseLeave={handleClick}>
                                     <span >
-                                        <h2>7.7</h2>
+                                        <h2>{ user.rating}</h2>
                                     </span>
                                 
-                                    <Popper id={id} open={open} anchorEl={anchorEl} transition>
+                                    <Popper id={id1} open={open} anchorEl={anchorEl} transition>
                                         {({ TransitionProps }) => (
                                             <Fade {...TransitionProps} timeout={350}>
                                                 <div className={classes.paper}>
                                                     <div className={styles.selectRatingModal}>
-                                                        <h4>Based on <span style={{ color: "#5392f9" }}> 734 </span> verified reviews</h4>
+                                                        <h4>Based on <span style={{ color: "#5392f9" }}> { user.reviews} </span> verified reviews</h4>
                                                         <div className={styles.RatingModalDivs}>
                                                             <div><p>9 + Exceptional</p></div>
                                                             <div className={styles.RatingBlueDiv}>
@@ -207,9 +260,10 @@ function Select() {
                                         )}
                                     </Popper>
                                 </div>
-                                <h3>Very Good</h3>
-                                <br />
-                                <h5>/(1,515 reviews)</h5>
+                                <div className={ styles.selectmodaldivright}>
+                                    <h3>Very Good</h3>
+                                    <h6>/({ user.reviews} reviews)</h6>
+                                </div>
                             </div>
                             <div className={styles.selectRatingdivs}>
                                 <p> <span>Housekeeping </span>35<i className="fas fa-thumbs-up"></i></p>
@@ -222,7 +276,18 @@ function Select() {
                             </div>
                         </div>
                         <div className={styles.mapImage}>
-                            <Link to={"/map"}><img src="https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="map" /></Link>
+                            <div className={styles.mapImageimage}>
+                                <Link to={"/map"}><img src="https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="map" /></Link>
+                            </div>
+                            <div className={styles.mapImageupdiv}>
+                                <div className={styles.mapImageupdivdiv1}>
+                                    <h3 style={{color:"rgb(0, 76, 184)", marginLeft:"2px"}}>8.7</h3>
+                                </div>
+                                <div className={styles.mapImageupdivdiv2}>
+                                    <h5>Excellent</h5>
+                                    <p>Location Rating Score</p>
+                                </div>
+                            </div>
                             <h4 className={styles.mapImageh4}><i className="fas fa-award"></i>Excellent location</h4>
                             <h4 className={styles.mapImageh42}><i className="fas fa-building"></i>Popular Neighbourhood</h4>
                             <div className={styles.selectmapDiv}>
@@ -302,7 +367,7 @@ function Select() {
                     <span className={styles.selectsqrt1}>Last Booked 6 Hours Ago</span>
                     <div className={styles.selectinnerdiv}>
                         <div className={styles.selectinnerdiv1}>
-                            <img src="https://pix8.agoda.net/hotelImages/400860/-1/3cfdcb434113aab012d5b85bbe77c4e3.jpg?s=1024x768" alt="standardqueen" />
+                            <img src={user.urlchild1} alt="standardqueen" />
                             <p className={styles.selectinnerdivp1}>Room photos and details</p>
                             <p style={{ color: "rgb(133, 193, 80)" }} className={styles.facilitiesrightDiv}><i className="fas fa-wifi"> </i> Free Wi-Fi</p>
                             <p className={styles.facilitiesrightDiv}> <i className="fas fa-bed"></i> 1 Queen bed</p>
@@ -340,6 +405,7 @@ function Select() {
                                     CHEAPEST PRICE YOU'VE SEEN!
                                 </p>
                             </div>
+                            <h4 style={{ color: "red",padding:"10px",textAlign:"right" }}>Rs. { user.price}</h4>
                         </div>
                         <div className={styles.selectinnerdiv5}>
                             <div className={styles.selectinnerdivs}>
@@ -384,17 +450,17 @@ function Select() {
                         <div className={styles.selectFacidiv2divs}>
                             <i className="fas fa-broom"></i>
                             <p>Housekeeping</p>
-                            <span>18 mentions</span>
+                            <span>29 mentions</span>
                         </div>
                         <div className={styles.selectFacidiv2divs}>
                             <i className="fas fa-coffee"></i>
                             <p>Breakfast</p>
-                            <span>18 mentions</span>
+                            <span>38 mentions</span>
                         </div>
                         <div className={styles.selectFacidiv2divs}>
                             <i className="fas fa-taxi" style={{ marginLeft: "67px" }}></i>
                             <p >Taxi  </p>
-                            <span>18 mentions</span>
+                            <span>19 mentions</span>
                         </div>
                     </div>
                 </div>
@@ -480,7 +546,7 @@ function Select() {
                         </Accordion>
                     </div>
                     <div className={styles.selectmapfaqs}>
-                        <img src="	https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="faqimage" className={styles.selectFaqimage} />
+                       <Link to={"/map"}> <img src="	https://cdn6.agoda.net/images/MAPS-1214/default/property-map-entry-1.svg" alt="faqimage" className={styles.selectFaqimage} /></Link>
                         <Link to={"/map"}>
                             <button className={styles.selectFaqbutton}>
                                 <h3>View Map</h3>

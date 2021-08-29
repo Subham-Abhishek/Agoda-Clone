@@ -1,12 +1,19 @@
+.main_container {
+  position: absolute;
+  width: 100vw;
+  height: 3000vh;
+  top: 0;
+}
 .scrollNav {
   display: flex;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 80px;
   background-color: #1e2d71;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
+  overflow-x: scroll;
 }
 .scrollNav > button {
   padding: 9px 20px;
@@ -30,6 +37,7 @@
   background-color: #fff;
   height: 60px;
   border-radius: 9px;
+  width: 300px
 }
 .scrollNavSearch > input {
   border: none;
@@ -40,7 +48,12 @@
   color: #bbb;
   font-size: 16px;
 }
-
+.scrollNavCalendar{
+  width: 400px
+}
+.scrollNavRoomSelect{
+  width: 300px;
+}
 .debounceRes {
   width: 89.5%;
   max-height: 500px;
@@ -70,4 +83,8 @@
 }
 .locationIcon {
   margin-right: 10px;
+}
+.searchBtn{
+  height: 60px;
+  flex:1
 }
