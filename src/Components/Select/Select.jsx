@@ -19,8 +19,6 @@ import Pagination from "@material-ui/lab/Pagination";
 import { Navbar } from "../Landing/Navbar/Navbar";
 import { Footer } from "../Landing/Footer/Footer";
 
-
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -80,12 +78,11 @@ function Select() {
   const open = Boolean(anchorEl);
   const id1 = open ? "simple-popper" : undefined;
 
-        if (window.scrollY >= 200) {
-            setNavbar(true)
-        }
-        else {
-            setNavbar(false) 
-        }
+  window.onscroll = () => {
+    if (window.scrollY >= 200) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
     }
   };
 

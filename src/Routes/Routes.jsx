@@ -25,7 +25,7 @@ export const Routes = () => {
         <Dashboard searchedCity={searchedCity} />
       </Route>
       <Route path="/hotel/:id">
-        < Select/>
+        <Select/>
       </Route>
       {/* <Route exact path="/avinash">
         <Select />
