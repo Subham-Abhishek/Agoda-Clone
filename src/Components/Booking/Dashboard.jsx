@@ -19,6 +19,8 @@ import Filtering from "./Filtering";
 import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
 import { AppContext } from "../../context/Provider";
 import {Loading} from "../Loading/Loading"
+import { Footer } from "../Landing/Footer/Footer";
+import { Navbar } from "../Landing/Navbar/Navbar";
 
 const Dashboard = () => {
   const [clicked, setClicked] = useState(false)
@@ -85,7 +87,7 @@ const handleClicking = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
       setLoading(true)
-  }, 1600);
+  }, 3000);
   return () => clearTimeout(timer);
   }, []);
 
@@ -101,11 +103,13 @@ useEffect(() => {
   return  (
    
     <>
+                 {loading && <Navbar/>}
+
     {loading ? <div>
 
  
       {/* <Searchdiv /> */}
-     <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
+     <ScrollUpNav handleClicking={handleClicking} calcScroll="150"/>
     <Filtering/>
 
      <Box className={styles.root}>
@@ -314,8 +318,12 @@ useEffect(() => {
           </Box>
         </div>
       </Box>
+       
+       
          </div>
+
              :<Loading/>}
+             {loading && <Footer/>}
 
 </>
   );

@@ -51,7 +51,7 @@
 .filterparent{
   width: 100%;
   height: 68px;
-  margin-top: 7%;
+  /* margin-top: 7%; */
 
 }
 .filter{
@@ -133,9 +133,5 @@ button i{
   margin-left: 30px;
   margin-top: 3px;
   border: none;
-}
-.searchinputtext:active{
-  /* border: none; */
   outline: none;
-  
 }
