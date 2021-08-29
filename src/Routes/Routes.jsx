@@ -10,6 +10,7 @@ import { Select } from "../Components/Select/Select";
 import { Login } from "../Components/Authorization/Login";
 import { Register } from "../Components/Authorization/Register";
 import { CheckoutPage } from "../Components/CheckoutPage/CheckoutPage";
+import { BookingHistory } from "../Components/BookingHistory/BookingHistory";
 
 export const Routes = () => {
   let { searchedCity, setSearchedCity } = useContext(AppContext);
@@ -39,6 +40,9 @@ export const Routes = () => {
       </Route>
       <Route path="/checkout">
         <CheckoutPage />
+      </Route>
+      <Route path="/bookings">
+        <BookingHistory/>
       </Route>
     </Switch>
   );
