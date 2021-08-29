@@ -1,3 +1,6 @@
+body{
+  box-sizing: unset !important;
+}
 .resister-page {
   width: 500px;
   margin: auto;
@@ -11,6 +14,7 @@
   position: absolute;
   width: 300px;
   top: 35%;
+
   height: 200px;
   display: flex;
   left: 40%;
@@ -171,10 +175,14 @@ box-shadow:  12px 12px 24px #d9d9d9,
   color: rgba(0, 0, 0, 0.3);
   font-weight: 600;
 }
+.confirm{
+  margin-bottom: 30px;
+}
 .confirm .MuiFormControlLabel-label{ 
   font-size: 13px !important;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.8);
+  
 }
 .confirm .MuiFormControlLabel-label:hover{ 
    color: rgb(83,146,249);
@@ -185,7 +193,6 @@ box-shadow:  12px 12px 24px #d9d9d9,
      height: 70px;
      margin-top: 25px;
      margin-bottom: 25px;
-     border: 1px solid;    
   }
   .signup-btn{
     width: 100%;
@@ -202,15 +209,19 @@ cursor: pointer;
   }
   .break{
     display: flex;
+    align-items: center;
     font-size: 13px;
-    margin-top: 20px;
+    margin-top: 26px;
     margin-bottom: 15px;
   }
+  .break .line{
+    margin-bottom: 25px;
+  }
   .break p{
-    padding: 0 5px;
-    line-height: 26px;
-    color: rgba(0, 0, 0, 0.8);
-    width: 280px;
+    padding: 0 20px;
+    line-height: 20px;
+    color: #000000cc;
+    width: 300px;
     font-weight: 500;
   }
   .google{

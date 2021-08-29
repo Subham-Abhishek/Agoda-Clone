@@ -21,7 +21,7 @@ export default function ConfirmModal({open,setOpen,setOpen1,setBook}) {
     <div>
      
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">Booking cancellation</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Please tell us why you are cancelling so that we can improve on it.

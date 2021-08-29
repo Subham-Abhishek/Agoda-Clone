@@ -3,6 +3,9 @@
   padding-left: 100px;
   background-color: rgb(248, 247, 249);
   margin: auto;
+  margin-top: -50px;
+  padding-top: 50px;
+
 }
 .saved h4 {
   letter-spacing: 0.5px;
@@ -46,7 +49,7 @@
 }
 .booking-holder {
   width: 90%;
-  height: 100vh;
+  height: 400px;
   background-color: rgb(248, 247, 249);
 }
 .hotelcard {
@@ -60,8 +63,8 @@
   display: flex;
 }
 .upperCard > img {
-  width: 220px;
-  height: 230px;
+  width: 270px;
+  height: 300px;
   margin-right: 15px;
 }
 .detailsOf {
@@ -140,6 +143,9 @@
   align-items: center;
 }
 .Continue1 {
+  position: absolute;
+  right: 355px;
+  top: 490px;
   width: 150px;
   height: 40px;
   border: none;

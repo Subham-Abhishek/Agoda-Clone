@@ -6,6 +6,7 @@ import ConfirmModal from "./ConfirmModal";
 import { AlerBox } from "./AlertBox";
 import { Link } from "react-router-dom";
 import { Navbar } from "../Landing/Navbar/Navbar";
+import { Footer } from "../Landing/Footer/Footer";
 export const BookingHistory = () => {
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
@@ -95,6 +96,7 @@ export const BookingHistory = () => {
         ) : null}
         {open1 ? <AlerBox open1={open1} setOpen1={setOpen1} /> : null}
       </div>
+      <Footer/>
     </>
   );
 };

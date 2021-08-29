@@ -4,8 +4,10 @@ import { FcCheckmark, FcLock } from "react-icons/fc";
 import GooglePayButton from "@google-pay/button-react";
 import { Timer } from "./Timer";
 import { Confirmation } from "./Confirmation";
+import { Footer } from "antd/lib/layout/layout";
 export const Payment = ({step3, setStep3,selectedHotel}) => {
   return (
+    <>
     <div className="userInfo">
       <div
         className="form-container"
@@ -108,6 +110,7 @@ export const Payment = ({step3, setStep3,selectedHotel}) => {
             onPaymentAuthorized={(paymentData) => {
               console.log("Payment Authorised Success", paymentData);
               setStep3(true)
+            
               return { transactionState: "SUCCESS" };
             }}
             onPaymentDataChanged={(paymentData) => {
@@ -123,5 +126,7 @@ export const Payment = ({step3, setStep3,selectedHotel}) => {
         }
       </div>
     </div>
+    
+    </>
   );
 };

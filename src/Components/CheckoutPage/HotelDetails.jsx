@@ -84,7 +84,7 @@ export const HotelDetails = ({selectedHotel}) => {
             <span>Price(1 room x 1 night)</span>
             <span>Rs. {selectedHotel.price}</span>
           </div>
-          <div>
+          <div style={{marginTop:20}}>
             <span>Booking fees</span>
             <span style={{ color: "rgb(72,139,248)", fontWeight: 500 }}>
               FREE
@@ -95,7 +95,7 @@ export const HotelDetails = ({selectedHotel}) => {
           <div className="it">
             <span>Price</span>
             <div className="moreInfo" onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)}>
-              <FcInfo />
+              <FcInfo style={{cursor:"pointer"}} />
             <div className={`pricePolicy ${isHover?"activePo":"deactive"}`}>
                   <h4>Hotel tax and services fees</h4>
                   <p>

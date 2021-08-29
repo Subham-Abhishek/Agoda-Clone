@@ -8,7 +8,8 @@ import { FaCheck } from "react-icons/fa";
 import { Timer } from "./Timer";
 import { HotelDetails } from "./HotelDetails";
 import { Payment } from "./Payment";
-
+import { FcCheckmark } from "react-icons/fc";
+import {Footer} from "../Landing/Footer/Footer"
 let x = 0;
 
 export const CheckoutPage = () => {
@@ -25,7 +26,7 @@ export const CheckoutPage = () => {
       setLoading(false);
     }, 2000);
     let timer2 = setTimeout(() => {
-      setRemind(true);
+      setRemind(false);
     }, 8000);
     return () => {
       clearTimeout(timer);
@@ -36,12 +37,13 @@ export const CheckoutPage = () => {
   const handleNext = () => {
     setStep2(true);
     x++;
+    window.scroll(0,0)
     if (x == 2) setStep3(true);
   };
 
   return isLoading ? (
     <CheckoutLoading />
-  ) : (
+  ) : (<>
     <div className="checkout-Wrapper">
       <nav>
         <img src="agoda-logo.png" alt="" />
@@ -128,36 +130,28 @@ export const CheckoutPage = () => {
             <h4>Let us know who are you</h4>
             <div className="input-container">
               <label htmlFor="">Full name</label>
-              <input type="text" />
+              <input type="text" placeholder="Full name"/>
             </div>
             <div className="input-container">
               <label htmlFor="">Email</label>
-              <input type="text" />
+              <input type="text" placeholder="Email"/>
             </div>
             <div className="input-container">
               <label htmlFor="">Retype email</label>
-              <input type="text" />
+              <input type="text" placeholder="Retype email"/>
             </div>
             <div className="divide">
               <div className="input-container">
                 <label htmlFor="">Phone number</label>
-                <input type="text" />
+                <input type="text" placeholder="Phone number"/>
               </div>{" "}
               <div className="input-container">
                 <label htmlFor="">Country/region</label>
-                <div className="inp">
+                <div className="inpp">
                   India
-                  <span className="tik">
-                    <svg width="14px" height="14px" viewBox="0 0 24 24">
-                      <path
-                        fill="rgb(50, 169, 35)"
-                        id="check-valid-state_24px-a"
-                        d="M1.146 4.353a.5.5 0 1 1 .708-.706l15.699 15.731a.5.5 0 0 0 .7.008l3.718-3.578a.5.5 0 1 1 .693.72l-3.717 3.578a1.5 1.5 0 0 1-2.102-.021L1.146 4.353z"
-                      ></path>
-
-                      <use transform="matrix(-1 0 0 1 23.817 0)"></use>
-                    </svg>
-                  </span>
+                 
+                   <FcCheckmark style={{width:20,height:20}}/>
+                  
                 </div>
               </div>
             </div>
@@ -184,7 +178,7 @@ export const CheckoutPage = () => {
                 </label>
                <div style={{display:"flex",alignItems:"center"}}>
                <input type="radio"  className="check" />
-                <label htmlFor="">I'd like a large beb</label>
+                <label htmlFor="">I'd like a large bed</label>
                 <input type="radio" style={{marginLeft:100}} className="check" />
                 <label htmlFor="">I'd like twin beds</label>
                </div>
@@ -214,5 +208,7 @@ export const CheckoutPage = () => {
       </div>
       {isremind && <ConfirmLoading setRemind={setRemind} />}
     </div>
+    <Footer/>
+    </>
   );
 };
