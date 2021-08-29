@@ -1,153 +1,151 @@
-.saved{
-    width: 100%;
-    padding-left: 100px;
-    background-color: rgb(248,247,249);
-    margin: auto;
+.saved {
+  width: 100%;
+  padding-left: 100px;
+  background-color: rgb(248, 247, 249);
+  margin: auto;
 }
-.saved h4{
-    letter-spacing: .5px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 50px;
-    color: rgba(0,0,0,.8);
-    margin-bottom: 40px;
+.saved h4 {
+  letter-spacing: 0.5px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
 }
-.Nothing{
-    width: 400px;
-    margin: auto;
-    display: flex;
-    margin-top: 60px;
-    flex-direction: column;
-    align-items: center;
+.Nothing {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
 }
-.Nothing h3{
-    font-size: 28px;
-    margin-bottom: 60px;
-    color: rgba(0,0,0,.8);
+.Nothing h3 {
+  font-size: 28px;
+  margin-bottom: 60px;
+  color: rgba(0, 0, 0, 0.8);
 }
-.Nothing p{
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0,0,0,.8);
-    margin-top: 50px;
+.Nothing p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
 }
-.continue1{
-    width: 200px;
-    height: 40px;
-    border-radius: 3px;
-    border: none;
-    color: white;
-    font-size: 16px;
-    letter-spacing: .5px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: rgb(60,100,250);
+.continue1 {
+  width: 200px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(60, 100, 250);
 }
-.booking-holder{
-    width: 90%;
-    height: 100vh;
-    background-color: rgb(248,247,249);
+.booking-holder {
+  width: 90%;
+  height: 100vh;
+  background-color: rgb(248, 247, 249);
 }
-.hotelcard{
+.hotelcard {
   width: 80%;
   box-sizing: border-box;
   height: 300px;
-background: white;
-box-shadow:  -1px 1px 15px #b5b5b5,
-             -10px -1px 10px #ffffff;
+  background: white;
+  box-shadow: -1px 1px 15px #b5b5b5, -10px -1px 10px #ffffff;
 }
-.upperCard{
-    display: flex;
+.upperCard {
+  display: flex;
 }
-.upperCard>img{
-    width: 220px;
-    height: 230px;
-    margin-right: 15px;
+.upperCard > img {
+  width: 220px;
+  height: 230px;
+  margin-right: 15px;
 }
-.detailsOf{
-    width: 100%;
-    display: flex;
+.detailsOf {
+  width: 100%;
+  display: flex;
 }
-.Common{
-    width: 72%;
-    margin-top: 15px;
-    color: rgba(0,0,0,.8);
+.Common {
+  width: 72%;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.8);
 }
-.Common h3{
-    font-weight: 600;
-    color: rgba(0,0,0,.8);
-     margin-bottom: 0;
+.Common h3 {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
 }
-.Common >p>span{
-   font-weight: 600;
+.Common > p > span {
+  font-weight: 600;
 }
-.BookedOn{
-    display: flex;
-    align-items: center;
-    color:rgb(69,170,37);
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 50px;
+.BookedOn {
+  display: flex;
+  align-items: center;
+  color: rgb(69, 170, 37);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 50px;
 }
-.dateHolde{
-    display: flex;
-    width: 25%;
-    height: 60px;
-    margin-top: 15px;
-    justify-content: space-evenly;
+.dateHolde {
+  display: flex;
+  width: 25%;
+  height: 60px;
+  margin-top: 15px;
+  justify-content: space-evenly;
 }
-.checkInDat{
+.checkInDat {
   width: 48%;
 }
-.checkInDat p{
-    font-size: 11px;
-    letter-spacing: .5px;
-    color: rgba(0,0,0,.6);
+.checkInDat p {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.line1{
-    width: 4%;
-   height: 100%;
-   /* margin-left: -10px; */
-   margin-right: 5px;
-   color: rgba(0,0,0,.2);
-   border-left: 1px dashed;
+.line1 {
+  width: 4%;
+  height: 100%;
+  /* margin-left: -10px; */
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.2);
+  border-left: 1px dashed;
 }
-.sh{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    height: 40px;
-    width: 80%;
-    margin-top: -10px;
+.sh {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  width: 80%;
+  margin-top: -10px;
 }
-.sh>span{
-    font-size: 34px;
-    color: rgba(0,0,0,.6);
+.sh > span {
+  font-size: 34px;
+  color: rgba(0, 0, 0, 0.6);
 }
-.day{
-    margin-left: 10px;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    color: rgba(0,0,0,.7);
+.day {
+  margin-left: 10px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.7);
 }
-.options{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-     padding-top: 20px;
-    align-items: center;
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  align-items: center;
 }
-.Continue1{
+.Continue1 {
   width: 150px;
   height: 40px;
   border: none;
-  background-color: rgb(60,100,250);
+  background-color: rgb(60, 100, 250);
   color: white;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   border-radius: 3px;
   margin-right: 10px;
-  
 }
