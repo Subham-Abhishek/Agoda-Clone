@@ -14,6 +14,7 @@ import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
 import { Redirect } from "react-router-dom";
 import IsAuth from "../../context/Auth";
+import { FcGoogle } from "react-icons/fc";
 
 export const Login = () => {
   const [isLoading, setLoading] = useState(true);
@@ -70,13 +71,15 @@ export const Login = () => {
           <div className="line"></div>
         </div>
         <div className="google">
-          {/* <GoogleLogin
+          <FcGoogle style={{ marginRight: 10, width: 25, height: 25 }} />
+          <GoogleLogin
             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
-            buttonText="Sign in with Google"
+            render={(el) => <button>Google</button>}
+            buttonText="Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
-          /> */}
+          />
         </div>
         <div className="social">
           <div>

@@ -95,14 +95,14 @@ export const Register = () => {
         </div>
         <div className="google">
           <FcGoogle style={{ marginRight: 10, width: 25, height: 25 }} />
-          {/* <GoogleLogin
+          <GoogleLogin
             clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
             render={(el) => <button>Google</button>}
             buttonText="Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
-          /> */}
+          />
         </div>
         <div className="social">
           <div className="buttons" variant="outlined">
