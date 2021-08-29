@@ -19,6 +19,11 @@ import Pagination from "@material-ui/lab/Pagination";
 import { Navbar } from "../Landing/Navbar/Navbar";
 import { Footer } from "../Landing/Footer/Footer";
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6a8674ce1e9754d913fa641239bbb84cb54cec2d
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -78,6 +83,7 @@ function Select() {
   const open = Boolean(anchorEl);
   const id1 = open ? "simple-popper" : undefined;
 
+<<<<<<< HEAD
   window.onscroll = () => {
     // console.log(window.scrollY)
 
@@ -85,6 +91,14 @@ function Select() {
       setNavbar(true);
     } else {
       setNavbar(false);
+=======
+        if (window.scrollY >= 200) {
+            setNavbar(true)
+        }
+        else {
+            setNavbar(false) 
+        }
+>>>>>>> 6a8674ce1e9754d913fa641239bbb84cb54cec2d
     }
   };
 

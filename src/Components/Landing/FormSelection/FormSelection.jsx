@@ -267,7 +267,7 @@ export const FormSelection = () => {
           <Link
             className={styles.searchBtnLink}
             style={{ color: "#fff" }}
-            to="/milind"
+            to="/hotel"
           >
             <button className={styles.searchBtn}>SEARCH</button>
           </Link>

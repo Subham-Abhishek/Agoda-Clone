@@ -12,13 +12,15 @@ import Sortingdiv from "./Sortingdiv";
 import Searchdiv from "./Searchdiv";
 import axios from "axios";
 import Dashboardleft from "./Dashboardleft";
-import Switch from "@material-ui/core/Switch";
+import { Switch } from 'antd';
 import FilterBox from "./FilterBox";
 import { NavLink } from "react-router-dom";
 import Filtering from "./Filtering";
 import {ScrollUpNav} from "../Landing/Navbar/ScrollUpNav"
 import { AppContext } from "../../context/Provider";
 import {Loading} from "../Loading/Loading"
+import { Footer } from "../Landing/Footer/Footer";
+import { Navbar } from "../Landing/Navbar/Navbar";
 
 const Dashboard = () => {
   const [clicked, setClicked] = useState(false)
@@ -85,7 +87,7 @@ const handleClicking = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
       setLoading(true)
-  }, 1600);
+  }, 3000);
   return () => clearTimeout(timer);
   }, []);
 
@@ -101,11 +103,13 @@ useEffect(() => {
   return  (
    
     <>
+                 {loading && <Navbar/>}
+
     {loading ? <div>
 
  
       {/* <Searchdiv /> */}
-     <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
+     <ScrollUpNav handleClicking={handleClicking} calcScroll="150"/>
     <Filtering/>
 
      <Box className={styles.root}>
@@ -116,6 +120,7 @@ useEffect(() => {
         <div className={styles.hotelpaper}>
           <Box className={styles.root2}>
             <div className={styles.upgrade}>
+              <div className={styles.imgText}>
               <img
                 style={{ margin: "10px" }}
                 height="49px"
@@ -129,12 +134,8 @@ useEffect(() => {
                   Special Offers Hurry
                 </h5>
               </div>
-              <Switch
-                className={styles.slidebtn}
-                checked={state.checkedB}
-                name="checkedB"
-                color="primary"
-              />
+              </div>
+              <Switch className={styles.slidebtn} />
             </div>
 
             <Sortingdiv
@@ -314,8 +315,12 @@ useEffect(() => {
           </Box>
         </div>
       </Box>
+       
+       
          </div>
+
              :<Loading/>}
+             {loading && <Footer/>}
 
 </>
   );

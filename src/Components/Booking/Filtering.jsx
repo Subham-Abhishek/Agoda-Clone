@@ -1,26 +1,39 @@
-import React from 'react'
+import React from "react";
 import styles from "./dashboardleft.module.css";
-import {InputBase,Paper} from '@material-ui/core'
+import { Paper } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
 const Filtering = () => {
-    return (
-        <Paper elevation={1}   className={styles.filterparent}>
-        <div className={styles.filter}>
-        <button className={styles.btnnotuse}>Filter</button>
-        <button  className={styles.btn1} >Quantity Offers  <i class="fas fa-sort-down"></i></button>
-        <button className={styles.btn2}>Price <i class="fas fa-sort-down"> </i></button>
-        <button className={styles.btn3}>Start ratings  <i class="fas fa-sort-down"></i></button>
-        <button className={styles.btn4}>Property facilities <i class="fas fa-sort-down"></i> </button>
-        <button className={styles.btn5}>Property type  <i class="fas fa-sort-down"></i></button>
-       
-        <div className={styles.searchinputsmall}>
-              <input className={styles.searchinputtext} type="text" placeholder="Text Seach" />
-          </div>
-          
+  return (
+    <div className={styles.filterparent}>
+      <div className={styles.filter}>
+        <div className={styles.filterbtns}>
+          <span className={styles.btnnotuse}>Filter</span>
+          <button className={styles.btn1}>
+            Quarantine Offers <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn2}>
+            Price <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn3}>
+            Stars <i class="fas fa-sort-down"></i>
+          </button>
+          <button className={styles.btn5}>
+            More <i class="fas fa-sort-down"></i>
+          </button>
         </div>
-    
-        </Paper>
-    )
-}
 
-export default Filtering
+        <div className={styles.searchinputsmall}>
+          <SearchIcon />
+          <input
+            className={styles.searchinputtext}
+            type="text"
+            placeholder="What are you looking for?"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Filtering;

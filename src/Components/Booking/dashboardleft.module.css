@@ -48,94 +48,49 @@
   color: #3c3c3c;
   text-transform: uppercase;
 }
-.filterparent{
+.filterparent {
   width: 100%;
-  height: 68px;
-  margin-top: 7%;
-
+  padding: 15px 0;
+  box-shadow: 0 4px 5px lightgray;
 }
-.filter{
-  width: 90%;
-  height: 50px;
+.filter {
+  width: 74%;
   display: flex;
-  margin-left:80px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.btn1,.btn2,.btn3,.btn4,.btn5{
-  height: 35px;
-  border-radius:20px ;
+.filterbtns > button {
   color: #fff;
   background-color: #20274d;
-  display: inline-block;
-  margin-bottom: 0;
   font-weight: 700;
-  text-align: center;
   cursor: pointer;
   border: none;
-  outline: 0;
-  line-height: 1.4;
-  margin-left: 10px;
-  margin-top: 15px;
-  
-  margin-bottom: 0;
-    text-align: center;
-  
-} 
-.btnnotuse{
+  padding: 5px 15px;
+  border-radius: 25px;
+  margin-left: 15px;
+}
+
+.btnnotuse {
   border: none;
   background-color: white;
-  margin-top: 7px;
   font-weight: 700;
-  
+}
+button i {
+  transform: translate(4px ,-2px);
 }
 
-.btn1{
-  width: 200px;
-}
-
-.btn2{
-  width:80px
-}
-
-
-
-.btn3{
-  width: 130px;
-}
-
-
-
-.btn4{
-  width: 150px;
-}
-
-
-
-.btn5{
-  width: 140px;
-}
-button i{
-  margin: 5px;
-}
-
-.searchinputsmall{
-  margin-left: 100px ;
-  width: 210px;
+.searchinputsmall {
+  width: 250px;
   border-radius: 25px;
-  border: 1px solid black;
+  border: 1px solid #737373;
   height: 35px;
-  margin-top:17px ;
-
+  display: flex;
+  align-items: center;
+  padding: 0 15px
 }
-.searchinputtext{
-  width: 170px;
-  height: 25px;
-  margin-left: 30px;
-  margin-top: 3px;
+.searchinputtext {
+  width: 80%;
   border: none;
-}
-.searchinputtext:active{
-  /* border: none; */
   outline: none;
-  
 }

@@ -20,7 +20,7 @@ export const Routes = () => {
       <Route exact path="/">
         <LandingPage />
       </Route>
-      <Route path="/milind">
+      <Route exact path="/hotel">
         {/* <Milind searchedCity={searchedCity} /> */}
         <Dashboard searchedCity={searchedCity} />
       </Route>

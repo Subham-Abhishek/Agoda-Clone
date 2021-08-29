@@ -119,7 +119,7 @@ export const ScrollUpNav = (props) => {
           </Grid>
 
           <button onClick={props.handleClicking} className={styles.searchBtn}>
-            <Link style={{ color: "#fff" }} to="/milind">
+            <Link style={{ color: "#fff" }} to="/hotel">
               SEARCH
             </Link>
           </button>
