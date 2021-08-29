@@ -2,7 +2,5 @@
 import { createContext } from "react"
 
 
-const IsAuth = createContext({
-    isAuth:false
-})
+const IsAuth = createContext()
 export default IsAuth

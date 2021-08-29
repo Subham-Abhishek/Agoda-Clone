@@ -46,6 +46,7 @@ export const Navbar = () => {
   const classes = useStyles();
   // const [auth, setAuth] = useState(false);
   const auth = useContext(IsAuth);
+  console.log(auth);
   return (
     <>
       <div className={styles.navbar}>
