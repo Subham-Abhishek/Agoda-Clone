@@ -38,14 +38,14 @@ const useStyles = makeStyles({
     padding: "10px",
     zIndex: "-1",
     fontSize: "17px",
-    fontWeight: 600
+    fontWeight: 600,
   },
 });
 
 export const Navbar = () => {
   const classes = useStyles();
   // const [auth, setAuth] = useState(false);
-  const auth = useContext(IsAuth)
+  const auth = useContext(IsAuth);
   return (
     <>
       <div className={styles.navbar}>
@@ -81,12 +81,13 @@ export const Navbar = () => {
           <Button className={classes.sec} variant="outlined" color="secondary">
             List your place
           </Button>
-          {auth ? (
+          {auth.isAuth ? (
             <>
               <Avatar alt="SAJ" src="" />
               <p>Subham</p>
               <Button
                 // onClick={() => setAuth(!auth)}
+                onClick={() => auth.toggle(!auth.isAuth)}
                 className={classes.pri}
                 variant="outlined"
                 color="primary"
@@ -96,21 +97,23 @@ export const Navbar = () => {
             </>
           ) : (
             <>
-              <Button
-                // onClick={() => setAuth(!auth)}
-                className={classes.pri}
-                color="primary"
-              >
-                Sign in
-              </Button>
+              <Link to="/login">
+                <Button
+                  // onClick={() => setAuth(!auth)}
+                  className={classes.pri}
+                  color="primary"
+                >
+                  Sign in
+                </Button>
+              </Link>
               <Link to="/register">
-              <Button
-                className={classes.pri}
-                variant="outlined"
-                color="primary"
-              >
-                Create account
-              </Button>
+                <Button
+                  className={classes.pri}
+                  variant="outlined"
+                  color="primary"
+                >
+                  Create account
+                </Button>
               </Link>
             </>
           )}
