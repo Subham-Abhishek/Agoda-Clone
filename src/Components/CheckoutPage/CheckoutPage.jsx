@@ -18,7 +18,7 @@ export const CheckoutPage = () => {
   const [step2, setStep2] = useState(false);
   const [step3, setStep3] = useState(false);
   const [activeStep, setActiveStep] = React.useState(0);
-
+  let selectedHotel = JSON.parse(localStorage.getItem('selectedHotels'))
   useEffect(() => {
     // setLoading(false);
     let timer = setTimeout(() => {
@@ -102,8 +102,8 @@ export const CheckoutPage = () => {
             </span>
             <span className="great">Great choice of property</span>
             <span className="average"> - with an average guest rating of </span>
-            <span className="great"> 8.2 </span>
-            <span className="average"> from 375 reviews</span>
+            <span className="great"> {selectedHotel.rating} </span>
+            <span className="average"> from {selectedHotel.reviews} reviews</span>
           </div>
 
           <div className="form-container">
@@ -206,10 +206,10 @@ export const CheckoutPage = () => {
               <span className="great1">You wont't be charged yet.</span>
             </div>
           </div>
-        </div>:<Payment step3={step3} setStep3={setStep3}/>
+        </div>:<Payment selectedHotel={selectedHotel} step3={step3} setStep3={setStep3}/>
         }
         <div className="hotel-detail">
-          <HotelDetails/>
+          <HotelDetails selectedHotel={selectedHotel}/>
         </div>
       </div>
       {isremind && <ConfirmLoading setRemind={setRemind} />}

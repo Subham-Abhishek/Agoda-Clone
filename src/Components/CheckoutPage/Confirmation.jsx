@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React from 'react'
 import { FcCheckmark } from 'react-icons/fc'
 import "./Checkout.css"
@@ -37,8 +38,12 @@ export const Confirmation = () => {
                Please present this confirmation at check-in.
                </span>
            </div>
+           <Link to="/">
            <button className='bookAnother'>Book another room</button>
+           </Link>
+           <Link to="/bookings">
            <button className='bookAnother1'>Manage my bookings</button>
+           </Link>
         </div>
     )
 }

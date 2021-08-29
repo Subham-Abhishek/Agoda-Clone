@@ -12,9 +12,9 @@ const Filtering = () => {
         <button className={styles.btn3}>Start ratings  <i class="fas fa-sort-down"></i></button>
         <button className={styles.btn4}>Property facilities <i class="fas fa-sort-down"></i> </button>
         <button className={styles.btn5}>Property type  <i class="fas fa-sort-down"></i></button>
-        <div
-          className={styles.searchinputsmall}>
-              <input className={styles.searchinputtext} type="text" placeholder="Text Seacrh" />
+       
+        <div className={styles.searchinputsmall}>
+              <input className={styles.searchinputtext} type="text" placeholder="Text Seach" />
           </div>
           
         </div>

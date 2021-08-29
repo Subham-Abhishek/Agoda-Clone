@@ -5,16 +5,20 @@ import {IoCheckmarkCircleOutline} from "react-icons/io5"
 import ConfirmModal from './ConfirmModal'
 import { AlerBox } from './AlertBox'
 import { Link } from 'react-router-dom'
+import { Navbar } from '../Landing/Navbar/Navbar'
 export const BookingHistory = () => {
     const [open, setOpen] = React.useState(false);
     const [open1, setOpen1] = React.useState(false);
     const [book, setBook] = React.useState(false);
+    let selectedHotel = JSON.parse(localStorage.getItem('selectedHotels'))
 
     const handleClickOpen = () => {
         setOpen(true);
       };
      
     return (
+        <>
+        <Navbar/>
         <div className="saved">
             <h4>Booked properties list</h4>
             {book?<div className="Nothing">
@@ -30,16 +34,16 @@ export const BookingHistory = () => {
             <div className="booking-holder">
                 <div className="hotelcard">
                    <div className="upperCard">
-                       <img src="hote1.jpg" alt="" />
+                       <img src={selectedHotel.urlchild1} alt="" />
                        <div className="detailsOf">
                            <div className="Common">
-                               <h3>Hotel Olive zone Near Delhi Airport</h3>
+                               <h3>{selectedHotel.hotel}</h3>
                                <p>Booking ID: <span>579464669</span></p>
                                <div className="BookedOn">
                                    <IoCheckmarkCircleOutline 
                                    style={{marginRight:8,width:20,height:20}}
                                    />
-                                   <span>Booked on August 28, 2021</span>
+                                   <span>Booked on August 29, 2021</span>
                                </div>
                                <img src="superior.png" alt="" />
                            </div>
@@ -47,10 +51,10 @@ export const BookingHistory = () => {
                                <div className="checkInDat">
                                    <p>CHECK IN</p>
                                    <div className="sh">
-                                   <span>28</span>
+                                   <span>1</span>
                                    <div className="day">
                                        <span>Sep</span>
-                                       <span>Thu</span>
+                                       <span>Wed</span>
                                    </div>
                                    </div>
                                </div>
@@ -58,7 +62,7 @@ export const BookingHistory = () => {
                                <div className="checkInDat">
                                    <p>CHECK OUT</p>
                                    <div className="sh">
-                                   <span>28</span>
+                                   <span>2</span>
                                    <div className="day">
                                        <span>Sep</span>
                                        <span>Thu</span>
@@ -76,5 +80,6 @@ export const BookingHistory = () => {
             {open?<ConfirmModal setOpen1={setOpen1} setBook={setBook} open={open} setOpen={setOpen}/>:null}
             {open1?<AlerBox open1={open1} setOpen1={setOpen1}/>:null}
         </div>
+        </>
     )
 }

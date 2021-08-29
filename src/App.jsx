@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { Footer } from "./Components/Landing/Footer/Footer";
 import IsAuth from "./context/Auth";
 import { Routes } from "./Routes/Routes";
 
@@ -14,6 +15,7 @@ function App() {
       }}
     >
       <Routes />
+      <Footer/>
     </IsAuth.Provider>
   );
 }

@@ -4,7 +4,7 @@ import { FcCheckmark, FcLock } from "react-icons/fc";
 import GooglePayButton from "@google-pay/button-react";
 import { Timer } from "./Timer";
 import { Confirmation } from "./Confirmation";
-export const Payment = ({step3, setStep3}) => {
+export const Payment = ({step3, setStep3,selectedHotel}) => {
   return (
     <div className="userInfo">
       <div
@@ -57,7 +57,7 @@ export const Payment = ({step3, setStep3}) => {
                 forwarded to the <strong>GPay</strong> website to proceed with
                 this transaction.
               </li>
-              <li>The total amount you will be charged is: $ 38.65</li>
+              <li>The total amount you will be charged is: ₹  {selectedHotel.price+644.76}</li>
             </ul>
           </div>
         </div>
@@ -95,7 +95,7 @@ export const Payment = ({step3, setStep3}) => {
               transactionInfo: {
                 totalPriceStatus: "FINAL",
                 totalPriceLabel: "Total",
-                totalPrice: "1",
+                totalPrice: `${selectedHotel.price+644.76}`,
                 currencyCode: "INR",
                 countryCode: "IN",
               },
