@@ -99,13 +99,16 @@ useEffect(() => {
 
   
   return  (
+   
     <>
-    
+    {loading ? <div>
+
+ 
       {/* <Searchdiv /> */}
-      <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
+     <ScrollUpNav handleClicking={handleClicking} calcScroll="-1"/>
     <Filtering/>
 
-      <Box className={styles.root}>
+     <Box className={styles.root}>
         <Box className={styles.root1}>
           <Dashboardleft handlechangecheck={handlechangecheck} />
         </Box>
@@ -311,7 +314,10 @@ useEffect(() => {
           </Box>
         </div>
       </Box>
-    </>
+         </div>
+             :<Loading/>}
+
+</>
   );
 };
 

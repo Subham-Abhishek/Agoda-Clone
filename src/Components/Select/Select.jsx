@@ -58,6 +58,7 @@ function Select() {
         .then((res) => {
             console.log("getIdusers", res.data);
             setUser(res.data);
+            localStorage.setItem("selectedHotels", JSON.stringify(res.data));
         })
         .catch((err) => { })
         .finally(() => {console.log("users", user)})
