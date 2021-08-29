@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styles from "./navbar.module.css";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Avatar, Box, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
+import IsAuth from "../../../context/Auth";
 
 const useStyles = makeStyles({
   pri: {
@@ -42,7 +44,8 @@ const useStyles = makeStyles({
 
 export const Navbar = () => {
   const classes = useStyles();
-  const [auth, setAuth] = useState(false);
+  // const [auth, setAuth] = useState(false);
+  const auth = useContext(IsAuth)
   return (
     <>
       <div className={styles.navbar}>
@@ -83,7 +86,7 @@ export const Navbar = () => {
               <Avatar alt="SAJ" src="" />
               <p>Subham</p>
               <Button
-                onClick={() => setAuth(!auth)}
+                // onClick={() => setAuth(!auth)}
                 className={classes.pri}
                 variant="outlined"
                 color="primary"
@@ -94,12 +97,13 @@ export const Navbar = () => {
           ) : (
             <>
               <Button
-                onClick={() => setAuth(!auth)}
+                // onClick={() => setAuth(!auth)}
                 className={classes.pri}
                 color="primary"
               >
                 Sign in
               </Button>
+              <Link to="/register">
               <Button
                 className={classes.pri}
                 variant="outlined"
@@ -107,6 +111,7 @@ export const Navbar = () => {
               >
                 Create account
               </Button>
+              </Link>
             </>
           )}
         </div>
