@@ -20,6 +20,7 @@ import axios from "axios";
 import Pagination from '@material-ui/lab/Pagination';
 
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -78,7 +79,7 @@ function Select() {
     window.onscroll = () => {
         // console.log(window.scrollY)
 
-        if (window.scrollY >= 250) {
+        if (window.scrollY >= 200) {
             setNavbar(true)
         }
         else {
