@@ -56,11 +56,13 @@ export const Navbar = () => {
     <>
       <div className={styles.navbar}>
         <div className={styles.navbar_left}>
+          <Link to="/">
           <img
             className={styles.header_logo}
             src="https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg"
             alt=""
           />
+          </Link>
           <div>
             <p>Flight + Hotel</p>
           </div>
