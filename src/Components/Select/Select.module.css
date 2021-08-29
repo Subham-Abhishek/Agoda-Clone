@@ -30,6 +30,7 @@
 .selectBigimage {
   filter: brightness(0.6);
 }
+
 .selectBigimage:hover {
   filter: brightness(0.3);
 }
@@ -998,6 +999,10 @@ button {
   margin-left: 2%;
   height: 70%;
   margin-top: 8px;
+  transition: 0.5s all ease-in-out;
+}
+.navbarmaindivdiv2 button:hover {
+  background-color: #7da6e4;
 }
 .navbarmaindivdiv2 button h3 {
   color: white;

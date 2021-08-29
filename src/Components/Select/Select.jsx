@@ -17,6 +17,7 @@ import Fade from '@material-ui/core/Fade';
 import { Loading } from "../Loading/Loading";
 import { useParams, useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
+import Pagination from '@material-ui/lab/Pagination';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,10 +25,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
 }));
+const useStyles1 = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
 
 function Select() {
     const [navbar, setNavbar] = useState(false)
     const classes = useStyles();
+    const classes1 = useStyles1();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [heart, setHeart] = useState(false)
     const [src, setSrc] = useState("https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png")

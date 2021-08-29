@@ -2,21 +2,24 @@ import styles from "./Comment.module.css"
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { makeStyles } from '@material-ui/core/styles';
+import Pagination from '@material-ui/lab/Pagination';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > *': {
-      marginTop: theme.spacing(2),
-    },
+        border: "white",
+        marginLeft: "250px",
+        width: "800px",
+        marginRight: "300px",
+        boxShadow:"0px 0px 0px white"
   },
 }));
 function Comment() {
     const [comment, setComment] = useState([])
     const [page, setPage] = useState(1);
-
+    const classes = useStyles();
     useEffect(() => {
         getComments()
-    }, [])
+    }, [page])
 
     const getComments = () => {
         axios.get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=10`)
@@ -24,28 +27,21 @@ function Comment() {
             .catch((err) => (console.log(err)))
     }
 
-    const handlePage = (e) => {
-        getComments()
-        setPage(e.target.value)
-    }
+   
 
-    return <div className={ styles.upperdiv}>
+    return <div className={ styles.upperdiv} >
         <span className={styles.commentspan}>Showing 500+ verified guest comments</span>
         <hr className={styles.commenthr} />
 
-        <div className={styles.commentpagination}>
-            <div className={styles.commentpaginationbuttton}>
-                
-                <button>{'<'}</button>
-                <button onClick={ (e)=>(handlePage(e))} value="1">1</button>
-                <button onClick={ (e)=>(handlePage(e))} value="2">2</button>
-                <button onClick={ (e)=>(handlePage(e))} value="3">3</button>
-                <button onClick={ (e)=>(handlePage(e))} value="4">4</button>
-                <button onClick={ (e)=>(handlePage(e))} value="5">5</button>
-                <button onClick={ (e)=>(handlePage(e))} value="6">6</button>
-                <button onClick={ (e)=>(handlePage(e))} value="7">{ `>`}</button>
-            </div>
-        </div>
+        <div className={classes.root}>
+            <Pagination
+                count={50}
+                shape="rounded"
+                page={page}
+                onChange={(event, value) => setPage(value)}
+                className={ styles.selectNav}
+            />
+    </div>
         
         {
             comment.map((item, index) => {
