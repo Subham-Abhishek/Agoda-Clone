@@ -39,9 +39,18 @@
 
 }
 
-/* .childimg {
-      margin-left:0.5px
-  };    */
+.hotelchild1{
+   width: 260px;
+   height: 250px;
+   /* border: 1px solid black;  */
+}
+.childimg1{
+    margin-top: 2px;
+    
+}
+.childimg {
+      margin-left:1px
+   };   
 
 .hoteldetails {
     font-size: 15px;
@@ -49,7 +58,8 @@
     margin-left: 10px;
     width: 400px;
     padding: 25;
-    height: 250px
+    height: 250px;
+    /* border-right: 1px solid black; */
 }
 
 ;
@@ -127,16 +137,18 @@
 }
 
 .hotelfacility {
+    width: 230px;
     height: 300px;
     padding-top: 2%;
-
+    /* border: 1px solid rgb(58, 23, 23); */
+    margin-left: 50px;
 }
 
 .hotelfacilitychild {
-    width: 150px;
+    width: 230px;
     height: 250px;
     /* background-color: aqua; */
-    margin-left: 60px;
+    margin-left: 65px;
 }
 
 .offer {
@@ -174,7 +186,7 @@
 }
 
 .roombtn {
-
+    width: 140px;
     position: relative;
     border: none;
     padding: 12px;
@@ -182,9 +194,11 @@
     background-color: rgb(62, 108, 234);
     color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 5px;
+    margin-top: -5px;
     cursor: pointer;
+    height: 45px;
+    text-align: center;
 
 }
 
@@ -317,7 +331,7 @@
     border-bottom-left-radius: 50%;
     border: 3px solid white;
     bottom: 10px;
-    right: 0;
+    right: 10px;
 
 }
 

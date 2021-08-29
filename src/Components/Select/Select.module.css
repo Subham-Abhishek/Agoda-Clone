@@ -1,5 +1,5 @@
 .selectMainDiv {
-  width: 82%;
+  width: 87.5%;
   margin: auto;
 }
 .upperdiv {
@@ -30,6 +30,7 @@
 .selectBigimage {
   filter: brightness(0.6);
 }
+
 .selectBigimage:hover {
   filter: brightness(0.3);
 }
@@ -975,7 +976,7 @@ button {
   border-bottom: 3px solid rgb(224, 222, 222);
 }
 .navbarmaindivdiv1 {
-  width: 40%;
+  width: 45%;
   margin-left: 8%;
   margin-top: -10px;
   display: flex;
@@ -991,25 +992,38 @@ button {
   display: flex;
 }
 .navbarmaindivdiv2 button {
-  width: 150px;
+  width: 130px;
   background-color: #5392f9;
   color: white;
   border-radius: 5px;
   margin-left: 2%;
   height: 70%;
   margin-top: 8px;
+  transition: 0.5s all ease-in-out;
+}
+.navbarmaindivdiv2 button:hover {
+  background-color: #7da6e4;
 }
 .navbarmaindivdiv2 button h3 {
   color: white;
   padding-top: 5px;
 }
-.navbarmaindivdiv2 > h3 {
-  padding-top: 10px;
+.navbarmaindivdiv2div1 > h3 {
   color: #ee595d;
+  font-size: 22px;
+  margin-top: -6px;
 }
 .navbarmaindivdiv2 p {
   padding-top: 10px;
   font-size: 16px;
   font-weight: bolder;
   color: #696262;
+}
+.navbarmaindivdiv2div1 {
+  display: flex;
+  flex-direction: column;
+}
+.navbarmaindivdiv2div1 h6 {
+  color: #4e4e4e;
+  padding-top: 5px;
 }
