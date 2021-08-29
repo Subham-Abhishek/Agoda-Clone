@@ -47,6 +47,11 @@ export const Navbar = () => {
   // const [auth, setAuth] = useState(false);
   const auth = useContext(IsAuth);
   console.log(auth);
+
+  let name = "", image = "";
+  let userDetails = localStorage.getItem("user");
+  if(userDetails == null) userDetails = {}
+  else userDetails = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <div className={styles.navbar}>
@@ -84,8 +89,8 @@ export const Navbar = () => {
           </Button>
           {auth.isAuth ? (
             <>
-              <Avatar alt="SAJ" src="" />
-              <p>Subham</p>
+              <Avatar alt="SAJ" src={auth.isAuth ? userDetails.imageUrl : ""} />
+              <p>{auth.isAuth ? userDetails.givenName : ""}</p>
               <Button
                 // onClick={() => setAuth(!auth)}
                 onClick={() => auth.toggle(!auth.isAuth)}
