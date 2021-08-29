@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import styles from "./Select.module.css";
 import { Comment } from '../Comment/Comments';
 import { useEffect } from "react";
-import { SelectNavbar } from "./Navbar";
 import React,{ useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
@@ -18,6 +17,9 @@ import { Loading } from "../Loading/Loading";
 import { useParams, useHistory, useLocation} from "react-router-dom";
 import axios from "axios";
 import Pagination from '@material-ui/lab/Pagination';
+import { Navbar } from "../Landing/Navbar/Navbar";
+import { Footer } from "../Landing/Footer/Footer";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +41,7 @@ function Select() {
     const classes1 = useStyles1();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [heart, setHeart] = useState(false)
+    const [rend, setRend] = useState(false)
     const [src, setSrc] = useState("https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png")
     const [loading, setLoading] = useState(false)
     const [user, setUser] = useState({});
@@ -58,6 +61,7 @@ function Select() {
         .then((res) => {
             console.log("getIdusers", res.data);
             setUser(res.data);
+            setRend(true)
             localStorage.setItem("selectedHotels", JSON.stringify(res.data));
         })
         .catch((err) => { })
@@ -78,7 +82,7 @@ function Select() {
     window.onscroll = () => {
         // console.log(window.scrollY)
 
-        if (window.scrollY >= 250) {
+        if (window.scrollY >= 200) {
             setNavbar(true)
         }
         else {
@@ -105,6 +109,7 @@ function Select() {
     }
     
     return <>
+      { loading && <Navbar/>}
         {loading ? <div>
             {navbar && <div className={styles.navbarmaindiv}>
                 <div className={styles.navbarmaindivdiv1}>
@@ -570,6 +575,7 @@ function Select() {
             <br />
             <br />
         </div> : <Loading />}
+        {loading && <Footer/>}
     </>
 }
 
