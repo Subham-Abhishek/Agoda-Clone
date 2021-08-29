@@ -1,5 +1,5 @@
 .selectMainDiv {
-  width: 82%;
+  width: 87.5%;
   margin: auto;
 }
 .upperdiv {
@@ -30,6 +30,7 @@
 .selectBigimage {
   filter: brightness(0.6);
 }
+
 .selectBigimage:hover {
   filter: brightness(0.3);
 }
@@ -987,7 +988,7 @@ button {
 }
 .navbarmaindivdiv2 {
   margin-left: 15%;
-  width: 28%;
+  width: 30%;
   display: flex;
 }
 .navbarmaindivdiv2 button {
@@ -998,6 +999,10 @@ button {
   margin-left: 2%;
   height: 70%;
   margin-top: 8px;
+  transition: 0.5s all ease-in-out;
+}
+.navbarmaindivdiv2 button:hover {
+  background-color: #7da6e4;
 }
 .navbarmaindivdiv2 button h3 {
   color: white;

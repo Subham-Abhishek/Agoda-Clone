@@ -1,3 +1,49 @@
+
+# Project Title
+
+## Description:
+
+This project is clone of **[Agoda.com](https://www.agoda.com/?cid=1844104)** website.  
+  
+Agoda.com is an online travel agency and metasearch engine for hotels, vacation rentals, flights, and airport transfer. It was founded in 2003 and later acquired by Booking Holdings, becoming a subsidiary of the company.
+
+## Contributors:
+
+* **Subham Abhishek Jaiswal**  
+  [Subham-Abhishek](https://github.com/Subham-Abhishek) | [email](abhi950727@gmail.com)
+
+* **Abhishek Kumar Singh**  
+  [Abhishek](https://github.com/singhabhishek6) | [email](abhi950727@gmail.com)
+  
+* **Milind Anand**  
+  [Milind](https://github.com/Milind74) | [email](abhi950727@gmail.com)
+  
+* **Avinash Kumar**  
+  [Avinash](https://github.com/Avinash7564) | [email](abhi950727@gmail.com)
+  
+## Technologies Used:
+- React.js
+- Redux
+- Javascript
+- HTML & CSS
+
+
+## External Libraries Used:
+- Material UI
+- react-Google
+- react-Dates
+- react-leaf-carousel
+- react-redux
+- axios
+- react-recaptcha
+- react-router-dom
+- styled components
+- react-dates
+- react-map
+- ant-design
+- redux-thunk
+- uuid
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
