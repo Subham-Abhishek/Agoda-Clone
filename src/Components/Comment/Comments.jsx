@@ -23,7 +23,9 @@ function Comment() {
 
     const getComments = () => {
         axios.get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=10`)
-            .then((res) => (setComment(res.data)))
+            .then((res) => (
+                setComment(res.data)
+            ))
             .catch((err) => (console.log(err)))
     }
 
@@ -48,7 +50,7 @@ function Comment() {
                 return <div key={index}>
                 <div className={styles.commentMainDiv}>
                         <div className={styles.commentMainDiv1}>
-                            <div style={{display:"flex",  color:"#5392f9"}}><h1 style={{color:"#5392f9", fontSize:"35px"}}>10.0 </h1><h3 style={{  color:"#5392f9", paddingTop:"25px", marginLeft:"5px"}}>Exceptional</h3></div>
+                            <div style={{ display: "flex", color: "#5392f9" }}><h1 style={{ color: "#5392f9", fontSize: "35px" }}>{ Number(Math.random()*10).toFixed(1)} </h1><h3 style={{  color:"#5392f9", paddingTop:"25px", marginLeft:"5px"}}>Exceptional</h3></div>
                         <h5>{item.email}</h5>
                         <p><i className="far fa-hospital"></i> Superior Room</p>
                     </div>
