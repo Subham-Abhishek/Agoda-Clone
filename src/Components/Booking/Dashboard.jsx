@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData, getDataSuccess, searchDataFailure, searchDataRequest, searchDataSuccess } from "../../Bookingreducer/Redux/action";
+import { getData, getDataSuccess, searchDataFailure, searchDataRequest, searchDataSuccess } from "../../Redux/Bookingredux/action";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { Button, Box } from "@material-ui/core";

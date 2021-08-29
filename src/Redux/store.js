@@ -5,7 +5,7 @@ import {
 } from "redux"
 import {
     reducer
-} from "./reducer";
+} from "./Bookingredux/reducer";
 import thunk from "redux-thunk"
 const composeEnhancers =
     process.env.NODE_ENV === "development" ?

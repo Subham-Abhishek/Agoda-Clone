@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import AppProvider from "./context/Provider";
 import {Provider} from "react-redux"
-import {store} from "./Bookingreducer/Redux/store"
+import {store} from "./Redux/store"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
