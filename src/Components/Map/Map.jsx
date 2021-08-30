@@ -8,6 +8,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+import CloseIcon from '@material-ui/icons/Close';
 
 const fullscreenControlStyle= {
   right: 10,
@@ -35,7 +37,7 @@ function Map() {
     let hotelData = JSON.parse(localStorage.getItem("selectedHotels"))
     console.log("hotelData", hotelData)
     return (
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ display: "flex", flexDirection: "row", position: "absolute", top: 0, zIndex: 1000, backgroundColor: "#fff" }}>
 
             <div>
                 <ReactMapGL
@@ -86,6 +88,8 @@ function Map() {
                 </ReactMapGL>
             </div>
             <div style={{ width: "500px", padding: "10px" }}>
+                <Link to={`/hotel/${hotelData.id}`}><CloseIcon /></Link>
+                {/* <button onClick={() => setMap(false)}>X</button> */}
                 <h3 style={{ color: 'rgb(2,131,223)', textAlign: "center" }}>What's Nearby</h3>
                 <div className={ styles.upperdivmap}>
                     <h4><i class="fas fa-map-marker-alt" style={{color:"#5392f9", marginRight:"10px"}}> </i>Current Selection</h4>

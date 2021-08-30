@@ -18,6 +18,7 @@ import axios from "axios";
 import Pagination from "@material-ui/lab/Pagination";
 import { Navbar } from "../Landing/Navbar/Navbar";
 import { Footer } from "../Landing/Footer/Footer";
+import { Map } from "../Map/Map";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -42,6 +43,7 @@ function Select() {
   const [src, setSrc] = useState(
     "https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png"
   );
+  // const [map, setMap] = useState(false)
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState({});
   const location = useLocation;
@@ -89,7 +91,7 @@ function Select() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(true);
-    }, 1600);
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -834,6 +836,7 @@ function Select() {
       ) : (
         <Loading />
       )}
+      {/* {map && <Map setMap={setMap}/>} */}
       {loading && <Footer />}
     </>
   );

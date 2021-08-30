@@ -93,7 +93,7 @@ export const FormSelection = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:4000/city").then(({ data }) => {
+    axios.get("http://localhost:3001/city").then(({ data }) => {
       setCities(data);
     });
   }, []);
