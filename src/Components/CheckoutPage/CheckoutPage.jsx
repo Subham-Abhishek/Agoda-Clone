@@ -24,10 +24,10 @@ export const CheckoutPage = () => {
     // setLoading(false);
     let timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
     let timer2 = setTimeout(() => {
-      setRemind(false);
-    }, 8000);
+      setRemind(true);
+    }, 4000);
     return () => {
       clearTimeout(timer);
       clearTimeout(timer2);
@@ -150,7 +150,7 @@ export const CheckoutPage = () => {
                 <div className="inpp">
                   India
                  
-                   <FcCheckmark style={{width:20,height:20}}/>
+                   <FcCheckmark style={{marginLeft:260,marginTop:5,width:20,height:20}}/>
                   
                 </div>
               </div>

@@ -87,7 +87,7 @@ const handleClicking = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
       setLoading(true)
-  }, 3000);
+  }, 1500);
   return () => clearTimeout(timer);
   }, []);
 
