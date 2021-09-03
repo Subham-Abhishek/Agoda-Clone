@@ -6,7 +6,7 @@ export const Confirmation = () => {
     return (
         <div className="thanks">
            <div className="bluebar"></div>
-           <h3>Thank you Abhishek. Your booking is now complete!</h3>
+           <h3>Thank you Subham Abhishek. Your booking is now complete!</h3>
            <div className="features">
                <FcCheckmark style={{fontSize:20}} />
                <span>
@@ -29,7 +29,7 @@ export const Confirmation = () => {
                <FcCheckmark style={{fontSize:20}} />
                <span>
                In the next 10 minutes you will receive a booking confirmation with booking details in your inbox at 
-               <span className="great1"> sabhisheksingh6@gmail.com</span>
+               <span className="great1"> saj@gmail.com</span>
                </span>
            </div>
            <div className="features">
