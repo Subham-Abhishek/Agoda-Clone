@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   const handleSort = () => {
     axios
-      .get("http://localhost:3001/hotel?_sort=price&_order=asc")
+      .get("https://agoda-api.herokuapp.com/hotel?_sort=price&_order=asc")
       .then((res) => {
         console.log("result=", res.data);
         dispatch(getDataSuccess(res.data));
@@ -43,7 +43,7 @@ const Dashboard = () => {
 
   const handlereview = () => {
     axios
-      .get("http://localhost:3001/hotel?_sort=reviews&_order=desc")
+      .get("https://agoda-api.herokuapp.com/hotel?_sort=reviews&_order=desc")
       .then((res) => {
         console.log("result=", res.data);
         dispatch(getDataSuccess(res.data));
@@ -51,7 +51,7 @@ const Dashboard = () => {
   };
   const handlerate = () => {
     axios
-      .get("http://localhost:3001/hotel?_sort=rating&_order=desc")
+      .get("https://agoda-api.herokuapp.com/hotel?_sort=rating&_order=desc")
       .then((res) => {
         console.log("result=", res.data);
         dispatch(getDataSuccess(res.data));
@@ -60,7 +60,7 @@ const Dashboard = () => {
 
   const handlechangecheck = () => {
     axios
-      .get("http://localhost:3001/hotel?_sort=distance&_order=desc")
+      .get("https://agoda-api.herokuapp.com/hotel?_sort=distance&_order=desc")
       .then((res) => {
         console.log("result=", res.data);
         dispatch(getDataSuccess(res.data));
@@ -69,7 +69,7 @@ const Dashboard = () => {
 
 const searchData = () => {
     dispatch(searchDataRequest())
-    return axios.get(`http://localhost:3001/hotel?city=${searchedCity.toLowerCase()}`)
+    return axios.get(`https://agoda-api.herokuapp.com/hotel?city=${searchedCity.toLowerCase()}`)
         .then((res) => {
             console.log(res.data)
             dispatch(searchDataSuccess(res.data))

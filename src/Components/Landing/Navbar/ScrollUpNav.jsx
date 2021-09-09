@@ -30,7 +30,7 @@ export const ScrollUpNav = (props) => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3001/city").then(({ data }) => {
+    axios.get("https://agoda-api.herokuapp.com/city").then(({ data }) => {
       setCities(data);
     });
   }, []);

@@ -35,7 +35,7 @@ export const getDataFailure = (error) => {
 
 export const getData = () => dispatch => {
     dispatch(getDataRequest())
-    return axios.get("http://localhost:3001/hotel")
+    return axios.get("https://agoda-api.herokuapp.com/hotel")
         .then((res) => {
             console.log(res.data)
             dispatch(getDataSuccess(res.data))
