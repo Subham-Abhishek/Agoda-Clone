@@ -102,7 +102,7 @@ export const Register = () => {
             <p>or continue with</p>
             <div className="line"></div>
           </div>
-          <div className="google">
+          {/* <div className="google">
             <FcGoogle style={{ marginRight: 10, width: 25, height: 25 }} />
             <GoogleLogin
               clientId="979909697763-pe6gr2hbnarqpvdj31fh3ak86gfacg7a.apps.googleusercontent.com"
@@ -112,7 +112,7 @@ export const Register = () => {
               onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
             />
-          </div>
+          </div> */}
           <div className="social">
             <div className="buttons" variant="outlined">
               <FaApple
