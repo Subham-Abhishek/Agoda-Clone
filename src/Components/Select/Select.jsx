@@ -57,7 +57,7 @@ function Select() {
 
   const getUserDetails = () => {
     axios
-      .get(`http://localhost:3001/hotel/${id}`)
+      .get(`https://agoda-api.herokuapp.com/hotel/${id}`)
 
       .then((res) => {
         console.log("getIdusers", res.data);
