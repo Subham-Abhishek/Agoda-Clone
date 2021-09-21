@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Map() {
     const classes = useStyles();
-    const [lati, setLati] = useState(28.5245)
-    const [long, setLong] = useState(77.1855)
+    const [lati, ] = useState(28.5245)
+    const [long, ] = useState(77.1855)
     const [showPopup, togglePopup] = React.useState(false);
     const [viewport, setViewport] = useState({
         width: 900,

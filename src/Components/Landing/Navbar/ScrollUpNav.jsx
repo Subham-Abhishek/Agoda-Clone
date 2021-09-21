@@ -58,7 +58,7 @@ export const ScrollUpNav = (props) => {
           }}
           className={styles.scrollNav}
         >
-          <Grid item >
+          <Grid item>
             <div className={styles.scrollNavSearch}>
               <SearchIcon />
               <input

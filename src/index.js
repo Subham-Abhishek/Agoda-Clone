@@ -5,16 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import AppProvider from "./context/Provider";
-import {Provider} from "react-redux"
-import {store} from "./Redux/store"
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "font-awesome/css/font-awesome.min.css";
 
 ReactDOM.render(
   <BrowserRouter>
     <AppProvider>
-    <Provider store={store}>
-      <App />
+      <Provider store={store}>
+        <App />
       </Provider>
     </AppProvider>
   </BrowserRouter>,

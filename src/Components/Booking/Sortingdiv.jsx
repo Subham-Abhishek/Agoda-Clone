@@ -14,8 +14,7 @@ const Sortingdiv = ({ handleSort, handlereview, handlerate }) => {
         <p className={styles.btntext4}>Lowest price first</p>{" "}
       </button>
       <button onClick={handlerate} className={styles.sortchild4}>
-        <p className={styles.btntext4}>Rating  </p>{" "}
-        
+        <p className={styles.btntext4}>Rating </p>{" "}
       </button>
       <button onClick={handlereview} className={styles.sortchild4}>
         <p className={styles.btntext4}> Top Reviewed</p>

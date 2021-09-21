@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Link } from "react-router-dom";
 import styles from "./Select.module.css";
 import { Comment } from "../Comment/Comments";
@@ -13,33 +14,30 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Capture from "../Store/Capture.jpeg";
 import Fade from "@material-ui/core/Fade";
 import { Loading } from "../Loading/Loading";
-import { useParams, useHistory, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
-import Pagination from "@material-ui/lab/Pagination";
 import { Navbar } from "../Landing/Navbar/Navbar";
 import { Footer } from "../Landing/Footer/Footer";
-import { Map } from "../Map/Map";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
   },
 }));
-const useStyles1 = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
+// const useStyles1 = makeStyles((theme) => ({
+//   root: {
+//     "& > *": {
+//       marginTop: theme.spacing(2),
+//     },
+//   },
+// }));
 
 function Select() {
   const [navbar, setNavbar] = useState(false);
   const classes = useStyles();
-  const classes1 = useStyles1();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [heart, setHeart] = useState(false);
-  const [rend, setRend] = useState(false);
+  const [, setRend] = useState(false);
   const [src, setSrc] = useState(
     "https://www.vhv.rs/dpng/d/529-5293892_grey-instagram-heart-png-transparent-png.png"
   );

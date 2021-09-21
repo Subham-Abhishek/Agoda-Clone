@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   padding: 0 80px;
-  background-color: #20274D;
+  background-color: #20274d;
   width: 100%;
   position: fixed;
   top: 0;
@@ -40,7 +40,7 @@
   background-color: #fff;
   height: 60px;
   border-radius: 9px;
-  width: 300px
+  width: 300px;
 }
 .scrollNavSearch > input {
   border: none;
@@ -51,10 +51,10 @@
   color: #bbb;
   font-size: 16px;
 }
-.scrollNavCalendar{
-  width: 400px
+.scrollNavCalendar {
+  width: 400px;
 }
-.scrollNavRoomSelect{
+.scrollNavRoomSelect {
   width: 300px;
 }
 .debounceRes {
@@ -87,22 +87,23 @@
 .locationIcon {
   margin-right: 10px;
 }
-.searchBtn{
+.searchBtn {
   height: 60px;
-  flex:1
+  flex: 1;
 }
 @media only screen and (max-width: 700px) {
-  .scrollNavCalendar, .scrollNavRoomSelect{
+  .scrollNavCalendar,
+  .scrollNavRoomSelect {
     display: none;
   }
-  .scrollNavSearch{
+  .scrollNavSearch {
     height: 40px;
     width: 250px;
   }
-  .searchBtn{
+  .searchBtn {
     height: 40px;
   }
-  .scrollNav{
-    padding: 0 20px
+  .scrollNav {
+    padding: 0 20px;
   }
 }

@@ -15,7 +15,7 @@
   text-shadow: 0.5px 0 1px #555;
   cursor: pointer;
 }
-.navbar_right p{
+.navbar_right p {
   margin: 12px;
 }
 .navbar_left > div:nth-child(5) {
@@ -76,15 +76,16 @@
   margin: 0 15px;
 }
 @media only screen and (max-width: 850px) {
-  .navbar_left > div,.navbar_left > div:nth-child(5) {
+  .navbar_left > div,
+  .navbar_left > div:nth-child(5) {
     display: none;
   }
-  .navbar_right:nth-child(2) > button:nth-child(1){
+  .navbar_right:nth-child(2) > button:nth-child(1) {
     display: none;
     /* border: 1px solid red */
   }
-  .header_logo{
+  .header_logo {
     width: 60px;
-    margin: 10px 0 10px 20px
+    margin: 10px 0 10px 20px;
   }
 }

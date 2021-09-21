@@ -8,8 +8,8 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { useState } from "react";
 
-export const HotelDetails = ({selectedHotel}) => {
-    const [isHover,setHover] = useState(false)
+export const HotelDetails = ({ selectedHotel }) => {
+  const [isHover, setHover] = useState(false);
   return (
     <>
       <div className="hotelInfo">
@@ -25,9 +25,7 @@ export const HotelDetails = ({selectedHotel}) => {
             <FaStar />
             <FaStarHalfAlt />
           </div>
-          <p className="addre">
-            {selectedHotel.direction}
-          </p>
+          <p className="addre">{selectedHotel.direction}</p>
           <div className="exellent">
             <ImLocation2 style={{ width: 20, height: 15 }} />
             <span>Excellent location</span>
@@ -84,7 +82,7 @@ export const HotelDetails = ({selectedHotel}) => {
             <span>Price(1 room x 1 night)</span>
             <span>Rs. {selectedHotel.price}</span>
           </div>
-          <div style={{marginTop:20}}>
+          <div style={{ marginTop: 20 }}>
             <span>Booking fees</span>
             <span style={{ color: "rgb(72,139,248)", fontWeight: 500 }}>
               FREE
@@ -94,22 +92,27 @@ export const HotelDetails = ({selectedHotel}) => {
         <div className="dateHolder1">
           <div className="it">
             <span>Price</span>
-            <div className="moreInfo" onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)}>
-              <FcInfo style={{cursor:"pointer"}} />
-            <div className={`pricePolicy ${isHover?"activePo":"deactive"}`}>
-                  <h4>Hotel tax and services fees</h4>
-                  <p>
-                    Taxes and service fees are generally recovery charges which
-                    Agoda pays to the vendor or which are collected by the vendor.
-                    For more details, please see the Agoda Terms of Use. Tax and
-                    service fees may also contain fees that Agoda retains as
-                    compensation for processing the reservation.
-                  </p>
-                </div>
-              
+            <div
+              className="moreInfo"
+              onMouseOver={() => setHover(true)}
+              onMouseOut={() => setHover(false)}
+            >
+              <FcInfo style={{ cursor: "pointer" }} />
+              <div
+                className={`pricePolicy ${isHover ? "activePo" : "deactive"}`}
+              >
+                <h4>Hotel tax and services fees</h4>
+                <p>
+                  Taxes and service fees are generally recovery charges which
+                  Agoda pays to the vendor or which are collected by the vendor.
+                  For more details, please see the Agoda Terms of Use. Tax and
+                  service fees may also contain fees that Agoda retains as
+                  compensation for processing the reservation.
+                </p>
+              </div>
             </div>
           </div>
-          <span>Rs. {selectedHotel.price+644.76}</span>
+          <span>Rs. {selectedHotel.price + 644.76}</span>
         </div>
         <span style={{ fontSize: 12, fontWeight: 500, marginLeft: 12 }}>
           Included in price:

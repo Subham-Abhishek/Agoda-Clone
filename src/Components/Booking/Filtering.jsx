@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./dashboardleft.module.css";
-import { Paper } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
 const Filtering = () => {

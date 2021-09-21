@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import styles from "./navbar.module.css";
 import ApartmentIcon from "@material-ui/icons/Apartment";
@@ -48,20 +49,19 @@ export const Navbar = () => {
   const auth = useContext(IsAuth);
   console.log(auth);
 
-  let name = "", image = "";
   let userDetails = localStorage.getItem("user");
-  if(userDetails == null) userDetails = {}
+  if (userDetails == null) userDetails = {};
   else userDetails = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <div className={styles.navbar}>
         <div className={styles.navbar_left}>
           <Link to="/">
-          <img
-            className={styles.header_logo}
-            src="https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg"
-            alt=""
-          />
+            <img
+              className={styles.header_logo}
+              src="https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg"
+              alt=""
+            />
           </Link>
           <div>
             <p>Flight + Hotel</p>
