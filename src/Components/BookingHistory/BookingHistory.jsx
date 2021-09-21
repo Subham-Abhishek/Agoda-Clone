@@ -96,7 +96,7 @@ export const BookingHistory = () => {
         ) : null}
         {open1 ? <AlerBox open1={open1} setOpen1={setOpen1} /> : null}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
